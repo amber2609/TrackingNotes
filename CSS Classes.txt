@@ -1,0 +1,153 @@
+min-h-screen - The Tailwind CSS utility class for setting an element's minimum height to the full height of the viewport is min-h-screen.
+
+absolute - An element with position absolute will always be positioned relative to its nearest ancestor that has a specified position. For example, if we have a parent element and a child element, the child element has a position of absolute, to position the child element within the parent element the parent element also needs to have a position value, the best value to use at the parent would be position relative as this position value has almost no impact on the element when we are not changing anything using top bottom left and right, now our child element can be positioned relative to its parent, top zero and right zero will position the child in the top right corner of the parent, if we dont have position relative applied to the parent element then the absolute element will be positioned relative tot he body.
+
+relative - Change the position relative to its normal position, it will be positioned relative to the position where it would be if the element was static.
+
+-z-1 - You can control the order of the layers by using the z index property if you assign the negative values you can put the element behind other elements, if you assign a higher value the element will be above the other elements. To use a negative z-index value, prefix the class name with a dash to convert it to a negative value.
+
+object-cover - Use the object-cover utility to resize an element's content to cover its container.
+
+items-start - Use the items-start utility to align items to the start of the container's cross axis.
+
+justify-between - Use the justify-between utility to justify items along the container's main axis such that there is an equal amount of space between each item.
+
+h-12 - To set an element to a fixed height based on the spacing scale.
+
+object-contain - Use the object-contain utility to resize an element's content to stay contained within its container.
+
+max-md - To apply a style below a specific container size.
+
+size-4 - To set both the width and height of an element at the same time.
+
+text-transparent - It makes the actual text color transparent so the clipped background is visible.
+
+bg-linear-to-r - Use it with the color stop utilities to add a linear gradient to an element.
+
+from-indigo-950 - Use utilities like from-indigo-500, via-purple-500, and to-pink-500 to set the colors of the gradient stops.
+
+via-purple-200 - Use utilities like from-indigo-500, via-purple-500, and to-pink-500 to set the colors of the gradient stops.
+
+to-indigo-800 - Use utilities like from-indigo-500, via-purple-500, and to-pink-500 to set the colors of the gradient stops.
+
+bg-clip-text - Use the bg-clip-text utility to crop an element's background to match the shape of the text.
+
+max-w-md - Use utilities like max-w-sm or max-w-md to set an element to a fixed maximum width based on the container scale.
+
+flex-1 - Use flex-<number> utilities like flex-1 to allow a flex item to grow and shrink as needed, ignoring its initial size.
+
+w-full - Use w-full or w-<fraction> utilities like w-1/2 and w-2/5 to give an element a percentage-based width.
+
+h-screen - Use the h-screen utility to make an element span the entire height of the viewport.
+
+z-100 - Use the z-<number> utilities like z-10 and z-50 to control the stack order (or three-dimensional positioning) of an element, regardless of the order it has been displayed.
+
+w-10 - Use w-<number> utilities like w-24 and w-64 to set an element to a fixed width based on the spacing scale.
+
+h-10 - Use h-<number> utilities like h-24 and h-64 to set an element to a fixed height based on the spacing scale.
+
+max-sm - Use variants like @max-sm and @max-md to apply a style below a specific container size.
+
+translate-x-0 - Use translate-x-<number> or translate-x-<fraction> utilities like translate-x-4 and translate-x-1/4 to translate an element on the x-axis.
+
+-translate-x-full - Use translate-x-<number> or translate-x-<fraction> utilities like translate-x-4 and translate-x-1/4 to translate an element on the x-axis.
+
+transition-all - Prefix a transition-property utility with a breakpoint variant like md: to only apply the utility at medium screen sizes and above.
+
+duration-300 - Use utilities like duration-150 and duration-700 to set the transition duration of an element in milliseconds.
+
+ease-in-out - Use utilities like ease-in and ease-out to control the easing curve of an element's transition.
+
+space-y-1 - Use space-x-<number> or space-y-<number> utilities like space-x-4 and space-y-8 to control the space between elements.
+
+overflow-y-scroll - Use the overflow-y-scroll utility to allow vertical scrolling and always show scrollbars unless always-visible scrollbars are disabled by the operating system.
+
+no-scrollbar - 
+
+w-screen - Use the w-screen utility to make an element span the entire width of the viewport.
+
+w-[calc(100vw-240px)] - 
+
+max-w-2xl - Use utilities like max-w-sm and max-w-xl to set an element to a fixed maximum width based on the container scale.
+
+overflow-x-auto - Use the overflow-x-auto utility to allow horizontal scrolling if needed.
+
+shadow-sm - Use utilities like shadow-sm and shadow-lg to apply different sized outer box shadows to an element.
+
+aspect-[3/4] -
+ 
+ring - Use ring or ring-<number> utilities like ring-2 and ring-4 to apply a solid box-shadow to an element.
+
+truncate - Use the truncate utility to prevent text from wrapping and truncate overflowing text with an ellipsis (…) if needed.
+
+scale-95 - Use scale-<number> utilities like scale-75 and scale-150 to scale an element by a percentage of its original size.
+
+opacity-70 - Use opacity-<number> utilities like opacity-25 and opacity-100 to set the opacity of an element.
+
+backdrop-blur - Use utilities like backdrop-blur-none and backdrop-blur-sm to control an element’s backdrop blur.
+
+resize-none - Use resize-none to prevent an element from being resizable.
+
+outline-none - Use the outline-none utility to completely remove the default browser outline on focused elements.
+
+max-w-[90vw] - The Tailwind CSS class to set a max-width of 90vw is max-w-[90vw], using arbitrary value syntax.
+
+max-h-[90vh] - In Tailwind CSS, you can use the class max-h-[90vh] to set an element's maximum height to 90% of the viewport height.
+
+inline-flex - Use the inline-flex utility to create an inline flex container that flows with text.
+
+whitespace-pre-line - Use the whitespace-pre-line utility to preserve newlines but not spaces within an element. Text will be wrapped normally.
+
+max-xl:hidden - max-xl @media (width < 80rem) - 1280px
+
+text-[10px] - This text is exactly 10 pixels large.
+
+flex-warp - 
+
+flex-col - Use flex-col to position flex items vertically.
+
+flex-row - Use flex-row to position flex items horizontally in the same direction as text.
+
+flex-wrap - Use flex-wrap to allow flex items to wrap.
+
+border-slate-200/60 - Tailwind CSS utility class that sets a border color to a light, desaturated gray (slate-200) with 60% opacity.
+
+bg-white/80 - Use the color opacity modifier to control the opacity of an element's background color
+
+group-hover:scale-105-transition - combines Tailwind's group utilities to create an interactive effect where hovering a parent element (group) scales a child element up by 5% (group-hover:scale-105), with a smooth animation (transition) for the scale change, making elements visually responsive and engaging.
+
+aspect-video - Use the aspect-video utility to give a video element a 16 / 9 aspect ratio.
+
+placeholder-gray-400 - Control the placeholder color of an element
+
+mx-auto - The Tailwind CSS mx-auto class is a utility that horizontally centers a block-level element within its parent container by setting both the margin-left and margin-right properties to auto.
+
+items-start - Use the items-start utility to align items to the start of the container's cross axis.
+
+items-end - Use the items-end utility to align items to the end of the container's cross axis.
+
+rounded-bl-none - border-bottom-left-radius: 0.
+
+rounded-br-none - border-bottom-right-radius: 0.
+
+group-hover/profile:flex - 
+
+block - To set an element to display: block in Tailwind CSS, you use the block utility class. This class will make an element a block-level element, which means it starts on a new line and takes up the full width of its parent container by default. 
+
+group-hover/cover:flex - 
+
+group/cover - 
+
+justify-end - Use the justify-end or justify-end-safe utilities to justify items against the end of the container's main axis.
+
+inset-0 - Use top-<number>, right-<number>, bottom-<number>, left-<number>, and inset-<number> utilities like top-0 and bottom-4 to set the horizontal or vertical position of a positioned element.
+
+<Outline /> - 
+
+dangerouslySetInnerHTML={{__html: post.content}} - dangerouslySetInnerHTML is a React property that serves as the framework's direct replacement for using the browser DOM's native innerHTML. It allows you to programmatically set the HTML content within a React component, bypassing React's default rendering and security mechanisms.
+
+scrollintoview react - In React, scrollIntoView() is implemented using the native browser API combined with React's useRef hook to target specific DOM elements. This allows you to scroll an element into the visible area of the browser window smoothly or instantly upon user action, such as a button click.
+
+tosorted javascript - The toSorted() method in JavaScript is a modern (ES2023) array method that returns a new, sorted array without modifying (mutating) the original array. It is the copying counterpart to the traditional sort() method.
+
+URL.createObjectURL() - The URL.createObjectURL() static method in JavaScript creates a temporary blob: URL string that represents a specific File, Blob, or MediaSource object. This URL can be used as a src for images, videos, or as an href for downloading files.

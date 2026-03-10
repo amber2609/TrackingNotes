@@ -1,0 +1,280 @@
+Day 1: 29/11/2025
+ReactJS Hooks Tutorial:
+1. Introduction - 8 mins
+2. useStateHook - 11 mins
+3. useState with previous state - 6 mins
+4. useState with object - 7 mins
+5. useState with array - 6 mins
+6. useEffect Hook - 4 mins
+7. useEffect after render  - 7 mins
+8. conditionally run effects - 8 mins
+9. Run effects only once - 5 mins
+10. useEffect with cleanup - 6 mins
+11. useEffect with incorrect dependency - 10 mins
+12. Fetching Data with useEffect Part 1 - 6 mins
+13. Fetching Data with useEffect Part 2 - 5 mins
+14. Fetching Data with useEffect Part 3 - 3 mins
+15. useContext Hook Part 1 - 4 mins
+16. useContext Hook Part 2 - 6 mins
+17. useContext Hook Part 3 - 3 mins
+18. useReducer Hook - 9 mins
+19. useReducer (simple state and action) - 10 mins
+20. useReducer (complex state and action) - 9 mins
+21. Multiple Reducers - 3 mins
+22. useReducer with useContext - 12 mins
+23. Fetching Data with useReducer Part 1 - 7 mins
+24. Fetching Data with useReducer Part 2 - 7 mins
+25. useState vs useReducer - 4 mins
+26. useCallback Hook - 15 mins
+27. useMemo Hook - 11 mins
+28. useRef Hook Part 1 - 4 mins
+29. useRef Hook Part 2 - 10 mins
+30. Custom Hooks - 2 mins
+31. useDocumentTitle Custom Hook - 9 mins
+32. useCounter Custom Hook - 8 mins
+33. useInput Custom Hook - 10 mins
+
+Day 2: 30/11/2025
+React Redux Tutorials:
+1. Introduction - 15 mins
+2. Getting Started - 2 mins
+3. Three Core Concepts - 4 mins
+4. Three Principles - 6 mins
+5. Actions - 4 mins
+6. Reducers - 5 mins
+7. Store - 11 mins
+8. Cakes and Ice Creams - 3 mins
+9. Multiple Reducers - 6 mins
+10. Combine Reducers - 4 mins
+11. Middleware - 5 mins
+12. Async Actions - 9 mins
+13. Redux Thunk Middleware - 9 mins
+14. React Redux Setup - 4 mins
+15. Actions - 4 mins
+16. Reducers - 3 mins
+17. Store - 4 mins
+18. connect - 9 mins
+19. React Redux with Hooks - 1 mins
+20. useSelector Hook - 3 mins
+21. useDispatch Hook - 2 mins
+22. Cakes and Ice Creams - 11 mins
+23. Logger Middleware - 3 mins
+24. Redux Devtool Extension - 7 mins
+25. Action payload - 5 mins
+26. mapStateToProps - 6 mins
+27. mapDispatchToProps - 3 mins
+28. Async Actions - 9 mins
+29. Redux Thunk Get Request - 11 mins
+
+Day 3: 14/12/2025
+React Native Tutorials:
+1. Introduction - 4 mins
+2. Expo vs React Native - 3 mins
+3. Hello World - 6 mins
+4. Running App on Device - 2 mins
+5. Running App on iPhone Simulator - 2 mins
+6. Running App on Android Emulator - 4 mins
+7. Core Components - 3 mins
+8. View - 7 mins
+9. Text - 4 mins
+10. Image - 6 mins
+11. Scroll View - 4 mins
+12. Button - 4 mins
+13. Pressable - 4 mins
+14. Modal - 7 mins
+
+Day 4: 15/12/2025
+15. Status Bar - 3 mins
+16. Activity Indicator - 3 mins
+17. Alert - 4 mins
+18. Custom Componenets - 3 mins
+19. Styling - 2 mins
+20. StyleSheet API - 6 mins
+21. Multiple Styles - 5 mins
+22. Box Model - 6 mins
+23. Shadow and Elevation - 4 mins
+24. Style Inheritance - 5 mins
+25. Layout with Flexbox - 2 mins
+26. Code Setup - 5 mins
+27. Flex - 6 mins
+28. Flex Direction - 3 mins
+29. Justify Content - 5 mins
+30. Align Items - 3 mins
+31. Align Self - 4 mins
+32. Flex Wrap - 4 mins
+33. Align Content - 4 mins
+34. Gap - 2 mins
+35. Flex Basis - 3 mins
+36. Flex Shrink - 3 mins
+37. Flex Grow - 5 mins
+38. Relative and Absolute Layout - 4 mins
+39. Dynamic User Interfaces - 2 mins
+40. Dimensions API - 6 mins
+41. Dimensions API Drawback - 7 mins
+42. useWindowDimensions - 2 mins
+43. SafeAreaView - 4 mins
+44. Platform Specific Code - 9 mins
+
+Day 5: 16/12/2025
+45. Build a Pokemon Card (1/6) - 5 mins
+46. Build a Pokemon Card (2/6) - 2 mins
+47. Build a Pokemon Card (3/6) - 4 mins
+48. Build a Pokemon Card (4/6) - 3 mins
+49. Build a Pokemon Card (5/6) - 7 mins
+50. Build a Pokemon Card (6/6) - 3 mins
+51. Lists - 6 mins
+52. FlatList - 7 mins
+53. Item Separator - 2 mins
+54. List Empty - 1 min
+55. List Header and Footer - 2 mins
+56. SectionList - 6 mins
+57. Inputs and Forms - 2 mins
+58. TextInput - 5 mins
+59. TextInput Props - 4 mins
+60. Multiline TextInput - 2 mins
+61. Switch - 4 mins
+62. Login Form - 5 mins
+63. KeyboardAvoidingView - 4 mins
+64. Form Validation - 3 mins
+65. Form Submission - 2 mins
+66. Networking - 3 mins
+67. GET Requests - 7 mins
+68. Loading State - 3 mins
+69. Pull to Refresh - 3 mins
+70. POST Request - 7 mins
+71. Error Handling - 7 mins
+72. Navigation - 3 mins
+73. Stack Navigation - 7 mins
+74. Navigation between Screens - 4 mins
+75. Passing Data between Screens - 4 mins
+76. Stack Navigation Options - 5 mins
+77. Dynamic Stack Navigator Options - 4 mins
+78. Drawer Navigation - 7 mins
+79. Drawer Navigation Options - 2 mins
+80. Tab Navigation - 4 mins
+81. Tab Navigation Options - 5 mins
+82. Nesting Navigators - 4 mins
+
+Day 6: 23/12/2025
+Node.js Tutorials:
+1. Introduction - 7 mins
+2. ECMAScript - 5 mins
+3. Chrome's V8 Engine - 6 mins
+4. Javascript Runtime - 3 mins
+5. What is Node.js? - 7 mins
+6. Hello World - 6 mins
+7. Browser vs Node.js - 3 mins
+8. Modules - 1 min
+9. Local Modules - 7 mins
+10. Module Exports - 4 mins
+11. Module Scope - 4 mins
+12. Module Wrapper - 6 mins
+13. Module Caching - 10 mins
+14. Import Export Patterns - 6 mins
+15. Module.Exports vs Exports - 9 mins
+16. ES Modules - 10 mins
+17. Importing JSON and Watch Mode - 6 mins
+18. Built-in Modules - 2 mins
+19. Path Module - 13 mins
+20. Callback Pattern - 6 mins
+21. Events Module - 8 mins
+22. Extending from EventEmitter - 8 mins
+23. Character Sets and Encoding - 6 mins
+24. Streams and Buffers - 10 mins
+25. Asynchronous Javascript - 6 mins
+26. Fs Module - 13 mins
+27. Fs Promise Module - 5 mins
+28. Streams - 7 mins
+29. Pipes - 5 mins
+30. HTTP Module - 3 mins
+31. Creating a Node Server - 7 mins
+32. JSON Response - 4 mins
+33. HTML Response - 6 mins
+34. HTML Template - 3 mins
+35. HTTP Routing - 5 mins
+36. Web Framework - 4 mins
+37. Node Runtime Recap - 4 mins
+38. Libuv - 1 min
+39. Thread Pool - 9 mins
+40. Thread Pool Size - 8 mins
+41. Network I/O - 7 mins
+42. Event Loop - 14 mins
+43. Microtask Queues - 14 mins
+44. Timer Queue - 11 mins
+45. I/O Queue - 11 mins
+46. I/O Polling - 6 mins
+47. Check Queue - 13 mins
+48. Close Queue - 5 mins
+
+Day 7: 24/12/2025
+49. What is npm? - 4 mins
+50. package.json - 7 mins
+51. Installing Packages - 5 mins
+52. Using Packages - 3 mins
+53. Dependencies - 3 mins
+54. Versioning - 6 mins
+55. Global Packages - 4 mins
+56. npm Scripts - 3 mins
+57. Publishing an npm Package - 5 mins
+58. Building CLI Tools - 6 mins
+59. CLI Options - 7 mins
+60. Interactive CLI Tools - 5 mins
+61. Cluster Module - 15 mins
+62. Worker Threads Module - 7 mins
+63. Deploying Node.js App - 5 mins
+64. Wrapping Up - 2 mins
+
+Day 8: 25/01/2026
+Redux Toolkit Tutorial:
+1. Intro feat. React - 15 mins
+2. Getting Started - 2 mins
+3. Three Core Concepts - 5 mins
+4. Three Principles - 7 mins
+5. Actions - 4 mins
+6. Reducers - 6 mins
+7. Store - 12 mins
+8. Restocking Cakes - 5 mins
+9. Bind Action Creators - 3 mins
+10. Cakes and Ice Creams - 3 mins
+11. Multiple Reducers - 8 mins
+12. Combine Reducers - 4 mins
+13. Immer - 7 mins
+14. Middleware - 6 mins
+15. Async Actions - 9 mins
+16. Redux Thunk Middleware - 9 mins
+17. Redux Toolkit Intro - 3 mins
+18. Project Setup - 3 mins
+19. Cake Slice - 7 mins
+20. Configuring Store - 6 mins
+21. Ice Cream Feature - 5 mins
+22. Logger Middleware - 5 mins
+23. Extra Reducers - 9 mins
+24. Async Thunks - 14 mins
+
+Day 9: 26/01/2026
+25. React Project Setup - 9 mins
+26. Provider - 3 mins
+27. useSelector - 4 mins
+28. useDispatch - 6 mins
+29. Redux Devtools - 5 mins
+30. Fetching Data - 8 mins
+
+Day 10: 12/02/2026
+React Table Tutorial:
+1. Introduction - 4 mins
+2. Getting Started - 5 mins
+3. Basic Table - 18 mins
+4. Footers - 4 mins
+5. Header Groups - 5 mins
+6. Sorting - 4 mins
+7. Sorting and Formatting - 5 mins
+8. Global Filtering - 6 mins
+9. Column Filtering - 5 mins
+10. More on Filtering - 7 mins
+11. Pagination (Next and Previous) - 7 mins
+12. Pagination (Goto Page) - 5 mins
+13. Pagination (Page Size) - 3 mins
+14. Selecting Rows - 10 mins
+15. Column Ordering - 5 mins
+16. Column Hiding - 6 mins
+17. Sticky Columns - 9 mins

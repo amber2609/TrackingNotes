@@ -1,0 +1,221 @@
+Day 1: 06/11/2025
+Section 1: Introduction and Resources
+1. Course Introduction - 5 mins
+2. Welcome to Course - 4 mins
+3. Resources[important] - 11 mins
+4. Resources[important] - 1 min
+
+Section 2: React Basics and Setup
+5. React Introduction - 13 mins
+6. Environment Setup - 7 mins
+7. Create React App / Set React App - 18 mins
+8. React Behind the Scene - 11 mins
+9. React Boilerplate - 16 mins
+10. Components: Class and Function Based - 10 mins
+11. JSX: In-depth Introduction - 12 mins
+12. Practice: Basic Template Structure - 16 mins
+
+Day 2: 07/11/2025
+Section 3: States and useState
+13. Why we need States? 10 mins
+14. State Introduction: useState - 12 mins
+15. useState: Multiple updates - 4 mins
+16. useState: Array State value - 12 mins
+17. useState: Array setState value - 7 mins
+18. Conditional Templates - 7 mins
+19. Quick Hook advice - 1 min
+
+Section 4: Components and Props
+20. Multiple Components and Fragments - 9 mins
+21. Props: In-depth Introduction - 7 mins
+22. Props: Children - 11 mins
+23. Prop Drilling - 4 mins
+
+Section 5: Styling React Application
+24: Global Level Styling - 13 mins
+25. Component Level Styling - 17 mins
+26. Inline Level Styling - 5 mins
+27. Dynamic Level Styling - 5 mins
+28. Module Level Styling - 8 mins
+
+Day 3: 09/11/2025
+Section 6: User Input, Events and useRef
+29. Forms and Input - 11 mins
+30. onChange Event - 5 mins
+31. Controlled Inputs - 4 mins
+32. onSubmit Event - 14 mins
+33. Add New Task - 11 mins
+34. useRef Hook - 7 mins
+
+Section 7: useEffects, useCallback and Custom Hooks
+35. JSON Server - 17 mins
+36. useEffect Hook - 13 mins
+37. React StrictMode - 5 mins
+38. List Output - 6 mins
+
+Day 4: 10/11/2025
+39. onClick Event - 7 mins
+40. useCallback  Hook - 11 mins
+41. Custom Hook (useFetch) - 11 mins
+42. Loading State - 7 mins
+43. Handling Erros (try/catch) - 10 mins
+44. Aborting Fetch Request - 5 mins
+45. Infinite Loops - 4 mins
+
+Day 5: 13/11/2025
+Section 8: Project: Taskmate
+46. Project Source Code - Github - 1 min
+47. TaskMate Demo - 6 mins
+48. Project Structure - 4 mins
+49. Components - 15 mins
+50. State: tasklist & setTasklist - 11 mins
+51. Function: Edit & Delete - 20 mins
+52. Warning: Undefined Value - 10 mins
+53. Update Button - 1 min
+54. Local Storage: Store All Tasks - 7 mins
+55. Theme: Change Background - 11 mins
+56. Project Deployment - 6 mins
+
+Day 6: 14/11/2025
+Section 9: React Router
+57. React Router Introduction - 9 mins
+58. React Router Setup - 10 mins
+59. Project Structure - 15 mins
+60. Navigation - 11 mins
+
+Day 7: 15/11/2025
+61. Route Parameters - 13 mins
+62. No Route Found - 5 mins
+63. Nested Routes - 9 mins
+64. Project Restructuring - 15 mins
+
+Day 8: 17/11/2025
+Section 10: Tailwind CSS Crash Course
+65. Introduction and Demo - 10 mins
+66. Common Properties - 15 mins
+67. Hover, Focus, and Other States - 5 mins
+68. Responsive Design - 12 mins
+69. Dark Mode - 7 mins
+70. Custom Configuration - 8 mins
+71. Project Demo - 13 mins
+72. Header and Hero Section - 13 mins
+73. Footer - 3 mins
+74. Responsive Screen and Component Tools - 12 mins
+
+Day 9: 20/11/2025
+Section 11: Movie API Project: Cinemate
+75. Project Source Code - Github - 1 min
+76. Cinemate Demo - 5 mins
+77. Project Setup - 18 mins
+78. Tailwind Introduction - 20 mins
+79. TMDB API: Documentation - 11 mins
+80. UI Design (Tailwind & Flowbite) - 14 mins
+
+Day 10: 21/11/2025
+81. Navigation Structure - 10 mins
+82. Dark Mode Integration - 15 mins
+83. Movie List Structure - 11 mins
+84. API Fetch: Movie List - 15 mins
+85. Custom Hook: useFetch - 12 mins
+86. API Fetch: Movie Search - 15 mins
+87. Tailwind CSS Customization - 16 mins
+88. Page Not Found - 15 mins
+89. Individual Movie Information - 28 mins
+90. Scroll Restoration: Scroll to Top - 5 mins
+91. Dynamic Page Title - 13 mins
+92. Style Update - 3 mins
+93. Project Deployment - 22 mins
+94. Development Branch on Git and Github - 10 mins
+95. Solved: Netlify Error - 7 mins
+
+Day 11: 24/11/2025
+Section 12: Assignment: Shopping Cart
+96. Assignment Statement and Demo - 3 mins
+97. Solution: Project Setup - 6 mins
+98. Solution: Components - 17 mins
+99. Solution: Pages - 10 mins
+100. Assignment Deployment - 4 mins
+
+Section 13: Context and Reducers Project: Shopping Cart
+101. Global State Management - 7 mins
+102. Project Structure - 6 mins
+103. Context - 16 mins
+104. Reducer - 26 mins
+105. Methods - 19 mins
+106. Project Deployment - 12 mins
+
+Section 14: Redux Project: Shopping Cart
+107. Redux Introduction - 15 mins
+108. Project Structure - 10 mins
+109. Slice and Action - 17 mins
+110. Reducers: Add and Remove - 16 mins
+111. Redux Store State - 11 mins
+112. Project Deployment - 10 mins
+
+Day 12: 26/11/2025
+Section 15: E-Commerce Project: Codebook
+113. Project Source Code - Github - 1 min
+114. Codebook Demo - 11 mins
+115. Installations - 7 mins
+116. Project Structure - 20 mins
+
+Day 13: 27/11/2025
+117. Header Component - 1 - 17 mins
+118. Header Component - 2 - 10 mins
+119. Home Page - 22 mins
+120. Products Page - 8 mins
+121. API: Product List - 19 mins
+122. Rating Component - 9 mins
+123. Individual Product Component - 16 mins
+
+Day 14: 28/11/2025
+124. Dark Mode - 10 mins
+125. ScrollToTop Component - 4 mins
+126. Product Search - 17 mins
+127. Dynamic Title - 7 mins
+
+Day 15: 01/12/2025
+128. Filter: Context and Reducers - 19 mins
+129. Filter: Initial Product List - 12 mins
+130. Filter: Properties - 39 mins
+131. Clear Filter - 6 mins
+132. Dropdown Option - 8 mins
+133. User Account and Cart - 14 mins
+134. Login and Registration Page - 14 mins
+135. React-Toastify - 10 mins
+136. API: Login/Register End Point - 11 mins
+137. Session Storage - 10 mins
+138. Toggle Dropdown (Hide) - 4 mins
+139. Cart Interface - 14 mins
+140. Cart: Context and Reducers - 10 mins
+141. Cart: Provider - 13 mins
+142. Add to Cart - 12 mins
+143. Condition Check: Already in Cart - 15 mins
+
+Day 16: 02/12/2025
+144. Out of Stock Products - 7 mins
+145. Protected Routes - 8 mins
+146. Checkout Modal - 16 mins
+147. Undefined Value Warning - 2 mins
+148. Order Submit Function - 17 mins
+149. Order Page - 14 mins
+150. Dashboard: Condition 1 - 10 mins
+151. Dashboard: Condition 2 - 12 mins
+152. Auth Service: API End Points - 11 mins
+153. Data Service: API End Points - 16 mins
+154. Product Service: 10 mins
+155. Page Not Found - 2 mins
+156. Dynamic Page Title - 7 mins
+157. Error Handling - 26 mins
+158. ENV - 8 mins
+159. Frontend Deployment - 19 mins
+160. Backend Deployment - 15 mins
+161. Update Environment Variables - 5 mins
+
+Day 17: 03/12/2025
+162. Login as Guest - 15 mins
+163. Solved: Netlify Errors - 3 mins
+
+Section 16: Assignment: Word Counter
+164. Statement and Demo - 5 mins
+165. Solution: Word Count - 5 mins

@@ -1,0 +1,9 @@
+https://full-stack-project-ping-up-f3t4.vercel.app
+https://full-stack-project-ping-up.vercel.app/
+
+webhooks
+scheduling
+cron jobs
+batch processing
+queueing
+background jobs

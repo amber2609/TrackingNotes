@@ -1,0 +1,29 @@
+Day 1: 22/12/2025
+MongoDB Tutorial:
+1. What is MongoDB? - 6 mins
+2. Installing MongoDB - 4 mins
+3. Collections and Documents - 4 mins
+4. Using MongoDB Compass - 10 mins
+5. Using the MongoDB shell - 6 mins
+6. Adding New Documents - 7 mins
+7. Finding Documents - 8 mins
+8. Sorting and Limiting Data - 4 mins
+9. Nested Documents - 7 mins
+10. Operators and Complex queries - 8 mins
+11. Using $in and $nin - 4 mins
+12. Quering Arrays - 9 mins
+13. Deleting Documents - 6 mins
+14. Updating Documents - 11 mins
+15. MongoDB Drivers - 9 mins
+16. Connecting to MongoDB - 11 mins
+17. Cursors and Fetching Data - 8 mins
+18. Finding Single Documents - 9 mins
+
+Day 2: 23/12/2025
+19. Using POSTMAN - 5 mins
+20. Handling POST Requests - 6 mins
+21. Handling DELETE Requests - 4 mins
+22. PATCH Requests - 6 mins
+23. Pagination - 7 mins
+24. Indexes - 7 mins
+25. MongoDB Atlas - 7 mins

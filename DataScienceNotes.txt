@@ -1,0 +1,1001 @@
+Getting started with Statistics =>
+
+What is Statistics and its Application ->
+
+Statistics is a field that deals with collection, organization, analysis, interpretation and presentation of the data.
+The data is used in decision making.
+
+Types of Statistics ->
+
+1. Descriptive
+2. Inferential
+
+Population vs Sample Data ->
+
+Population = N
+Sample = n
+
+Measure of Central Tendency ->
+
+1. Mean
+2. Median
+3. Mode
+
+Measure of Dispersion ->
+
+1. Variance
+2. Standard Deviation
+
+Why Sample Variance is divided by n-1? ->
+
+Bessel Correction
+
+Standard Deviation ->
+
+Types of Variables ->
+
+Quantitative Variable
+Qualitative/Categorical Variable
+
+2 types of Quantitative Variable ->
+
+1. Discrete Quantitative Variable
+2. Continuous Quantitative Variable
+
+Random Variable ->
+
+Random Variable is a function which defines its values through some process or experiments.
+
+Types of Random Variables ->
+
+1. Discrete Random Variable
+2. Continuous Random Variable
+
+5 Number Summary ->
+
+1. Minimum
+2. 1st Quartile
+3. Median
+4. 3rd Quartile
+5. Maximum
+
+Probabiltiy - Multiplication Rule ->
+
+Multiplication Rule:
+Independent and Dependent Events(Conditional Probability).
+Conditional Probability will also be used in Naive Bayes Machine Learning Algorithm
+
+Probability Distribution Functions ->
+
+Probability Distribution Functions describe how the probabilities are distributed over the values of a random variable.
+2 main types of Probability Distribution Functions:
+1. Probability Mass Function (PMF) - used for discrete random variables.
+2. Probability Density Function (PDF) - used for continuous random variables.
+Cumulative Density Function(CDF) means we need to combine all the probabilities as we go from 1 to 6, in case of rolling a fair dice.
+The value in CDF will be from 0 to 1. It cannot go above than 1.
+Area under the curve.
+Cumulative Probability takes a S-shape.
+In order to calculate the Probability Density we need to find out the Gradient or Slope of the point.
+Wherever the steepness will be high that slope will be highest.
+Probability Density Function is the gradient or slope of the point of Cumulative Density Function.
+The different kinds of Distribution is basically used to represnt the random variable in the form of Probabilities.
+The function F(x) will be different for differenttypes of Distribution.
+
+Standard Normal Distribution ->
+
+Whenever we solve a Machine Learning problem statement or whenever we create a Machine Learning models, the first rule is that we try to bring all this features in a same unit scale. If we bring it in the same unit, there are many algorithms that require it to be in the same unit, so that the Machine Learning models will be able to optimize themselves in a better way or it will be able to give better performance.
+We convert all the features by a technique which is called as Standardization where we apply Z-score formula on every feature.
+Note: There are many Machine Learning algorithms which wants the data to fall as Normal Distribution, so that the Machine Learning Algorithm will be able to perform well.
+
+Hypothesis Testing ->
+
+It is a part of Inferential Statistics. The main of Inferential Statistics is to come up with Conclusion or Inferences from a Sample data about an unknown Population parameter.
+
+What is P Value ->
+
+How do we define Confidence Interval? There is a very important parameter called as Significance Value. Significance Value is denoted by Alpha. If we say Alpha is 0.05, then we have to find the Confidence Interval by taking 1-Alpha(1-0.05), which is 0.95.
+
+Z Test - Hypothesis Testing ->
+
+Whenever we want to use the Z Test, then we need to know the Population Standard Deviation, and the sample size should be greater than or equal to 30.
+Z Table gives the value of the Area under the curve.
+We find the Z Score value in the Z Table by using the Area under the curve.
+If the value comes between the range of negative Z Score value and positive Z Score value, we will consider it as the Null Hypothesis (H0) is true and we fail to reject the null Hypothesis. If it comes outside the Z Score value, then we reject the null Hypothesis.
+When we get the new Z Score value, we construct a new graph by using the new value, and we find the area under the curve by checking the Z Table.
+We can calculate the P Value by adding the vaule of area under the curve on both the sides, and if it is less than the Significance Value, then we reject the Null Hypothesis. If the value is greater than the Significance Value, then we accept the null hypothesis or we fail to reject the null hypothesis.
+Z Test usually gets applied for the average data.
+
+T Test ->
+
+We refer T Table for performing the T Test. In T Table there is 1 important parameter which is called as Degree of Freedom. Degree of Freedom is given by the formula n-1.
+If Population Standard Deviation is not given, then we can use T Test.
+
+Bayes Theorem ->
+
+Bayes Theorem is completely based on Probability.
+
+Confidence Interval and Margin of Error ->
+
+Confidence Interval lies between Lower Confidence Interval and Higher Confidence Interval.
+Confidence Interval formula is Point Estimate +/- Margin of Error.
+
+Chi Square Test ->
+
+This is an amazing test technique for categorical variables.
+The Chi Square Test is for Goodness of Fit. This test claims about Population Proportion.
+It is a non parametric test that is performed on categorical (ordinal and nominal) data.
+To solve Chi Square Test problems we use Chi Square Table.
+In Chi Square Table we need to calculate Degree of Freedom. Formula is df = n - 1.
+In Chi Square Table we also need to find the Decision Boundary. In the case of Chi Square Test we do not have Symmetrical Distribution. The distribution will be Right Skewed Distribution. We need to find out the Critical Value based on Significance Level. If the Test statistics is greater than the Critical Value then we reject the Null Hypothesis.
+Chi Square Test Formula is Summation(O-E)^2/E
+
+Analysis of Variance (ANOVA Test) ->
+
+ANOVA is a statistical method used to compare the means of 2 or more groups.
+Wrt ANOVA we have 2 components, the first component is Factors, the Factors can be dependent or independent. The second component is Levels.
+Factor could be Mode of Payment and Levels could be GPay, PhonePe, IMPS or NEFT.
+
+Assumptions in ANOVA ->
+
+1. Normality of Sampling Distribution of Mean. The distribution of sample mean is normally distributed.
+2. Absence of Outliers. Outliers needs to be removed from the dataset if present.
+3. Homogenity of Variance. Population Variance in different levels of each independent variable should be same.
+4. Samples are independent and randomly selected.
+
+Types of ANOVA ->
+
+There are 3 types of ANOVA:
+1. One way ANOVA. One Factor with atleast 2 Levels, these Levels are independent.
+2. Repeated Measures ANOVA. One Factor with atleast 2 Levels, theses Levels are dependent.
+3. Factorial ANOVA. Two or more Factors (each of which with atleast) 2 Levels. Levels can be independent or dependent.
+
+Partitioning of Variance in ANOVA ->
+
+To calculate ANOVA we use the F Table, F = Variance between Samples / Variance within Samples
+
+Handling Imbalanced Dataset ->
+
+from sklearn.utils import resample - resample basically extrapolates the points, will create more points for minortiy and try to equalize with the majority.
+In Upsampling, on top of the data more data keeps getting added. We are increasing the similar datapoints again and again. This technique is not good as the Variance is not increasing. In order to increase variance we can use interpolating techniques.
+
+Handling Imbalanced Dataset using SMOTE ->
+
+In SMOTE upsampling, we try to join the 2 nearest points, and it add data points in that line. Similarly it joins the next 2 points and creates data points in that line.
+from sklearn.datasets import make_classification - make_classification helps you to create binary classification or multi classification
+
+Notes:
+1. If we set normalize=True, instead of giving in the form of numbers it will give us in the form of percentage.
+2. KDE plot means Kernel Density Estimator.
+3. Normalization helps you to scale down your feature between 0 to 1.
+4. Standardization will help you to scale down your feature based on Standard Normal Distribution, where the mean will be 0 and the standard deviation is usually 1.
+
+Types of Machine Learning Techniques ->
+
+Difference between Regression and Classification:
+In Regression Problem Statement, whatever dependent or output feature we will be having all the feature value will be continuous.
+If the dependent or output feature value is Categorical, then it will be Classification Problem Statement.
+
+Classification can be of 2 type:
+1. Binary Classification
+2. Multiclass Classification
+
+In Supervised Machine Learning Algorithm, dependent feature must be there, then only we can say as Supervised. Then only we will be able to train our model with this specific dataset and later on whenever we give new input data to that specific model it will be able to predict.
+
+Difference between Supervised and Unsupervised:
+Whenever we work with respect to Unsupervised Machine Learning, we do not know the output feature. We dont need to predict anything, instead we need to find out similar clusters or groups.
+
+Equation of Line, 3d and Hyperplane ->
+
+y=mx+c, x is x axis, m is slope and c is the intercept.
+Slope denotes, in the unit movement in the X axis what is the movement with respect to the y axis, this will be basically giving us the slope value.
+Intercept, if the x value is zero, where does the straight line meet the y axis, the specific point is intercept.
+
+w1x1 + w2x2 + b = 0
+w1 and w2 are the coefficients.
+We can also give this representation as:
+wTx + b = 0. This is nothing but a equation of straight line.
+
+If we have 3 axis, In this particular case we dont draw a straight line. We draw a 3d plane specifically.
+The equation will be:
+w1x1 + w2x2 + w3x3 + b = 0, we can write the following equation as wTx + b = 0.
+When we do matrix multiplication with respect to w and x, one of the matrix we have to Transpose it.
+
+If we have n-dimension plane, the equation will be:
+w1x1 + w2x2 + w3x3 + ..... + wnxn + b = 0, which can also be written as wTx + b = 0
+
+Lets say we have 2 axis x1 and x2, we can represent the equation as w1x1 + w2x2 + b = 0. When the equation passes through the origin, with respect to b, that is our intercept. We have x1,x2 = 0. Whenever there is a straight line that passes through origin, the equation can also be written as w1x1 + w2x2 = 0, which is nothing but wTx = 0.
+Equation of a straight line passing through the origin is written as wTx = 0.
+
+Equation of a plane = Pin in n-dimension, not 3.14 Pi, which is represented as wTx = 0.
+
+Lets consider w and x as 2 vectors. If we talk in terms of Linear Algebra, if we can see how the dot operation can be specified mathematically, w.x = wTx = ||w||||x||cos(titha). Cos(titha) will be giving angle between w and x vectors. ||w||||x||cos(titha)=0. When titha=90, then cos(titha)=0.
+
+At every point of time, w will always be perpendicular to plane.
+
+Distance of a point from a plane ->
+
+The Distance of a point is given as:
+d = wTs / ||w||
+
+The distance above the plane is always going to be positive, wTs = ||w||||s||cos(titha) = +ve value.
+The distance below the plane is always going to be negative, wTs1 = ||w||||s1||cos(titha) = -ve value.
+
+Instance Based Learning vs Model Based Learning ->
+
+In Instance Based Learning, the model is completely dependent on the training data, for doing every prediction if it is dependent on the training data, how the data exists there we get specific output.
+In Model Based Learning, whatever data we use here, it tries to understand the pattern within this specific data, once it understands the pattern within the specific data it creates a Generalization method to make the prediction for the new data. The Generalization method  is far more better when compared to the instance based techniques.
+
+Simple Linear Regression Introduction ->
+
+Lets take Weight in x-axis and Height in y-axis, With respect to the dataset we plot some points. With the help of Simple Linear Regression we will try to create a best fit line, and this best fit line will help us to do the prediction for new weight.
+The best fit line must be created in such a way that distance between the true point and the predicted point, then the summation of the distance should be minimal.
+
+Understanding Simple Linear Equations ->
+
+With the unit movement in the x-axis, what is the movement with respect to the y-axis, that indicates something called as slope.
+Error is nothing but the difference between the true points and the predicted points.
+We try to find out the optimized way, where in we create a best fit line and then we try rotate this best fit line by changing the values of intercept and slope and then try to find out the best fit line with minimal error.
+
+Cost Function ->
+
+Cost Function is used find the best fit line.
+Our main aim is to Minimize the Cost Function.
+We can minimize the Cost Function by changing the values of titha0 and titha1, and we try to find out the best fit line where in we do the summation of the particular error and this should be minimal.
+We bassically say this Cost Function as Mean Squared Error.
+Equation of the straight line is htitha(x) = titha0 + titha1x
+If titha0 = 0, that basically means, when x value is 0, it is basically passing through the origin, hence the intercept is exactly 0.
+
+The dataset has x=(1,2,3) and y=(1,2,3).
+When titha0 = 0, the equation becomes htitha(x) = titha1x
+When titha1 = 1, the Cost Function Jtitha1 is 0 and there is no error, the best fit line passes through all the points.
+When titha1 = 0.5, the Cost Function Jtitha1 is 0.58.
+When titha1 = 0, the Cost Function Jtitha1 is 2.3.
+
+If we continue to do it with different titha1 value, we will get a curve in the graph. The point where the error was very less is called the Global Minima, and we really need to achieve Global Minima or atleast near to that point to say that my error has minimized. The curve is called as Gradient Descent. The Gradient Descent is important in Deep Learning techniques as well. We have to come to Global Minima point by changing titha0 or titha1 value.
+We cannot be randomly selecting titha1 value, so we need to apply convergence algorithm.
+
+Convergence Algorithm ->
+
+Convergence Algorithm will actually help you to initialize one titha1 value, and automatically based on the Gradient Descent it should be able to increase or decrease the titha1 value. Convergence Algorithm basically says to repeat until the convergence means until we reach the Global Minima.
+
+The equation is tithaj = tithaj - alpha(derivative/derivative(tithaj))*J(titha1).
+
+We will initalize some value to tithaj and we will try to find out the Cost Function.
+The above equation will help us to change our titha1 value much more efficiently.
+
+When we say derivative, we mean we are going to calculate the slope.
+In order to find out the derivative, we need to find out whether it is a positive slope or negative slope because derivative is nothing but we are trying to find out the slope. So at a particular point in order to calculate the slope we create a tangent line. See the right side of the tangent line to find out whether it is a positive slope or negative slope. If we are able to find out whether it is a positive slope or negative slope, then we will be able to understand whether we have to reduce tithaj value or increase tithaj value.
+If the right part of the line is facing downwards, we will say it as negative slope.
+If we get a negative slope, then tithaj = tithaj - alpha(-ve value), (derivative/derivative(tithaj))*J(titha1) will be negative. It will become tithaj = titha + (+ve value) and it will increase the tithaj value.
+
+If we do the above iterative process again and again, we will reach the Global Minima by optimizing the tithaj value.
+If the right part of the tangent is pointing upward, then it becomes a positive slope. In case of positive slope we need to decrease the tithaj value, then only we will be able to reach the global minima, then tithaj = tithaj - alpha(+ve value), (derivative/derivative(tithaj))*J(titha1) will be positive. It will become tithaj = titha - (+ve value) and it will decrease the tihaj value.
+
+Alpha is nothing but it is a learning rate. Learning rate controls the speed at which convergence happens. If it is a very small value then it will take more time to converge, if it is a higher value then it may never converge, so we have to take the small value but should not be very smaller.
+
+Convergence Algorithm Part 2 ->
+
+If titha0 is not zero, then it would be 3-dimensional graph and will look different than 2-dimensional graph.
+The updated equation will be, tithaj = tithal - alpha(derivative/derivative(tithaj))*J(titha0,titha1).
+Derivative is nothing but we are trying to find out the slope.
+
+Multiple Linear Regression ->
+
+The equation for the best fit line will be:
+htitha(x) = titha0 +  titha1(x1) + titha2(x2) + titha3(x3)
+titha0 is always an intercept, there will always be 1 intercept for any kind of regression(simple or multiple) problem
+titha1, titha2, titha3 are nothing but coefficients or slope.
+
+Performance Metrics ->
+
+Performance Metrics is used to determine whether the model is good or not for a specific problem statement.
+Rsquared equation is:
+Rsquared = 1 - Sum of Square Residual/Sum of Square Total, which can also be writte as:
+Rsquared = 1 - Summation(yi - yihat)^2/Summation(yi - yibar)^2,
+where,
+yi is the true point.
+yibar is the predicted point.
+yihat is the average of true point.
+
+The numerator difference will be smaller number when compared to denominator difference.
+Rsquared equation gives us the percentage of accuracy and shows us how our model is performing. More the value towards 1, more accurate the Linear Regression model is.
+
+When we have good positive correlation, then the Rsquared value increases.
+
+The equation of the Rsquared is such that, as more the features increases the Rsquared value keeps increasing. If there is positive correlation of the independent feature with the dependent feature then the Rsquared value increases more. If there is no correlation of the independent feature with the dependent feature then the Rsquared value increases less. This is the problem with respect to Rsquared, eventhough there is no correlation the Rsquared value increases.
+In order to prevent this, we use Adjusted Rsquared. Adjusted Rsquared penalizes with respect to every feature that are not correlated with the output feature.
+The equation of Adjusted Rsquared is:
+Adjusted Rsquared = 1 - (1-R^2)(N-1)/N-P-1, where N is number of data points and P is number of independent features.
+
+MSE, MAE, RMSE ->
+
+MSE: Mean Squared Error, MAE: Mean Absolute Error, RMSE: Root Mean Squared Error.
+
+MSE equation:
+MSE = Summation((y - yihat)^2/n), where n is the number of data points, y is the actual value of the observation and yihat is the predicted value of the ith observation.
+Our best fit line must be created such that the Cost Function should keep on reducing.
+
+(y - yihat)^2 is a quadratic equation because it is in the format of ax+by+c, (a - b)^2 = a^2 - 2ab + b^2.
+Whenever we have a quadratic equation and if we plot the quadratic equation, then we will be getting Gradient Descent. In Gradient Descent we will be having Global Minima. Our aim is to come to the Global Minima or come closer to the Global Minima, because there the Error will be less.
+The Gradient Descent is differentiable at all points. It is differentiable because it forms a Gradient Descent, so at every point we will be able to calculate the slope and based on that we can reduce the coefficient and reach the Global Minima.
+
+If we have a local minima, the convergence will go ahead and stop over there because there the slope will be zero. But in real we need to reach the global minima.
+
+In convex function we will be having one local minima or one global minima.
+In non convex function we will be having both local minima and global minima.
+
+Because of the outlier there would be change in the best fit line, that is why MSE is not robust to the outliers.
+
+MAE equation:
+MAE = 1/nSummation(y - yihat)
+
+RMSE equation:
+RMSE = sqrt(1/nSummation(y - yihat)^2)
+
+As a starter, we should try to check all of this.
+
+Notes:
+Mean Squared Error measures the amount of error in statistical models. It assesses the average squared difference between the observed and predicted values. When a model has no error, the MSE equals zero. As model error increases, its value increases.
+Mean Absolute Error is a measure of the average size of the mistakes in a collection of predictions, without taking their direction into account. It is measured as the average absolute difference between the predicted values and the actual values and is used to assess the effectiveness of a regression model.
+The root mean squared error measures the average difference between a statistical model's predicted values and the actual values. Mathematically, it is the standard deviation of the residuals.
+
+Overfitting and Underfitting ->
+
+While training the model with the training dataset, would never know about test dataset.
+We further split the Training data to Train and Validation. Train part is used to train the model and Validation is used for Hyperparameter Tuning the Model. We combine Train and Validation data in order to make the model performance better.
+
+When the model gives very good accuracy to the Training Data and very good accuracy to the Test Data, such model is known as Generalized model as it is working well with both Training and Test Data.
+
+Very Good Accuracy is Low Bias in Training Data and Very Good Accuracy is Low Variance in Test Data.
+
+Suppose we have a scenario where the model gives very good accuracy(90%) to the Training Data but bad accuracy(50%) to the Test Data, then we say that the Model is Overfitting.
+We say that the Model is Overfitting when the Model has been trained well with the Training Dataset but with respect to the new data points it is not able to predict.
+Very Good accuracy is Low Biased in Training Data and Bad Accuracy is High Variance in Test Data.
+
+When the model gives Low Accuracy with respect to the Training Data and Low Accuracy with respect to the Test Data, then we say that the Model is Underfitting.
+Low Accuracy is High Bias in Training Data and Low Accuracy is High Variance in Test Data.
+
+We should always try to find out the Generalized Model where the Training(90%) and Test Accuracy(85%) should be good.
+
+Linear Regression with OLS ->
+
+OLS: Ordinary Least Square.
+
+OLS technique basically says that, if we have specific data points. Can we apply some formula and calculate beta0(intercept) and beta1(coefficient).
+The aim of OLS is that we should try to reduce the error between the predicted and true points with respect to any best fit line.
+
+OLS method will approximately be giving the same value when compared to Normal Linear Regression using SKLearn.
+
+Simple Linear Regression Practical ->
+
+Multicollinearity is a scenario wherein if we have 2-3 independent features and the correlation between those features are high than we can neglect those features which are highly correlated, we can take either of the feature.
+Independent features should be 2 dimensional array or data frame because it can contain more than 1 independent feature.
+Dependent feature should be 1 dimensional array or series because it contains only 1 dependent feature.
+When the output value is continuous, we say it as regression problem statement.
+
+Standardization:
+We take up each independent feature and we apply Z-score, which will be converting all our values with mean=0 and standarddeviation=1.
+There are algorithms where Standardization may not be applied.
+
+In Test Dataset, we use only transform and we take mean and standarddeviation of Train Dataset to calculate the Z-score.
+If we use fit_transform for Test Data, then mean and standarddeviation will calculated for Test Dataset, which would lead to Data Leakage.
+We dont want our Training Data to know any  info about Test Data.
+The model that is created, the Train Data should be the truth value, the Train Data information should only be known.
+When the model sees the Test Data, it should see as a new data so that then only we will be able to understand that our model is performing well or not.
+
+Any algorithm that we will be seeing in the fit, and whatever training data that we are giving it should always have a 2d array. In the output we can have 1d array.
+
+We have got coefficient, hence one unit movement in the weight value, that leads to 17.29 movement in the height value.
+We have got intercept, hence when the weight value is zero, at 156.47 is meeting with our y axis.
+
+Multiple Linear Regression ->
+
+The shaded region basically shows that we can Hyperparameter Tune the particular line to some level.
+
+If we have 1000 records, then we split the data into Train and Test, we give 900 records to the Train and 100 to the Test. Further we will split Train to Train and Validation.
+If we take cross validation(cv) as 5, and divide 900 by 5, we get 180 records.
+In the 1st experiment we take first 180 records as Test Data and remaining 720 records as Train Data.
+In the 2nd experiment we take second 180 records as Test Data and remaining 720 records as Train Data.
+In the 3rd experiment we take third 180 records as Test Data and remaining 720 records as Train Data.
+In the 4th experiment we take fourth 180 records as Test Data and remaining 720 records as Train Data.
+In the 5th experiment we take fifth 180 records as Test Data and remaining 720 records as Train Data.
+
+For every Cross Validation we will get MSE. The MSE comes from the scooring parameter. The MSE value will be negative. The more the value comes to zero, the more better the model is.
+
+Notes:
+In Linear Regression, residuals is the difference between the actual value and the value predicted by the model (y - yihat) for any given point. If we plot the residuals with the help of displot and the kind of plot we take is kde plot, then we will get a Normal Distribution.
+If we get Normal Distribution, the model that we have created is good.
+
+Polynomial Regression Intuition ->
+
+In Simple Linear Regression, our main aim was to create a best fit line with one input feature and one output feature.
+If we have more than one input feature, so we basically have to select a 3d plane.
+If there is 3-dimensional point with respect to x, y and z, where z is the output feature then we will have to create a 3d plane.
+If there is more than 3-dimension, then we would probably have to create a Hyperplane.
+
+If we have dataset, which does not have a Linear Relationship or have a Non Linear Relationship. If we try to create a best fit line, the difference between the true value and the predicted value or the error would be quite high.
+
+In this case we have to create a line that captures the non linear points, then for any input point we would be able to do the prediction, then it will have error less. For this we would be using Polynomial Regression.
+
+When we increase the degree value, then the best fit line that we create will fit the dataset points very much properly.
+When we increase the degree value to some higher value, then it will cause overfitting and overfit the model.
+Hence we need to play with the degree values, we should select a degree value which should not underfit or overfit the model, it should generalize the specific model.
+
+Ridge Regression, Lasso Regression and ElasticNet Regression ML Algorithms =>
+
+Ridge Regression ->
+
+Ridge Regression is used in reducing the Overfitting.
+If we get an accuracy of 100%, consider it as the model is overfitting. We should never get Training accuracy as 100%.
+Ridge Regression is also known as L2 Regularization.
+
+We can consider Ridge Regression as a new Algorithm which will help us to Hyperparameter Tune the Linear Regression.
+Cost Function equation:
+1/2mSummation(htitha(x) - y)^2 + lambdaSummation(Slope)^2.
+When we are adding Lambda and Slope^2, the situation is going to be such that we are never going to get best fit line that passes exactly through the training data points. This is how Ridge Regression is making sure that the Overfitting does not happen.
+
+When lambda is 0, we will have the the Cost Function of Linear Regression.
+When we increase the value of lambda with respect to titha, it will get multiplied to slope^2, we will get new Gradient Descent and then you will be able to see that the Global Minima has changed. Lambda can be considered as Hyperparameter.
+The relationship between lambda and slope is when lambda is increasing then the slope will decrease.
+
+Ridge Regression is reducing Overfitting by reducing the impact by reducing the coefficient of the feature that are not directly corelated with the output feature. Here we can see x3 is hardly corelated by 0.24, and further it is trying to reduce the value and it will have less impact on the best fit line.
+
+Lasso and ElasticNet ->
+
+Lasoo Regression is also called as L1 Regularization. We use Lasso Regression for Feature Selection.
+Cost Function equation:
+1/2mSummation(htitha(x) - y)^2 + lambdaSummation|Slope|.
+With the help of lambdaSummation|Slope| equation, we will try to do Feature Selection. Features that are not important will automatically get deleted and features that are important will be considered.
+
+When the lambda value increases, the titha value keeps decreasing. But after 1 point of time, the titha value will become zero, therefore the coefficient is actually becoming zero. When the coefficient becomes zero, we are removing the feature.
+We use Lasso Regression when we have many features, because automatically it is going to find out features that are not highly correlated, it will just remove it by making the coefficient to zero.
+
+ElasticNet is the combination of both Ridge Regression and Lasso Regression.
+We try to reduce overfitting and also do Feature Selection.
+Cost Function equation:
+1/2mSummation(htitha(x) - y)^2 + lambdaSummation(Slope)^2 + lambdaSummation|Slope|.
+When we have a model that is Overfitting and has a lot of Features, then we can use ElasticNet Regression.
+Hence Ridge, Lasso and ElasticNet are Hyperparameter Tuning the Linear Regression.
+
+Types of Cross Validation ->
+
+When we are Validating the Dataset, we are also Hyperparameter Tuning it. Hyperparameter Tuning means playing with multiple parameters.
+We use Test Data to check the performance of the Model based on new data. The Test Data will only be shown to the Model after the Model is trained completely, validated completely, then only the new Test Data will be shown, and then we check the performance by seeing lot of performance metrics.
+
+We apply Cross Validation during splitting of Training Dataset into Training and Validation.
+There is an important parameter called as Random State while splitting the Training Data. As we change the Random State value, you will be seeing that we will always be getting separate Training Data and separate Validation Data. In different splits we may get different percentage of Accuracy. As a Data Scientist, we should be saying that my Model is giving an average accuracy of some specific value, and for that specific thing we will be using Cross Validation.
+
+Different types of Cross Validation:
+
+Leave One Out Cross Validation (LOOCV).
+Leave P Out Cross Validation.
+K Fold Cross Validation.
+Stratified K Fold Cross Validation
+Time Series Cross Validation
+
+Leave One Out Cross Validation (LOOCV):
+Suppose we take Dataset of 500 records, we give 1 record for Validation and rest of the records for Training to calculate the Accuracy, and continue this for 500 experiments and calculate the average accuracy.
+The disadvantage with respect to this is, as the dataset size increases the complexity of training the model also increases.
+The second disadvantage is that, this model leads to Overfitting.
+This means during the training data and its accuracy is very high, since the validation data is small the accuracy keeps decreasing. When we test the same model with the new test data, then the model performance will go down.
+
+Leave P Out Cross Validation:
+Here we can select the P value, like 10 20 30 etc....
+
+K Fold Cross Validation:
+Lets take 500 records of Dataset, and K value as 5, hence if we divide 500/5 we get 100 as Test Size.
+Hence, in the Experiment 1, 100 data will be the Validation Data and Training Data will be 400.
+In the next experiment, the next 100 data will be Validation Data and the rest will be Training Data.
+For different experiments we will be getting different accuracy.
+We can caluculate the Average Accuracy.
+As a Data Scientist we can calculate the Maximum Accuracy, the Minimum Accuracy and the Average Accuracy with the help of Cross Validation Dataset.
+
+Disadvantage of K Fold Cross Validation is, suppose if we are solving a Classification problem, there may be a scenario in the test data or validationn data that there may be high possibiltiy that only 1 type of category may come in the data.
+Lets say if it is a Binary Classification problem, in the Validation Data the scenario may be that all the outputs are 1 or 0. We may not get the right combination of 1 and 0 as my output, hence the model will not be able to train itself properly.
+
+Notes:
+Cross Validation is used for Hyperparameter Tuning along with to check how the model perfoms with respect to the validation dataset.
+
+Stratified K Fold Cross Validation:
+This Cross Validation makes sure that whatever validation we are doing with respect to K Validation the number of outputs in the Validation Data is evenly distributed, lets say 60 1s and 40 0s.
+
+Time Series Cross validation:
+In this the Cross Validation will happen based on days or based on some time.
+We have to make sure that whenever we are doing split it happens based on days.
+In Time Series Application we will be using this Time Series Cross Validation.
+
+Notes:
+Multicollinearity basically means the independent feature should not be that much correlated based on some threshold values.
+
+Basic Simple Linear Regression Project ->
+
+train_test_split gives 4 parameters X_train, X_test, y_train, y_test, we will be using X_train and y_train dataset, X_train is the input feature(independent feature) and y_train is the output feature(dependent feature) for the training dataset. For testing the model we will take X_test and y_test.
+
+Standardizing the data is important, because in the dataset height-weight.csv, the feature weight is calculated in different unit and height is calculated in different unit, and if we see the scatter plot also, weight is ranging between 40 to 100, we need to scale down this data so that our gradient descent optimization will happen quickly. If we are having very big value between 40 to 100, everytime we have to calculate the cost function by calculating the best fit line, finding the error. While we are finding the errorthere will be a bigger number, so what if we scale down all this weight value in a standardized format and then probably train the model, in this way we will be able to quickly optimize or converge in the gradient descent, so that is the reason we really need to do Standardization.
+It is not that Standardization needs to be performed in every Algorithm, wherever there is distance based Algorithms, wherever there is optimization kind of Algorithms, there we will be specifically Standardizing.
+In Linear Regression Standardization needs to be applied.
+StandardScaler is nothing but we are applying the Z-score formula.
+We need to Standardize our Test data also based on the observation that we have got from the training data.
+scaler.fit_transform(X_train), it will go and compute what is the mean and what is the standard deviation of X_train and it is going to change the value by applying Z-score on every data point of X.
+fit will compute the mean and standard deviation of X_train, and transform will go ahead and apply the Z-score formula on every data point.
+For X_test, we will just write transform
+scaler.transform(X_test)
+The reason we are doing this is because that we dont need to again calculate our mean and standard deviation, the mean and standard deviation that is utilized in the Z-score, it is basically being used from the X_train itself. The model should not know anything about the test data. The reason we do is because of Data Leakage.
+
+LinearRegression model will be responsible in finding the best fit line and also all the slopes of the independent features.
+
+regressor.fit(X_train,y_train), when we do this and execute it, this is going to find out all the points with respect to different titha0(intercept) value and titha1(slope). The fit() method is used to train a Machine Learning model. Training a model involves feeding it with data so it can learn the underlying patterns. When a model object is created, its parameters are initialized. The fit() method adjusts the model parameters based on the input data X and the target values y. The model tries to minimize the error between its predictions and the actual target values.
+regressor.coef_, will give you the slope value of independent feature.
+regressor.intercept_, will give you the value of the intercept.
+
+htitha(x) = titha0 + titha1x1, where tithat0 is 157.5 and titha1 is 17.03. For every xi data points, we are going to apply the formula(htitha(x) = titha0 + titha1x1).
+
+mse = mean_squared_error(y_test,y_pred_test), we are trying to compare and finding out the accuracy.
+mae = mean_squared_error(y_test,y_pred_test).
+rmse = np.sqrt(mse).
+The less the value of the above is, the more better the model is.
+As the value keeps increasing, the model is performing even better.
+R squared Formula:
+R2 = 1 - SSR/SST.
+Adjusted R squared Formula:
+R2 = 1 - [(1 - R2) * (n - 1) / (n - k - 1)].
+R squared value will always be greater than Adjusted R squared.
+
+With respect to Linear Regression Model, whenever you get a new data point, lets say the weight is 80, lets do the prediction for 80, the scaled weight is 0.3235, we have to give this value for the prediction. The prediction for the weight 80kgs is height 163.01.
+
+Notes:
+Residuals is nothing but the difference between y_test and y_pred_test.
+residuals = y_test - y_pred_test.
+
+Assumptions:
+When we plot the scatter plot, here we will be able to see that the scatter plot will be linearly distributed. If it is linearly distributed then we have done a very good prediction.
+If we plot the residuals, and if we get normal distribution then we are able to come to a conclusion that we are able to create a better model.
+If we create a scatter plot with respect to prediction and residuals, it should be a uniform distribution. Uniform Distribution means the data points will be available in both positive and negative sides, then this can be considered as a very good model.
+
+We create a pickle file for the model, and will be used for the deployment purpose.
+
+Multiple Linear Regression Projects with Assumptions ->
+
+In Multiple Linear Regression we will be finding out multiple different coefficients or slopes based on the number of independent features but only 1 intercept.
+When the accuracy is less, it may not be a good model. We may have to apply different type of Algorithms to perform well.
+Since we just focus on creating a straight line, the accuracy will not be that good.
+
+One final thing we have to after creating a model, suppose if we want to take this model and deploy it in Production, so in what format we can probably take it up so that the prediction can be done over there in the cloud, so for that we will be using pickling concept.
+
+Model Training with Cross Validation using Lasso Regression ->
+
+Whenever we take a dataset. It is initially divided into Train and Test dataset. The Train dataset will further be divided into Train and Validation dataset. The Train data is used for training the model. With the help of Validation data, we will perform Hyperparameter Tuning.
+
+Lets say we have 1000 datapoints in the Training data. If we have Cross Validation as 5, then 1000/5 will be 200 datapoints. In the first instance, for CV = 1, first 200 datasetes will be Validation dataset for Testing the model. The remaining 800 will be put in the Training data. We will find out the accuracy 1. In CV = 2, the next 200 datasets will be Validation dataset and the remaining 800 will be for the Training data. We will find out the accuracy 2. We will do the same till CV = 5 and find out the accuracy 5.
+
+When we find the average accuracy, that will be the accuracy of the model, and will be called as the Final accuracy.
+
+Notes:
+Alpha and Lambda are the same.
+Whichever Algortihm is giving the best accuracy, we can convert that into the pickle file and use that specific model for the prediction.
+We will pickle the machine learning model, we will also pickle the preprocessing model which is for the StandardScaler. This 2 model, we are going to use it when we are doing the deployment.
+
+End to End ML Project Implementation ->
+
+Machine Learning Project Lifecycle:
+Initially when we start ML Project, we start with Data Collection by reading the data from some specific sources like MongoDB, MySQL or Hadoop.
+Then after the Data Collection step, we perform EDA, where we try to understand the data.
+Then we perform Feature Engineering, in FE we handle missing values, we clean the data, we have to do feature scaling and create pickle file after that which was for the Standardization process.
+Then we perform Feature Selection, not all the availbale features should be used in the dataset, only the most important features, we should also check multicollinearity.
+Then we train our model, we select the best model and create the pickle file and this pickle file was saved in the Hard Disk.
+After our model is created, we have to create a web application using Flask, the application will have a form which will take all the inputs required to do the prediction from the model.
+Then we can do the deployment using AWS, Cloud.
+
+render_template('index.html') will look for the folder templates and will find index.html file inside that. If the file or folder is not present, then the code will not work.
+0.0.0.0 is mapped to the local ip address of the any machine that you are working.
+
+Project Deployment in AWS ->
+
+We have our code available in the Github repository and we have to do the deployment in the AWS using Elastic Beanstalk. It is a kind of Linux Machine where we will be able to create the environment, where we will be able to run the code, where we will be able to run the application in short.
+There needs to be configurstion done in the codebase repository.
+Pipeline is like a medium where in we will be able to connect the Github repository to the deployment environment, and whenever we make any changes to the Github environment, we will be able to automatically deploy just by a click of button.
+This pipeline will be created using Code Pipelines available in AWS. Code Pipelines is just like a connecting medium between the Github Repository and the Elastic Beanstalk.
+
+Can Linear Regression solve Classifier problem ->
+
+Logistic Regression is used for solving Binary Classification Problem.
+What does Binary Classification Problem actually mean?
+Let's say we have a specific dataset, and let the output feature will be a categorical feature. Over here, specifically we will be having binary categories.
+We say it as a Classification Problem because in our output we have 2 categories or binary categories.
+
+Why do we say Regression even though it is a Classification Problem?
+If we have to solve, can we solve Binary Categories problem with the help of Linear Regression?
+Main aim of Linear Regression is to find out the best fit line, which ever will be the minimaml error we will try to create the best fit line.
+
+With respect to Linear Regression Algorithm if we try to solve Binary Categories problem, then if we get anything less than 0.5 we will consider it as 0, and if we get anything more than 0.5 we will consider it as 1.
+
+The problem with Linear Regression is, supposr if we introduce an outlier in our training dataset. If we re-train our model with this outlier, the best fit line will get slanted towards outlier. The best fit line will completely change because of the outlier, now most of the data points which that were initially with respect to that many number of hohurs which were giving 1 will now be basically be giving 0 as the output. So this is the biggest blunder. So this is one of the issue with Linear Regression.
+The another issue is that, in some cases the output will be greater than 1 and in some cases we will get a negative value, but in Binary Classification we should be getting the value between 0 to 1. So this is again a problem with Linear Regression. This is why we cannot use Linear Regression for Classification.
+We will have to basically squash the line at 0 and 1 then we will always get the value between 0 and 1, and this squashing is only possible with the help of Logistic Regression.
+
+Logistic Regression Indepth Math Intuition ->
+
+We know that the best fit line can be created with the equation:
+htitha(x) = titha0 + tithat1x1.
+But we dont want this equation, as we are squashing the line at 0 and 1.
+We will be using Sigmoid Activation whose value will always be between 0 and 1 and mod one will be our 0.5.
+We are going to apply the Sigmoid Activation function on the best fit line.
+Sigmoid Activation equation:
+1/1+e^-z.
+When z value is greater than or equal to 0, then sigmoid(z) will always be greater than or equal to 0.5.
+
+In Logistic Regression also we create a best fit line and on top of that we apply Sigmoid Activation.
+
+The equation of the best fit line changes with respect to Logistic Regression:
+htitha(x) = sigmoid(titha0 + titha1x1) with respect to one independent feature.
+Consider, z = titha0 + titha1x1.
+and sigmoid = 1/1+e^-z.
+Then, htitha(x) = 1/1+e^-z, where z = titha0 + titha1x1, which is nothing but Logistic Regression Hypothesis.
+
+We will not get Gradient Descent with the Logistic Regression Cost Function.
+Gradient Descent is actually a convex function.
+Logistic Regression is actually a non convex function.
+
+We get a different kind of curve in case of Logistic Regression, which is non convex. Whenever it is non convex, it will create Local Minima.
+The disadvantage with respect to Local Minima is the slope will always be 0. When the slope is 0, the titha will always remain stagnant. It wont be able to increase or decrease to come to the Global Minima.
+We will try to get Convex Function that is required in terms to get the global minima by using something called as Log Loss.
+The new Cost Function will give us the Convex Function or we can also call it as Gradient Descent.
+Our main aim is to minimize the cost function by changing the titha0 and titha1.
+We try to repeat the Convergence Algorithm, where we keep on updating the tithaj value, and where j is equal to 0 and 1.
+If we have multiple features, j value keeps on increasing.
+
+Performance Metrics ->
+
+Performance Metrics are specifically used in Binary Classification and Multi Class Classification.
+Logistic Regression is a Classification Problem and we try to split the graph by creating a linear line.
+Confusion Classification in case of Binary Classification is a two cross two matrix.
+The top 1 0 indicates the actual values and the left 1 0 indicates the predicted values.
+The diagonal elements are the correct results.
+Confusion Matrix is important in deriving Accuracy, Precision, Recall, F-Beta score.
+True Positive and True Negative are the correct results.
+False Positive and False Negative are the wrong results.
+If we have Multi Classification then Confusion Matrix will not become two cross two, if we have number of output categories as 3 then Confusion Matrix will become three cross three. If the number of output categories as 4 then Confusion Matrix will become four cross four.
+When the dataset is imbalanced, we cannot directly use Accuracy.
+In an imbalanced dataset we can get biased results for Accuracy, in order to fix this we can use Precision and Recall.
+
+When we have imbalanced dataset, we should not be using Accuracy.
+With Precision, we are going to find out, of all the predicted values how many are correctly predicted.
+With the Precision and Recall, we should try to reduce the False Positive value and False Negative value.
+When we try to reduce False Positive, then we use Precision.
+When we try to reduce False Negative, then we use Recall.
+
+In F-Beta score, when both False Positive and False Negative are important then Beta value is 1 in the formula.
+When False Positive is more important than False Negative then Beta value is 0.5 in the formula.
+When False Negative is more important than False Positive then Beta value is 2 in the formula.
+
+Logistic Regression OVR ->
+
+Lets say we have 3 or more than 2 specific categories, then we call it as Multi Class Classification Problem.
+One important parameter in Logistic Regression is One versus Rest.
+One versus Rest can be used to solve Multi Class Classification Problem.
+
+Suppose we have 3 output categories, with the help of OVR we try to create internally multiple models, and each and every model will act as a Binary Classification. Since we have 3 categories, then 3 models will be created.
+At the end, we are going to combine all the 3 outputs and then we are going to decide to which block it belongs. That is the agenda of One Versus Rest(OVR).
+
+It will do One Hot Encoding of the output categories.
+Internally we will be having 3 models since we have 3 outputs, and finally averaging all this we will get our output model of the classification. In Model M1, we will have f1, f2, f3 as the input features and O1 as the output feature. Similarly for Model M2, we will have f1, f2, f3 as the input features and O2 as the output feature and for Modle M3, we will have f1, f2, f3 as the input feature and O3 as the output feature.
+
+As soon as the new data gets passed, it first gets passed to M1 model, lets say M1 Model is giving some probability. M1 model output is O1, and we get some probability for the M1 model. Then it is given to the M2 model, and we get some probability for the M2 Model. Then it is given to the M3 model, and we get some probability for the M3 model.
+
+Whenever we get a new test data, all the 3 models will give you different probabilities, whichever will be the highest probability then we can understand that for which model is basically giving that specific probability and what this Model has take as the output feature while training. So here we can see O3 has been taken by M3, so that is the reason we basically say that for this new data the output is Category 3.
+
+Logistic Regression Implementation ->
+
+make_classification is going to create a dataset in the classification approach, basically it will try to create some independent feature and it will create output feature. In the output feature we can say that how many categories we want. It will cretae the dataset in such a way that, we dont even have to do Standarization. So we are skipping that step, so that we can focus on the implementation part.
+
+Grid Search Hyper Parameter ->
+
+We are going to see 2 techniques with respect to Hyper Parameter Tuning:
+1. Grid Search CV
+2. Randomized Search CV.
+
+With the help of Grid Search CV, we will be trying to find out the best parameter that will be fit for this specific dataset.
+
+Hyperparameter Tuning is done to select the best parameters that can get applied. With the help of Grid Search CV, what we do is that, we try to see the combination of every parameters.
+Randomized Search CV will take less amount of time when compared to Grid Search CV because it will try to take the sample of the combination and it will try to train the model.
+
+Randomized Search CV ->
+
+In Grid Search CV, whatever algorithm we are basically using and hyper parameter tuning it, it usually takes all the combination of all the parameters that we are using. So usually when we take all the combination, it will take more time. So in order to overcome this, we basically use Randomized Search CV. In Randomized Search CV, what it will do is that, it will make sure that it will pick up random attributes or random parameters and then it will try to create some or it will try to find out what parameters will be suitable for a specific problem statement.
+
+Logistic Regression ROC ->
+
+What does the roc auc curve give us?
+It gives us two important thing, one is False Positive rate and the other is the True Positive Rate.
+If we plot TPR in the y-axis and FPR in the x-axis, we will be then able to get roc_curve.
+
+Based on all this Threshold value, we will compute the TPR and FPR and we will keep on plotting in the points, and then wherever there is a high TPR and less FPR, we will capture that particular point and that threshold will be selected for the Logistic Regression. Hence anything greater than that threshold will be 1 and anything lesser than that threshold will be 0.
+
+Introduction to Support Vector Machine ->
+
+Support Vector Machine Algorithm helps us to solve both Classification and Regression problems. If we are solving a Classification problem, we basically say this as Support Vector Classifier(SVC) and in the case of Regression, we basically say Support Vector Regressor(SVR).
+To understand Support Vector Machine, it is really important that we need to understand Logistic Regression.
+In Logistic Regression, suppose if we have 2 categories of points, lets say it is a Binary Classification. In Logistic Regression our main aim is to create a best fit line, that is a line between the 2 particular points such that this line is able to clearly separate them, and this is what we basically do with respect to Logistic Regression.
+
+In Support Vector Machine, in Support Vector Classifier, we create a best fit line in 2-dimension, in case of 3-dimension it becomes a plane, in case of n-dimension it becomes a hyperplane. In Support Vector Classifier, along with the best fit line, we also try to create 2 more lines and these lines are basically called as marginanl planes.
+The marginal planes should be equal distance, and marginal planes should be created in such a way that the distance between this marginal plane should be maximum.
+
+We need to select the best fit line with distance between the marginal plane should be maximum for doing the classification.
+
+The another thing that we need to understand here is that, with the marginal plane passes through one of the nearest point from this particular plane, these points are basically called as Support Vectors.
+
+The aim of Support Vector Machine is that, we need to create a best fit line along with we need to create the marginal planes, so that we will be able to categorize the point very clearly or classify the point very clearly.
+In 3-dimensional plane also we need to create the plane along with the marginal planes and the distance between this marginal plane should be maximum.
+
+Soft Margin and Hard Margin ->
+
+In real world scenario, we will not have fully completely separable marinal points. There will be lot of overlapping. In overlapping we cannot clearly separate just by using best fit line and marginal plane, there would definitely be some amount of errors. Errors means the points may be coming in other category as well. This situation is basically caleed as Soft Margin. In Soft Margin, some amount errors will always be there.
+
+In a scenario, where we are clearly separating all the points and we dont have any errors. This scenario is basically called as Hard Margin.
+
+In Hard Margin we dont get errors, in soft margin we get some amount of errors because there is a lot of overlapping.
+
+SVM Maths Intuition ->
+
+The equation of the best fit line is given by:
+wTransposex + b = 0
+
+Earlier, we have already discussed that, the equation of straight line is given by:
+ax + by + c = 0
+we can also write this as:
+w1x1 + w2x2 + b = 0
+which can also be written as:
+wTransposex + b = 0
+If the line passes through origin, then b = 0, then we can write it as:
+wTransposex = 0
+
+w is perpendicular to the best fit line that means it has a 90 degree angle.
+Whenever the angle between w and a co-ordinate is greater than 90 degree, then with respect to the co-ordinate and the distance between the co-ordinate and the hyperplane(best fit line) will be negative. So any points that are there below the best fit line and if we try to calculate the distance, it is always going to be negative.
+Similarly with respect to the co-orinates that are above the best fit line, the angle between w and the co-ordinate will always be between 0 to 90 degree. So any points that are above the best fit line and if we try to calculate the distance , it is always going to be positive.
+
+Unit Vector basically means where the magnitude of that vector is 1.
+If we really want to see how this magnitude of the vector will be 1, we just divide wTranspose with the magnitude of w i.e., ||w||.
+It is always a good idea that we need to come up with a unit vector because all the points will be normalized within the value between 0 to 1.
+
+The RHS will be the Cost Function, we need to maximize the RHS value because it is basically the distance between the 2 marginal planes and it needs to be maximum.
+We need to maximize the Cost Function by changing w,b.
+
+SVC Cost Function ->
+
+In Machine Learning, we always try to minimize the Cost Function.
+C(i) and Eeta(i) are Hyper Parameter.
+This specific Hyper Parameter is called as Hinge Loss.
+
+Support Vector Regression ->
+
+It is a regression problem stataement because all the output feature is a continuous value.
+In SVR, our main aim should be to basically create the best fit line along with the marginal plane in such a way that the distance between the predicted points and the real points, if we do the summation it should be really less.
+Epsilon is Marginal Error, means the distance between marginal plane and the best fit line.
+
+Most of the points will be falling withing the marginal planes. If it is falling within the marginal plane that basically means that the difference between the real point and the predicted point will always be less than or equal to Epsilon.
+There will be some points that are outside the marginal planes, we should also be considering this points when we are constructing our marginal planes along with the best fit line.
+For this, we define one more parameter called as Eeta(i). Eeta(i) basically says that it, points that are outside the marginal planes will be a deviation from our top marginal plane and from our bottom marginal plane, that if we are getting, we should also consider as Hyper Parameter to construct our marginal plane along with the best fit line. This value is basically Eeta(i) with respect to the distance.
+
+When the C value keeps on increasing, the Loss Function then keeps on decreasing.
+Epsilon is marginal error and Eeta(i) is the error above the margin.
+
+SVM Kernels ->
+
+Support Vector Classifier(SVC) is also known as Linear SVC.
+
+If the points are distributed all over the graph or around the graph or are not linearly separable, if we try to use Linear SVC and try to create the best fit line.
+For this kind of scenario, Linear SVC will not work since all the points are overlapped and are not clearly separable. During this scenario, the accuracy will go low and error will be high if we use Linear SVC Model.
+
+Whenever we have this kind of scenarios where the data points are not linearly separable, we can definitely use something called as SVM Kernels.
+With the help of SVM Kernels, we are going to apply some Transformation (some mathematical formula) on this dataset. When we apply the Transformation it will create 3-dimension data point.
+The data points have been converted from 2-dimension to 3-dimension by using Transformation technique. The data points after the Transformation is clearly separable, now with the help of Linear SVC we can create a 3d hyperplane. The accuracy will the definitely will go higher.
+
+Different types of Kernels:
+
+Polynomial Kernel
+RBF Kernel
+Sigmoid Kernel
+
+Support Vector Regression Implementation ->
+
+The reason we should definitely divide the data into train and test before doing Feature Encoding, there will always be problem of data leakage if we dont divide this into train and test. Data Leakage basically means the model should have no information about the test data.
+
+Naive Bayes Theorem =>
+
+Understanding Baye's Theorem ->
+
+Naive Bayes Algorithm is specifically used to solve Classification problems, both Binary and Multi Class Classification. In order to understand Naive Bayes, we need to have basic idea of Probability. Conditional Probability will be used in Naive Bayes Machine Learning Algorithm.
+
+If in a generic way, we can write the Probability equation of Dependet or Conditional event:
+P(A and B) = P(A) * P(B/A)
+
+This is what we are going to use for deriving the Baye's Theorem.
+
+Based on Baye's Theorem the entire Naive Baye's Algorithm works.
+
+The below equation is called as Baye's Theorem:
+P(A/B) = (P(A) * P(B/A)) / P(B)
+
+We will understand how the above equation will be used in Machine Learning problem statement.
+
+The same equation can be written for independen and dependent events like:
+P(y/x1,x2,x3) = (P(y) * P(x1,x2,x3/y)) / P(x1,x2,x3)
+
+The above equation is all about Naive Baye's Machine Learning Algorithm.
+
+Refer the Course Material 1.0-Naive+Bayes+Classifier+Indepth+Intuition.pdf.
+
+Naive Baye's Machine Learning Algorithm uses Baye's Theorem to probably calculate everything.
+In short the Naive Baye's Algorithm calculates the probabilities like 'Yes' or 'No', if it is a Multi Class Classification based on the input features that we are getting.
+
+The output is just a probability, but we should try to make this in the form of 100%.
+
+Naive Baye's solves any kind of Classification Problem, let it be with respect to Binary Classification or Multi Classification.
+
+Variants of Naive Baye's ->
+
+There are 3 Types of Naive Baye's Variants:
+
+Bernoulli Naive Baye's
+Multinomial Naive Baye's
+Gaussian Naive Baye's
+
+Bernoulli Naive Baye's:
+Whenever your independent features are following a Bernoulli Distribution, then we need to use Bernoulli Naive Bayes Algorithm to solve Classification Problem.
+Whenever we have Bernoulli kind of Distribution feature then we should apply Bernoulli Naive Baye's to solve this Classification Problem.
+
+Multinomial Naive Baye's:
+Whenever we have the input data in the form of Text and it is a Classification Problem, then we can probably use Multinomial Naive Baye's.
+We need to convert this text into numerical values, which we also call it as Vectors. The reason we need to convert it into the numerical values because the model will not be able to understand the sentence, we will be converting it into numerical values using NLP techniques.
+
+Gaussian Naive Baye's:
+If the independent features are following Gaussian Distribution (little right skewed or left skewed will also work well), then we use Gaussian Naive Baye's for Classification Problem.
+Even though if it is of a different Distribution, then we convert this into Normal Distribution.
+Whenever we have continuous features, we specifically use Gaussian Naive Baye's.
+What if we have some of the features as Bernoulli Distribution? Then we need to see that which of the maximum features ar having Continuous values or Bernoulli Distribution. If it is having maximum Bernoulli Distribution, then we can go ahead with Bernoulli Naive Baye's, but if we have features that are continuous or which have multiple categories inside it, not Bernoulli then we can go ahead with Gaussian Naive Baye's. At the end we have to convert those multiple categories feature to numerical categories.
+
+Naive Baye's Practical Implementation ->
+
+The Bernoulli Distribution are in the form of Sparse Matrix. Sparse MAtrix means maximum number of 1s and 0s are available in the Dataset.
+Whenever we have this kind of Sparse Matrix, so in this particular case we can either use Bernoulli Naive Baye's or we can use Multinomial Naive Baye's.
+In Multinomial Naive Baye's, we specifically use for NLP Problem Statements.
+
+K Nearest Neighbour ML Algorithm =>
+
+KNN Classification and Regression Indepth Intuition ->
+
+We have to use this Algorithm to probably test the new data point. The steps are:
+1. We have to initialize the K value. K can be any number which will be greater than 0 and can go to infinity. K=4 means, K has 4 neighbours. K value can be considered as a Hyperparameter. Hyperparameter basically means, the K value can change based on various datasets.
+We have define different K values and then come to a conclusion that what should be the K value which can actually give us the highest accuracy.
+2. Find the K Nearest Neighbour for the Test Data.
+If K=5, it will find 5 nearest neighbours for the test data
+3. Find those K=5, how many neighbours belong to 0 category and how many neighbours belong to 1 category.
+The final output for the test data will be belonging to the data with the most K neighbours category.
+
+We have to use some distance metrics or some formula to finding out the K Nearest Neighbours for the particular test data point. We use 2 different types of Distance Formula:
+1. Eucledian Distance, used to find out the distance between 2 points.
+2. Manhattan Distance, used to find out the distance between 2 points using Base and Adjacent.
+
+Most of the time, people use Eucledian Distance or which ever has the highest accuracy we can probably use that.
+
+For Formula, refer the Course Material 1,0-KNN+Classification+And+Regression.pdf.
+
+In Regression, we have to find out the 5 nearest data points from the Test data and find out the average of thos 5 Nearest data points to find out the output.
+If we have outliers, then we can go ahead with the Median.
+
+When we have 2 categories of data points, whenever we have new Test Data. We have to calculate the distance between all the points and then we have to take the top 5 Nearest Neighbours. There would be a problem when we have millions of data points. Then, calculating the distance between each and every point to the Test Data will be a very cubersome process. Time Complexity will obviously be high. So we use variants of K Nearest Neighbours. The variants are:
+1. KD Tree
+2. Ball Tree
+With the help of the above tree, we basically optimize the entire distance calculation. The trees are created in Binary Tree Format and hence wont calculate the distance between all the points. It will be reduced by half.
+
+Optimization of KNN - KD Tree and Ball Tree Indepth Intuition ->
+
+KD Tree:
+Our aim is that to find out the way that, whenever we try to find out the K Nearest Neighbour we should not go and check distance of each and every point.
+For this, we will try to create a new tree which is called as KD Tree which is in the form of a Binary Tree Format. With the hlep of Binary Tree Format, we are reducing the number of searches.
+
+Refer the Course Material 2.0-KD+Tree+Ball+Tree+.pdf.
+
+Find the median of the Features.
+Take the nearest point of the median value.
+
+Once we get the Median value, we will draw a line projecting it into the x axis at the nearest point of the Median. Because of the line, we have 2 main regions. The region has come by finding out the Median value of the Feature.
+We create a new line for the next Feature and projecting it into the y axis at the nearest point of the Median. We can continue further and find out the Median of the points present in the different regions and create a new line either projecting it into the x axis or into the y axis at the neares point of the Median.
+By creating this we are actually creating a split, and when we are creating a split, the split will be cconsidered into the Binary Tree.
+
+If any new point comes, and then we have to calculate the distance, it will come in a specific region and we should check that specific region. From that specific region, we have to find the nearest point by tracking the Binary Tree and back tracking the binary tree to find the next nearest point. By this, we decrease the Time Complexity.
+
+Ball Tree:
+In Ball Tree, we dont have to do the back tracking. In Ball Tree, the concept is very simple. Whichever is the nearest point, we group them together and create Groups.
+Next we can combine the nearest Groups, and finally we combine the entire Group. We have combined them with respect to Clusters.
+When we get a new data point, we will know which is the nearest neighbour point.
+So this way because of the Group we are directly able to get the elements instead of searching each and every element and calculating the distance. By this, we decrease the Time Complecity.
+
+KNN Classifier and Regressor Classification ->
+
+Whenever we have features that are randomly distributed in feature dimensions, we should definitely take Eucledian distance.
+
+Decision Tree Classifier and Regressor =>
+
+Introduction to Decision Tree ->
+
+Random Forest, Xg Boost uses Decision Tree internally.
+Decision Tree can be used to solve both the kinds of Problem Statement, that is Classification and Regression Problem Statement.
+Two types of Decision Tree Classifier:
+1. ID3
+2. Cart
+The basic difference between ID3 and Cart is that, in Cart whenever we are creating a Decision Tree, we create only Binary Splits, whereas in ID3 we can create more than Binary Splits.
+Decision Tree will be working like if, else if condition
+Decision Tree will try to create in the bottom to top approach.
+
+Impure Split is such a split which can further have Binary Split and does not have a leaf node.
+Pure Split is such a split which has no further Binary Split and have a leaf node.
+The Split continues to happen until and unless we get Leaf node.
+
+For finding out mathematically whether the split is a pure split or an impure split, we can use Entropy and Gini Index.
+If we select a particular feature and if we are able to get the leaf node quickly, that means the feature selected is correct.
+But if we select a feature, that may not give a leaf node or it may take time to give you a leaf node, then that is bad.
+So for this particular case, we use something called as Information Gain.
+
+Entropy and Gini Impurity ->
+
+p+ is nothing but probability of being positive, or 1.
+p- is nothing but probability of being negative, or 0.
+
+If we have a very impure split, when number of yes and no are equal. Then the maximum split value will have 1.
+For the pure split, the maximum split value will have 0.
+For the probability of + and -, the value will be between 0 and 1. If we say probability of + is 0.5, then probability of - is 0.5.
+
+Whenever we have probability of + as 0.5 or probability of - is 0.5, the maximum valaue that we can get is 1. This is a complete impure split.
+In case of Entropy, the values will always be between 0 and 1.
+
+In case of Gini Impurity, if it is a complete impure split, the maximum value will be 0.5.
+For the pure split, the maximum value will be 0.
+In case of Gini Impurity, the values will always be between 0 and 0.5.
+
+How do we decide which features to basically select to make the decision tree split? For this, we will try to understand about Information Gain.
+With the help of Gini Index and Entropy, we are definitely able to find out whether the node split is pure split or impure split.
+
+Information Gain ->
+
+How do we determine which feature to select in order to start the split? For that we will be using Information Gain.
+
+For Formula, refer the Course Material Decision+Tree+Classifier+.pdf.
+
+When we have an impure split, then the Entropy of the Category will be 1.
+We can select the feature which has the highest Gain to start the split.
+Decision Tree internally checks all this conditions.
+This is how Information Gain is calculated.
+
+When should we use Entropy and when should we use Gini Index?
+
+Entropy vs Gini Impurity ->
+
+Whenever the dataset is small we can use Entropy. For example 10000 records.
+With respect to small datasets, the difference between the time that is going to take to train the model will be minimal between Entropy and Gini Impurity.
+When the dataset is large, then try to use Gini Impurity.
+
+By default, whenever we use Decision Tree Classifier, then use Gini Impurity.
+
+Decision Tree Split for Numerical Features ->
+
+What if we get a feature, which has continuous values rather than categorical values. In this scenario how should we go ahead and do the decision split?
+First we will sort the feature values in ascending order.
+We create many Decision Trees, in every Decision Tree, we will have a Threshold, lets consider the Threshold will have the first value. The root node will have the first value.
+
+To understand which split is better, we basically use the Information Gain. So whichever has the highest Information Gain we will be selecting that specific split.
+The Time Complexity will usually be high when we will have millions of records.
+
+Post Pruning and Pre Pruning ->
+
+In Decision Tree, whenever we try to do the split completely to its depth with respect to the training dataset, usually we face a scenario called as Overfitting.
+Overfitting basically means your train accuracy is very high because we have done splitting completely till the end. But with respect to the Test Accuracy, the accuracy will be very very low. This scenario we basically say it as Overfitting.
+With Overfitting, we get Low Bias and High Variance. Bias is for Training data and Variance is for Test data.
+In order to reduce Overfitting we can use 2 different techniques:
+1. Post Pruning
+2. Pre Pruning
+
+Post Pruning basically means, we will construct the decision tree completely and then after that we can start Pruning it or Cutting it with respect to depth. We Prune it so that it does not lead to Overfitting scenario. Post Pruning should be applied for smaller datasets because the Time Complexity will be high when we have millions of records.
+
+Pre Pruning basically means, while we are constructing the decision tree, we dont have to construct the decision tree entirely like how we did it in Post Pruning, hence while we are constructing the decision tree, we can play with some of the parameters. We have some parameters like max_features, max_depth. All these parameters are basically some of the Hyperparameters.
+In short in Pre Pruning, we tune with the Hyperparameters while constructing decision tree.

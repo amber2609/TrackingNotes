@@ -1,0 +1,454 @@
+Day 1: 12/01/2026
+Section 1: Getting Started
+1. Welcome to the Course - 3 mins
+2. Complete Materials - 1 mins
+3. Anaconda installation - 12 mins
+4. Getting started with VS code - 13 mins
+
+Section 2: Python Programming Language
+5. Getting Started with VS code - 11 mins
+6. Different ways of Creating Virtual Environment - 8 mins
+7. Solve Conda not recognized issue - 1 min
+8. Python Basics-Syntax and Semantics - 20 mins
+9. Variables in Python - 19 mins
+10. Basic Data Types in Python - 10 mins
+11. Operators in Python - 16 mins
+12. Coding Exercise and Assignments - 1 min
+
+Section 3: Python Control Flow
+13. Conditional Statements (if, elif, else) - 21 mins
+14. Loops in Python - 28 mins
+15. Coding Exercise and Assignments - 1 min
+
+Day 2: 13/01/2026
+Section 4: Inbuilt Data Structures in Python
+16. List and Lis Comprehension in Python - 37 mins
+17. List Practice Code and Assignment - 1 min
+18. Tuple in Python - 23 mins
+19. Tuple Assignment and Practice Code - 1 min
+20. Sets in Python - 21 mins
+21. Sets Assignment and Practice Code - 1 min
+22. Dictionaries in Python - 38 mins
+23. Dictionaries Assignment and Practice Questions - 1 min
+24. Real world Usecases of list - 10 mins
+
+Day 3: 14/01/2026
+Section 5: Functions in Python
+25. Getting started with Functions - 24 mins
+26. More coding examples with Functions - 28 mins
+27. Lambda Function in Python - 10 mins
+28. Map Function in Python - 11 mins
+29. Filter Function in Python - 9 mins
+30. Functions Assignments and Practice Content - 1 min
+
+Sectionn 8: Importing Creating Modules and Packages
+31. Import Modules and Packages in Python - 17 mins
+32. Standard Library Overview - 18 mins
+33. Packages Assignment and Practice Questions with Solutions - 1 min
+
+Section 9: File Handling in Python
+34. File Operation in Python - 17 mins
+35. Working with File Paths - 9 mins
+36. File Handling Operation Assignment with Solutions - 1 min
+
+Section 10: Exception Handling in Python
+37. Exception Handling with try except else and finally blocks - 25 mins
+38. Exception Handling Practice assignments and solution - 1 min
+
+Day 4: 15/01/2026
+Section 11: OOPS Concepts with Classes and Objects
+39. Classes and Objects in Python - 23 mins
+40. Classes and Objects Practice Questions and Solutions - 1 min
+41. Inheritance in OOPS - 19 mins
+42. Polymorphism in OOPS - 19 mins
+
+Day 5: 16/01/2026
+43. Encapsulation in OOPS - 22 mins
+44. Abstraction in OOPS - 9 mins
+45. Practics Assignments with Solutions - 1 min
+46. Magic Methods in Python - 8 mins
+47. Operator Overloading in Python - 9 mins
+48. Custom Exception Handling - 7 mins
+49. Complete OOPS Practice Questions with Solutions - 1 min
+
+Section 12: Advance Python
+50. Iterators in Python - 6 mins
+51. Generators with Practical Implementation - 11 mins
+52. Function Copy, Cloures and Decorators - 21 mins
+53. Advance Python practice Questions and Solutions - 1 min
+
+Day 6: 17/01/2026
+Section 13: Data Analysis with Python
+54. Numpy in Python - 28 mins
+55. Pandas - Dataframe and Series - 29 mins
+56. Data Manipulation with Pandas and Numpy - 25 mins
+57. Reading data from various data source using Pandas - 15 mins
+58. Data Visualization with Matplotlib - 31 mins
+59. Data Visualization with Seaborn - 19 mins
+60. Pandas and Numpy Assignments and Solutions - 1 min
+
+Section 14: Working with Sqlite3
+61. Crud Operations with SQLite3 and Python - 17 mins
+62. SQLite3 Assignments and Solutions - 1 min
+
+Section 15: Logging in Python
+63. Logging Practical Implementation in Python - 15 mins
+64. Logging with Multiple Loggers - 5 mins
+65. Logging with a Real World Example - 8 mins
+66. Logging Assignments and Solutions - 0 min
+
+Section 16: Python Multi Threading and Multi Processing
+67. What is Process and Threads - 14 mins
+68. 2-Multithreading Practical Implementation with Python - 12 mins
+69. Multiprocessing Practical Implementation with Python - 7 mins
+70. Thread Pool Executor and Process Pool - 8 mins
+71. Implement Web Scraping usecase with Multithreading - 10 mins
+72. Real World usecase Implementation with Multiprocessing - 6 mins
+
+Section 17: Memory Management with Python
+73. Memory Allocation and Deallocation Garbage collection and Best Practices - 21 mins
+
+Day 7: 18/01/2026
+Section 18: Getting started with Flask Framework
+74. Introduction to Flask Framework - 12 mins
+75. Understanding simple Flask App Skeleton - 13 mins
+76. Integrating HTML with Flask Web App - 9 mins
+77. Working with HTTP Verbs Get and Post - 12 mins
+
+Day 8: 19/01/2026
+78. Building Dynamic Url, Variables rule and Jinja 2 Template Engine - 37 mins
+79. Working with Rest API's and HTTP Verbs Put and Delete - 24 mins
+
+Section 19: Getting started with Streamlit Web Framework
+80. Building Web App using Streamlit - 17 mins
+81. Example of ML App with Streamlit Web App - 8 mins
+
+Section 20: Getting started with Statistics
+82. What is Statistics and its Application - 9 mins
+83. Types of Statistics - 8 mins
+84. Population vs Sample Data - 4 mins
+85. Measure of Central Tendency - 11 mins
+86. Measure of Dispersion - 11 mins
+87. Why Sample Variance is divided by n-1? - 8 mins
+88. Standard Deviation - 6 mins
+89. What are Variables? - 9 mins
+90. What are Random Variables - 8 mins
+91. Histograms - Descriptive Statistics - 9 mins
+92. Percentile and Quartiles - Descriptive Statistics - 11 mins
+93. 5 Number Summary - Descriptive Statistics - 10 mins
+
+Day 9: 20/01/2026
+94. Correlation and Covariance - 39 mins
+
+Section 21: Introduction to Probability
+95. Addition Rule (For Mutual and Non Mutual Exclusive Events) - 13 mins
+96. Probability-Multiplication Rule (Independent and Dependent Events) - 9 mins
+
+Section 22: Probability Distribution Function for Data
+97. The relationship between PDF, PMF and CDF - 32 mins
+98. Types of Probability Distribution - 8 mins
+99. Bernoulli Distribution - 24 mins
+100. Binomial Distribution - 17 mins
+101. Poisson Distribution - 13 mins
+102. Normal/Gaussian Distribution - 15 mins
+103. Standard Normal Distribution and Z Score - 15 mins
+
+Day 10: 21/01/2026
+104. Uniform Distribution - 15 mins
+105. Log Normal Distribution - 11 mins
+106. Power Law Distribution - 8 mins
+107. Pareto Distribution - 6 mins
+108. Central Limit Theorem - 11 mins
+109. Estimates - 7 mins
+
+Section 23: Inferential Statistics
+110. Hypothesis Testing and Mechanism - 7 mins
+111. What is P value - 12 mins
+
+Day 11: 22/01/2026
+112. Z Test - Hypothesis Testing - 27 mins
+113. Student t Distribution - 5 mins
+114. T Stats with T test Hypothesis Testing - 11 mins
+115. Z test vs T test - 4 mins
+116. Type 1 and Type 2 Error - 5 mins
+117. Bayes Theorem - 10 mins
+118. Confidence Interval and Margin of Error - 8 mins
+119. What is Chi Square Test - 8 mins
+120. Chi Square Goodness of Fit - 12 mins
+121. Annova Test - 5 mins
+122. Assumptions of Annova - 5 mins
+123. Types of Annova - 8 mins
+124. Partitioning of Variance in Annova - 24 mins
+
+Section 24: Feature Engineering
+125. Handling Missing Values - 20 mins
+126. Handling Imbalanced Dataset - 13 mins
+
+Day 12: 23/01/2026
+127. Handling Imbalanced Dataset using Smote - 14 mins
+128. Handling Outliers using Python - 8 mins
+129. Data Encoding - Nominal or OHE - 13 mins
+130. Label and Ordinal Encoding - 10 mins
+131. Target Guided Ordinal Encoding - 5 mins
+
+Day 13: 24/01/2026
+Section 25: Exploratory Data Analysis and Feature Engineering
+132. Red Wine Dataset EDA - 24 mins
+133. EDA and Feature Engineering Flight Price Dataset - 30 mins
+134. Data Cleaning with Google Playstore Dataset - 26 mins
+135. Part 2 - EDA Google Play Store Cleaned Dataset - 19 mins
+
+Section 26: Introduction to Machine Learning
+136. Introduction - 9 mins
+137. Types of ML Techniques - 15 mins
+138. Equation of Line, 3d, and Hyperplane - 14 mins
+139. Distance of a point from a plane - 7 mins
+140. Instance based vs Model based learning - 16 mins
+
+Day 14: 26/01/2026
+Section 27: Understanding Complete Linear Regression indepth intuition and Practicals
+141. Simple Linear Regression Introduction - 6 mins
+142. Understanding Simple Linear Regression Equations - 9 mins
+143. Cost Function - 20 mins
+144. Convergence Algorithm - 12 mins
+145. Convergence Algorithm Part 2 - 13 mins
+146. Multiple Linear Regression - 7 mins
+147. Performance Metrics - 17 mins
+148. MSE, MAE, RMSE - 23 mins
+149. Overfitting and Underfitting - 11 mins
+150. Linear Regression with OLS - 22 mins
+151. Simple Linear Regression Practical - 46 mins
+152. Multiple Linear Regression - 32 mins
+153. Polynomial Regression Intuition - 11 mins
+154. Polynomial Regression Implementation - 23 mins
+155. Pipeline in Polynomial - 5 mins
+
+Day 15: 27/01/2026
+Section 28: Ridge, Lasso and ElasticNet ML Algorithms
+156. Ridge Regression - 16 mins
+157. Lasso and ElasticNet - 9 mins
+158. Types of Cross Validation - 19 mins
+159. Cleaning the Dataset - 23 mins
+160. EDA and Feature Engineering - 26 mins
+161. Feature Selection - 17 mins
+162. Model Training - 9 mins
+163. Hyperparameter Tuning - 12 mins
+
+Day 16: 28/01/2026
+Section 29: Step by Step Project Implementation with Lifecycle of ML Project
+164. Basic Simple Linear Regression Project - 41 mins
+165. Multiple Linear Regression Projects with Assumptions - 27 mins
+166. Basc Regression Project from Scratch - EDA and Feature Engineering - 17 mins
+167. Model Training with Cross Validation using Lasso Regression - 25 mins
+168. Model Training with Ridge and Elastice Net with Cross Validation - 5 mins
+169. Model Pickling in ML Project - 3 mins
+170. End to End MLProject Implementation - 32 mins
+171. Project Deployment in AWS- 13 mins
+
+Section 30: Logistic Reggression
+172. Can LinearRegression Solve Classsifier Problem - 12 mins
+173. Logistic Regression Indepth Math intuition - 19 mins
+174. Performance Metrics - 23 mins
+175. Logistic Regression OVR - 10 mins
+
+Day 17: 29/01/2026
+176. Logistic Regression Implementation - 13 mins
+177. Grid Search Hyper Parameter - 13 mins
+178. Randomised Search CV - 5 mins
+179. Logistic OVR - 4 mins
+180. Logistic Imbalanced Dataset - 10 mins
+181. Logistic Regression ROC - 19 mins
+
+Section 31: Support Vector Machines
+182. Introduction to Support Vector Machine - 9 mins
+183. Soft Margin and Hard Margin - 2 mins
+184. SVM Maths Intuition - 12 mins
+185. SVC Cost Function - 7 mins
+186. Support Vector Regression - 10 mins
+187. SVM Kernels - 11 mins
+188. Support Vector Classifiers - 18 mins
+189. SVM Kernels Implementation - 14 mins
+190. Support Vector Regression Implementation - 21 mins
+
+Day 18: 30/01/2026
+Section 32: Naive Bayes Theorem
+191. Understanding Baye's Theorem - 35 mins
+192. Variants of Naive Baye's - 11 mins
+193. Naive Baye's Practical Implementation - 10 mins
+
+Section 33: K Nearest Neighbour ML Algorithm
+194. KNN Classification and Regression indepth - 16 mins
+195. Optimization of KNN-KD Tree and Ball Tree indepth intuition - 15 mins
+196. KNN Classifier and Regressor Classification - 6 mins
+
+Day 19: 31/01/2026
+Section 34: Decision Tree Classifier and Regressor
+197. Introduction to Decision Tree - 13 mins
+198. Entropy and Gini Impurity - 12 mins
+199. Information Gain - 9 mins
+200. Entropy vs Gini Impurity - 3 mins
+201. Decision tree split for numerical features - 5 mins
+202. Post Pruning and Pre Pruning - 8 mins
+203. Decision Tree Regression - 21 mins
+204. Decision Tree Implementation - 17 mins
+205. Decision Tree Prepruning - 8 mins
+206. Diabetes Prediction using decision tree Regressor - 11 mins
+
+Section 35: Random Forest Machine Learning
+207. Bagging and Boosting Ensemble Techniques - 15 mins
+208. Random Forest Regression - 12 mins
+209. Problem Classification - 3 mins
+210. Feature Engineering Part 01 - 13 mins
+211. Feature Engineering Part 02 - 9 mins
+212. Model Training Step - 12 mins
+213. Random Forest Regression Project-Problem Statement - 2 mins
+214. Feature Engineering - 12 mins
+215. Model Training - 7 mins
+
+Section 36: Adaboost MAchine Learning Algorithm
+216. Introduction to Adaboost ML Algorithm - 12 mins
+217. Creating Decision Tree Stump - 8 mins
+218. Performance of Decision Tree Stump - 8 mins
+219. Updating Weights - 5 mins
+220. Normalising Weights and Assigning Bins - 6 mins
+221. Selecting New Datapoints for Next Tree - 6 mins
+222. Final Prediction for Adaboost - 5 mins
+223. Adaboost Model Training - 12 mins
+224. Adaboost Regressor Model Training - 8 mins
+
+Section 37: Gradient Bossting
+225. Gradient Boosting Regression - 15 mins
+226. Gradient Boost Classifier Training - 9 mins
+227. Gradient Boost Regression Model Training - 10 mins
+
+Section 38: Xgboost Machine Learning Algorithm
+228. Xgboost Classification Indepth Intuit - 29 mins
+229. Xgboost Regressor - 22 mins
+230. Model Training Xgboost - 8 mins
+231. Xgboost Regressor Training - 5 mins
+
+Section 39: Unsupervised Machine Learning
+232. Introduction to Unsupervised Machine Learning - 8 mins
+
+Section 40: PCA
+233. Curse of Dimensionality - 14 mins
+234. Feature Selection and Extraction - 18 mins
+235. PCA Geometric Intuition - 16 mins
+236. PCA Maths Intuition 01 - 11 mins
+237. Eigen Decomposition on Covariance Matrix - 17 mins
+238. PCA Implementation - 12 mins
+
+Day 20: 01/02/2026
+Section 41: K Means Clustering Unsupervised ML
+239. Kmeans Clustering Geometric Intuition - 13 mins
+240. How to find K Values? - 11 mins
+241. Random Initialisation Trap(Kmeans++) - 5 mins
+242. K means Clustering Implementation - 20 mins
+
+Section 42: Hierarichal Clustering
+243. Hierarichal Clustering - 15 mins
+244. Agglomerative Clustering Implementation - 14 mins
+245. Kmeans vs Hierarichal Mean Clustering - 4 mins
+
+Section 43: DBSCAN Clustering
+246. How DBSCAN Works? - 9 mins
+247. Examples After Applying DBSCAN - 3 mins
+248. Pros and Cons of DBSCAN - 7 mins
+249. DBSCAN Clustering Implementation - 6 mins
+
+Section 44: Silhoutte Clustering
+250. Silhoutte Clustering Intuition - 9 mins
+
+Section 45: Anomaly Detection Machine Learning Algorithms
+251. Anomaly Detection using Isolation Forest Indepth Intuition - 23 mins
+252. DBSCAN Clustering Anomaly Detection - 8 mins
+253. Local Outlier Factor Anomaly Detection - 7 mins
+
+Day 21: 02/02/2026
+Section 48: End to End Machine Learning Project with AWS, Azure Deployment
+266. End to End ML Project with Deployment-Github and Code Set up - 38 mins
+267. Implementing Project Structure, Logging and Exception Handling - 34 mins
+268. Discussing Project Problem Statement, EDA and Model Training - 38 mins
+269. Data Ingestion Implementation - 26 mins
+270. Data Transformation using Pipelines Implementation - 37 mins
+
+Day 22: 03/02/2026
+271. Model Trainer Implementation - 25 mins
+272. Model Hyperparameter Tuning Implementation - 7 mins
+273. Building Prediction Pipeline - 27 mins
+274. ML Project Deployment using AWS Beanstalk - 17 mins
+275. Deployment EC2 Instance with ECR - 42 mins
+
+Day 23: 04/02/2026
+276. Deployment Azure with Container and Images - 25 mins
+
+Section 49: End to End MLOPS Projects with ETL Pipelines - Building Network Security System
+277. Project Structure set up with Environment - 18 mins
+278. Github Repository set up with VS Code - 12 mins
+279. Packaging the Project with setup.py - 17 mins
+280. Logging and Exception Handling Implementation - 14 mins
+281. Introduction to ETL Pipelines - 8 mins
+282. Setting up MongoDB Atlas - 12 mins
+283. ETL Pipeline setup with Python - 22 mins
+284. Data Ingestion Architecture - 5 mins
+285. Implementing Data Ingestion Configuration - 18 mins
+286. Implementing Data Ingestions Component - 34 mins
+
+Day 24: 05/02/2026
+287. Implementing Data Validation - Part 1 - 28 mins
+288. Implementing Data Validation - Part 2 - 35 mins
+289. Data Transformation Architecture - 19 mins
+290. Data Transformation Implementation - 31 mins
+291. Model Trainer Implementation - Part 1 - 25 mins
+292. Model Trainer and Evaluation with Hyperparameter Tuning - 20 mins
+293. Model Experiment Tracking with MLFLOW - 16 mins
+294. MLFLOW Experiment Tracking with Remote Repository Dagshub - 10 mins
+295. Model Pusher Implementation - 4 mins
+
+Day 25: 06/02/2026
+296. Model Training Pipeline Implementation - 27 mins
+297. Batch Prediction Pipeline Implementation - 12 mins
+298. Final Model and Artifacts pusher to AWS S3 buckets - 20 mins
+299. Building Docker Image and Github actions - 11 mins
+300. Github action - Docker Image push to AWS ECR Repo Implementation - 18 mins
+301. Final Deployment to EC2 Instance - 24 mins
+
+Section 50: NLP for Machine Learning
+305. Roadmap to learn NLP for Machine Learning - 16 mins
+306. Practical use cases of NLP - 6 mins
+
+Day 26: 07/02/2026
+307. Tokenisation and Basic Terminologies - 11 mins
+308. Tokenisation Practicals - 14 mins
+309. Text Preprocessing Stemming using NLTK - 20 mins
+310. Text Preprocessing Lemmatization NLTK - 10 mins
+311. Text Preprocessing Stopwords - 20 mins
+312. Parts of Speech Tagging using NLTK - 11 mins
+313. Named Entity Recognition - 6 mins
+314. What's Next? - 11 mins
+315. One Hot Encoding Intuition - 8 mins
+316. Advantages and Disadvantages of OHE - 12 mins
+317. Bag of Words Intuition - 10 mins
+318. Advantages and Disadvantages BOW - 10 mins
+319. BOW Implementation using NLTK - 21 mins
+320. N Grams - 7 mins
+321. N Gram BOW Implementation using NLTK - 7 mins
+322. TF-IDF Intuition - 10 mins
+323. Advantages and Disadvantages of TF-IDF - 5 mins
+324. TF-IDF Practical Implementation Python - 7 mins
+325. Wird Embeddings - 7 mins
+326. Word2Vec Intuition - 18 mins
+327. Word2Vec CBOW Intuition - 20 mins
+328. SkipGram Indepth Intuition - 10 mins
+329. Advantages of Word2Vec - 4 mins
+330. Average Word2Vec Indepth Intuition - 7 mins
+331. Word2Vec Practical Implementation Gensim - 8 mins
+332. Spam Ham Project using BOW - 12 mins
+333. Spam and Ham Project using TF-IDF - 5 mins
+334. Best Practices for Solving ML Problems - 10 mins
+
+Day 27: 08/02/2026
+335. Part 1 - Text Classification with Word2Vec and Average Word2Vec - 18 mins
+336. Part 2 - Text Classification with Word2Vec and Average Word2Vec - 15 mins
+337. Part 1 - Kindle Review Sentiment Analysis - 22 mins
+338. Part 2 - Kindle Review Sentiment Analysis - 8 mins

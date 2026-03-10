@@ -1,0 +1,306 @@
+Day 1: 06/12/2025
+Section 1: Before Web Dev Journey
+1. Course Introduction - Roadmap - 11 mins
+2. Meet your Instructor - Hitesh - 5 mins
+3. Lets talk about AI Hype - 6 mins
+4. Jobs salary range and skills - 10 mins
+5. What tools you need for Web Development - 10 mins
+6. How to setup your Code Editor - 18 mins
+
+Section 2: Code files - Download here
+7. Download course files
+
+Section 3: Basics of web development
+8. How does the internet works - 9 mins
+9. A big picture of web application - 5 mins
+10. Frontend Backend and APIs - 9 mins
+
+Section 4: Learn HTML
+11. Download Section files - 1 mins
+12. What is HTML - 13 mins
+13. Emmet, Headings and Block vs Inline - 30 mins
+14. Tables and Forms in HTML - 27 mins
+15. Building a Semantic HTML page - 21 mins
+16. Multimedia and ARIA in HTML - 14 mins
+Quiz 1: A quiz on HTML
+
+Section 5: Hands-on HTML Challenges
+Coding Exercise 1: Create a Simple Heading
+Coding Exercise 2: Create a Paragraph with a Link
+Coding Exercise 3: Create a Tooltip on Hover
+Coding Exercise 4: Create a Button
+Coding Exercise 5: Create an Unordered List
+Coding Exercise 6: Create a Simple Table
+Coding Exercise 7: Create a Form with Input Fields
+Coding Exercise 8: Create a Form with a Dropdown Menu
+Coding Exercise 9: Create an Image with Alt text
+Coding Exercise 10: Create a Hyperlink that Opens in a New Tab
+Coding Exercise 11: Create a Progress Bar
+
+Section 6: Learn about CSS
+17. Download section files - 1 mins
+18. The current state of CSS - 12 mins
+19. You can write CSS at 3 places - 14 mins
+20. Building a web project - Login page - 27 mins
+21. Masterclass on CSS selectors - 39 mins
+22. Box model, inline and block elements - 11 mins
+23. Navbar project with Pseudo element - 30 mins
+24. Twitter style navbar in CSS - 14 mins
+25. Dropdown navbars and positions - 15 mins
+
+Day 2: 07/12/2025
+26. Build a custom coming soon template Project - 33 mins
+27. Flexbox Masterclass - 24 mins
+28. Meet Grid Layout in CSS - You will love it - 19 mins
+29. Grid Masterclass - 32 mins
+30. Assignment to build cards from codepen - 7 mins
+31. Breakpoints for mobile tablet and web - 20 mins
+32. Hands on Bootstrap Integration - 18 mins
+33. Assignment - Build a complete page with this design - 4 mins
+Quiz 2: A quiz on CSS
+
+Section 7: Hands-on CSS Challenges
+coding Exercise 12: Change Text Color
+coding Exercise 13: Style a Button
+coding Exercise 14: Add a Dashed Border with Border radius
+coding Exercise 15: Styling Text with Font Properties
+coding Exercise 16: Create a Box with Padding and Margin
+coding Exercise 17: Create a Circle using Border Radius
+coding Exercise 18: Add a Box Shadow to an Element
+coding Exercise 19: Positions in CSS
+coding Exercise 20: Create a Responsive Flexbox Layout
+coding Exercise 21: Create a 3*3 Grid Layout
+
+Section 8: Learn Tailwind CSS
+34. Download section files - 1 min
+35. How to install tailwind 4 in vite and nextjs - 16 mins
+36. Tailwind setup with CDN and NodeJS - 27 mins
+37. Production ready login screen project - 21 mins
+38. Full potential of tailwind css - 10 mins
+39. How to build responsive design in tailwind - 13 mins
+40. Build any layout with Tailwind - Masterclass - 34 mins
+Quiz 3: A quiz on Tailwind
+
+Section 9: Hands-On TailwindCSS Challenges
+Coding Exercise 22: Style A Button with Tailwind CSS
+Coding Exercise 23: Center a Div using Flexbox
+Coding Exercise 24: Create a Basic Grid Layout
+Coding Exercise 25: Apply Box Shadow to a Card using Tailwind CSS
+Coding Exercise 26: Create a Donut Shape using Tailwind CSS
+Coding Exercise 27: Add Blur Effect to an Image
+Coding Exercise 28: Create a Gradient Colored Button using Tailwind CSS
+Coding Exercise 29: Create a Rotating Square Box using Tailwind CSS
+
+Day 3: 08/12/2025
+Section 10: Learn JS Foundation
+41. Download section files - 1 mins
+42. Javascript story - from console to v8 engine - 12 mins
+43. How javascript executes the code - Behind the scene - 13 mins
+Quiz 4: A mini JS quiz
+44. Datatypes, variables and constants in Javascript - 25 mins
+45. Operations in javascript - 21 mins
+46. Primitives in javascript - 23 mins
+47. Non Primitives in javascript - 21 mins
+48. Five challenges on conditions in javascript - 19 mins
+49. Facing ten challenges in Array and methods - 35 mins
+Quiz 5: A quiz on Array
+50. Introduction to loops in javascript - 21 mins
+51. Defeat 6 loop challenges in javascript - 26 mins
+52. Ten loop challenges to learn all kind of loops in javascript - 48 mins
+Quiz 6: A quiz on loops
+
+Day 4: 09/12/2025
+53. Function, arrow function, THIS and context in javascript - 26 mins
+54. Higher order function and nested functions in javascript - 20 mins
+
+Section 11: Hands-On JS Foundation Challenges
+Coding Exercise 30: Playing with Types
+Coding Exercise 31: Playing with Variables
+Coding Exercise 32: Arrays and Methods
+Coding Exercise 33: Loops
+Coding Exercise 34: Higher order functions and Arrow Functions
+Coding Exercise 35: Nested Functions and Context
+
+Section 12: Javascript - OOPS
+55. Download section files - 1 min
+56. A masterclass on Prototypes in javascript - 28 mins
+57. Functional constuctor and errors - 18 mins
+58. Classes Objects and inheritance in javascript - 20 mins
+59. Encapsulation, Polymorphism, Abstraction and getters and setters - 30 mins
+Quiz 7: An OOP quiz in javascript
+
+Section 13: Hands-On Javascript - OOPS Challenges
+Coding Exercise 36: Prototypes in Javascript
+Coding Exercise 37: Functional Constructor and Erros
+Coding Exercise 38: Classes, Objects, and Inheritance
+Coding Exercise 39: Encapsulation, Polymorphism, Abstraction, and Getters/Setters
+
+Section 14: Javascript in Browser - DOM and BOM
+60. Download section files - 1 min
+61. DOM and BOM basics in javascript - 21 mins
+62. Solving 5 challenges of DOM - 35 mins
+63. DOM finale with 5 more challenges - 34 mins
+
+Section 15: Advanced JS
+64. Download section files - 1 min
+65. Asynchronous Javascript with event loop - 18 mins
+66. Closures in Javascript - 5 mins
+67. Promises and promise chaining - 13 mins
+68. Prototypal Inheritance in javascript - 4 mins
+69. THIS and binding context - 5 mins
+70. Async-await and Promise all - 15 mins
+71. Iterators and Generators in Javascript - 7 mins
+72. ES6 Modules and CommonJS - 11 mins
+Quiz 8: Quiz on advance topics of Javascript
+
+Day 5: 10/12/2025
+Section 16: Hands-On Advanced JS Challenges
+Coding Exercise 40: Asynchronous JavaScript with Event Loop
+Coding Exercise 41: Closures in JavaScript
+Coding Exercise 42: Prototypal Inheritance in JavaScript
+Coding Exercise 43: THIS and Binding Context
+Coding Exercise 44: Async-Await and Promise.all
+Coding Exercise 45: Iterators and Generators in JavaScript
+
+Section 17: Projects in JS
+73. Download section files - 1 min
+74. Demo of project 1 - Todo with local storage - 5 mins
+75. Add a task in array - 10 mins
+76. Handling local storage and DOM event - 10 mins
+77. Event bubbling and CRUD operations - 19 mins
+
+Day 6: 11/12/2025
+78. Demo of API handling project - 5 mins
+79. Handle any type of API in your code - 37 mins
+80. Demo of Project 3 Ecommerce app - 2 mins
+81. Building ecommerce cart page - 27 mins
+82. Project 3 assignment - 2 mins
+83. Demo of project 4 Expense Tracker - 3 mins
+84. Expense tracker with localstorage and event deligation - 31 mins
+85. Demo of project 5 - quiz application - 4 mins
+86. Building a complete quiz app - 28 mins
+
+Day 7: 12/12/2025
+Section 18: Git and Github | Master version control
+87. Introduction to GIT series - 6 mins
+88. Git init and hidden folder - 17 mins
+89. Git commits and logs - 17 mins
+90. Git internal working and configs - 28 mins
+91. Git merge and git conflicts - 40 mins
+92. Git diff and stashing - 28 mins
+93. Git rebase is not that scary - 22 mins
+94. Insight of pushing code to github - 41 mins
+95. How to make Pull Request and Open Source contribution - 25 mins
+Quiz 9: A quiz on GIT and Github
+
+Section 19: Journey of Backend with NodeJS and Projects
+96. Download section files - 1 min
+97. Backend - NodeJS LibUV and source code - 19 mins
+98. Handling files in Nodejs as Project - 21 mins
+99. Build your own Nginx server with NodeJS - 36 mins
+100. Event Driven Architecture - Build your own logger - 26 mins
+
+Section 20: Introduction to Databases
+101. Introduction to databases - 11 mins
+102. SQL vs NOSQL Databases - 9 mins
+103. A quick tour of MongoDB - 10 mins
+
+Day 8: 13/12/2025
+Section 24: A mega course on React with projects - 10 Projects
+173. Download section files -  1 min
+174. React Roadmap - 19 mins
+175. Create react projects - 23 mins
+176. Understand the react flow and structure - 27 mins
+177. Create your own react library and JSX - 31 mins
+178. Why you need hooks and project - 19 mins
+179. Virtual DOM, Fibre and reconciliation - 14 mins
+180. Tailwind and Props in reactjs - 27 mins
+181. Building a react project bgChanger - 18 mins
+182. useEffect, useRef and useCallback with 1 project - 40 mins
+183. Custom hooks in react | Currency Project - 53 mins
+184. React router crash course - 56 mins
+185. 12 Context API in react | get the context - 29 mins
+186. Build a dark mode light mode in reactjs with context api - 29 mins
+187. Context API with local storage - 1 hr 8 mins
+
+Day 9: 17/12/2025
+Section 21: Building a complete Backend - New addition
+104. Download section files - 1 min
+105. Why this new section is here on Backend - 3 mins
+106. Building a fresh Backend project - 5 mins
+107. Importance of Project requirement document - 9 mins
+108. Preparing node project for backend - 7 mins
+109. Add prettier and git to the code base - 9 mins
+110. Auto restart your server - 6 mins
+111. Dot env files on backend - 8 mins
+112. A professional project structure - 8 mins
+113. Setup of basic express server - 10 mins
+114. Introducing postman for API testing - 8 mins
+115. Separation of app with index - 5 mins
+116. Express configuration and CORS - 13 mins
+117. Standard ApiResponse and API errors - 11 mins
+118. Keeping data in constants - 6 mins
+
+Day 10: 18/12/2025
+119. How to connect with MongoDB - 7 mins
+120. A guide on mongodb Atlas collection - 10 mins
+121. Write a healthcheck controller and routes - 14 mins
+122. Catch errors better with async Handlers - 10 mins
+123. Learn to write user schema in progress - 19 mins
+124. Hash the passwordwith pre hooks of mongoose - 8 mins
+125. Learn to handle mongoose methods - 5 mins
+126. What are JWT tokens - 8 mins
+127. Theory behind Access token and refresh token - 10 mins
+128. Code for access and refresh token with crypto module - 16 mins
+129. How to generate email templates - 10 mins
+130. How to send emails in nodejs - 15 mins
+131. How to register a user - 26 mins
+132. Routers for registering a user - 4 mins
+133. Test register woute with postman - 6 mins
+134. Writing custom validations - 21 mins
+135. Login user with tokens and cookie data - 16 mins
+136. Login validation and testing - 5 mins
+137. Write auth middleware - 15 mins
+138. How to securely logout a user - 9 mins
+139. Refresh Access token and resend verification email - 26 mins
+140. All password related controllers like forgot password and reset password - 19 mins
+141. All routes and validators of auth - 17 mins
+
+Section 22: Mega project in backend with MongoDB
+142. Download section files - 1 min
+143. Complete backend series - Launch - 11 mins
+144. Building web server with node and bun - 25 mins
+145. Express crash course with postman testing - 53 mins
+
+Day 11: 19/12/2025
+146. Write tests and documentation with Postman and deployment - 29 mins
+147. Advance logging with morgan and winston - 18 mins
+148. From idea to database design - 39 mins
+149. Database design for videoTube - 10 mins
+
+Day 12: 20/12/2025
+150. Backend project structure - 20 mins
+151. Connect database professionally in MERN - 30 mins
+152. Standarized error and response from server in MERN - 14 mins
+153. Healthcheck routes and testing with postman - 16 mins
+154. A guide to build models in MongoDB with aggregation plugin - 27 mins
+155. Hooks and methods in mongoose with JWT - 23 mins
+156. How to handle files in MERN application - 22 mins
+157. Registration with Ultimate debugging and refactoring - 1 hr 2 mins
+158. How to write login controller in MERN backend - 20 mins
+159. How to generate new refresh token in MERN backend - 19 mins
+160. How to write middleware in MERN backend - 24 mins
+161. Practice CURD in MERN backend - 22 mins
+162. How to get complex data with aggregation pipeline in MongoDB - 29 mins
+163. A postman assignment for you in routes - 13 mins
+164. Mega backend project assignment - 6 mins
+
+Day 13: 21/12/2025
+165. Download section files - 1 min
+166. MongoDB aggregation setup - 20 mins
+167. Grouping in MongoDB - 25 mins
+168. Group sum and more - 13 mins
+169. Dealing with arrays in integration - 14 mins
+170. Match and project pipeline - 16 mins
+171. Match all operators of aggregation - 21 mins
+172. Lookup in MongoDB aggregation - 10 mins

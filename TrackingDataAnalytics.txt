@@ -1,0 +1,481 @@
+Day 1: 04/11/2025
+Section 1: Introduction to the Course
+1. What does a Data Analyst do and its Roadmap - 18 mins
+
+Section 2: Getting started with Python
+2. Getting started with Google Colab - 7 mins
+3. Installation of Anaconda and Visual Studio Code - 12 mins
+
+Day 2: 05/11/2025
+Section 3: Complete Python with important Libraries
+4. Getting started with VS Code with environments - 11 mins
+5. Python Basics-Syntax and Semantics - 20 mins
+6. Variables in Python - 19 mins
+7. Basic Data Types in Python - 10 mins
+8. Operators in Python - 16 mins
+9. Coding Exercise and Assignments - 1 min
+10. Conditional Statements (if, elif, else) - 21 mins
+11. Loops in Python - 28 mins
+12. Coding Exercise and Assignments - 1 min
+
+Day 3: 06/11/2025
+13. List and List Comprehension in Python - 37 mins
+14. List practise code and assignments - 1 min
+15. Tuples in Python - 23 mins
+16. Tuple Assignment and Practise Code - 1 min
+17. Sets in Python - 21 mins
+18. Sets Assignment and Practise Code - 1 min
+19. Dictionaries in Python - 38 mins
+20. Dictionaries Assignments and Practise Questions - 1 min
+
+Day 4: 07/11/2025
+21: Real World usecases of List - 10 mins
+22. Getting started with Functions - 24 mins
+23. More Coding Examples with Functions - 28 mins
+24. Lambda Functions - 10 mins
+25. Map Function in Python - 11 mins
+26. Filter Function in Python - 9 mins
+27. Function Assignment with Solutions - 1 min
+
+Day 5: 08/11/2025
+28. Import Modules and Packages and Python - 17 mins
+29. Standard Library Overview - 18 mins
+30. File Operation in Python - 17 mins
+31. Working with File Paths - 9 mins
+32. Exception Handling with Try Except else finally blocks - 25 mins
+
+Day 6: 10/11/2025
+Section 4: Data Analysis with Python
+33. Numpy in Python - 28 mins
+34. Pandas-DataFrame and Series - 29 mins
+35. Data Manipulation with Pandas and Numpy - 25 mins
+36. Numpy Assignments with solution - 1 min
+37. Reading Data from various data source using Pandas - 15 mins
+
+Day 7: 11/11/2025
+38. Data Visualization with Matplotlib - 31 mins
+39. Data Visualization with Seaborn - 19 mins
+
+Section 5: Getting started with Statistics
+40. Introduction to Statistics - 10 mins
+41. Types of Statistics - 13 mins
+42. Population and Sample data - 16 mins
+43. Types of Sampling techniques - 23 mins
+44. Types of Data - 9 mins
+45. Scales of measurement of Data - 23 mins
+
+Day 8: 12/11/2025
+Section 6: Descriptive Statistics
+46. Measure of Central Tendency - 25 mins
+47. Measure of Dispersion - 23 mins
+48. Why sample variance is divided by n-1 - 8 mins
+49. Random Variables - 8 mins
+
+Day 9: 13/11/2025
+50. Percentiles and Quartiles - 11 mins
+51. 5 Number Summary - 18 mins
+52. Histogram and Skewness - 25 mins
+53. Covariance and Correlation - 39 mins
+
+Day 10: 14/11/2025
+Section 7: Probabiltiy Distribution Function and types of Distribution
+54. PDF, PMF, CDF - 32 mins
+55. Types of Probability Distribution - 8 mins
+56. Bernoulli Distribution - 24 mins
+57. Binomial Distribution - 17 mins
+58. Poisson Distribution - 13 mins
+59. Normal or Gaussian Distribution - 15 mins
+60. Standard Normal Distribution - 15 mins
+61. Uniform Distribution - 15 mins
+62. Log Normal Distribution - 11 mins
+63. Power Law Distribution - 8 mins
+64. Pareto Distribution - 6 mins
+65. Central Limit Theorem - 11 mins
+66. Estimates - 7 mins
+
+Day 11: 15/11/2025
+Section 8: Inferential Stats and Hypothesis Testing
+67. Hypothesis Testing and Mechanism - 7 mins
+68. P value and Hypothesis Testing - 12 mins
+69. Z test Hypothesis Testing - 27 mins
+70. Student t distribution - 5 mins
+71. T stats with T test and Hypothesis Testing - 11 mins
+72. Z test vs T test - 4 mins
+73. Type 1 and Type 2 Error - 5 mins
+74. Baye's Theorem - 10 mins
+75. Confidence Interval and Margin of Error - 8 mins
+76. What is Chi Square Test - 8 mins
+77. Chi Square Goodness of Fitness - 12 mins
+78. What is Anova - 5 mins
+79. Assumptions of Anova - 5 mins
+80. Types of Anova - 8 mins
+81. Patitioning of Anova - 24 mins
+
+Section 9: Feature Engineering with Python
+82. Feature-Engineering-Handling missing data - 20 mins
+83. Feature Engineering-Handling Imbalalnced dataset - 13 mins
+84. Feature Engineering-SMOTE - 14 mins
+85. Handling Outliers with Python - 8 mins
+86. Data Encoding-Nominal/One Hot enncoding - 13 mins
+87. Label and Ordinal Encoding - 10 mins
+88. Target Guided Ordinal Encoding - 5 mins
+
+Day 12: 16/11/2025
+Section 10: Exploratory Data Analysis
+89. Red Wine Dataset EDA - 24 mins
+90. EDA Flight Price Dataset - 30 mins
+91. Part 1-Data Cleaning Google Playstore Dataset - 26 mins
+92. Part 2-EDA Google Play Store Dataset - 19 mins
+
+Section 11: SQL: Course Introduction and Overview
+93. SQL Course Introduction - 3 mins
+94. SQL Overview - 11 mins
+95. SQL Server Download and Install - 11 mins
+
+Day 13: 17/11/2025
+Section 12: Microsoft SQL Server Basics
+96. SQL Select Statement - 14 mins
+97. SQL Select Distinct - 7 mins
+98. SQL Temporary Tables - 10 mins
+99. SQL Where Clause - 8 mins
+100. SQL Order By Clause - 7 mins
+101. SQL AND and or Operator - 11 mins
+102. SQL NOT, BETWEEN and IN Operators - 15 mins
+103. SQL Insert Into - 14 mins
+104. SQL Null Operator - 8 mins
+105. SQL Update Statement - 12 mins
+106. Delete, Drop and Truncate - 13 mins
+107. SQL Comments and Top N - 8 mins
+108. SQL MAX and Group By - 15 mins
+109. SQL MIN Function and Group By - 8 mins
+110. SUM, AVG, COUNT and Group By - 30 mins
+111. Group By Concept - 13 mins
+112. Group By Example SQL Server - 7 mins
+113. SQL Having Clause - 9 mins
+114. SQL Where and Having Clause Difference - 9 mins
+
+Day 14: 18/11/2025
+115. Inner Join Concept - 15 mins
+116. Inner Join Example - 11 mins
+117. Left Join Concept - 10 mins
+118. Left Join Example - 8 mins
+119. Right Join Concept - 8 mins
+120. Right Join Example - 10 mins
+121. Left and Right Anti Join - 18 mins
+122. Left and Right Anti Join Example - 4 mins
+123. Full Outer Join - 14 mins
+124. Self Join - 11 mins
+125. Union and Union All - 13 mins
+126. SQL Like Operator - 27 mins
+127. SQL Case in Select Statement and Order By Clause - 15 mins
+128. Nested CASE Statement - 11 mins
+129. SQL Data Types - 9 mins
+130. SQL Create Table
+131. Inserting Records into All Columns of the Table - 7 mins
+132. Inserting Records into Certain Columns in a Table - 6 mins
+133. Copying Data from One Table to Another - 17 mins
+134. Sub Queries - 13 mins
+135. Not Null Constraint - 13 mins
+136. Unique Constraint - 12 mins
+137. Check Constraint - 10 mins
+138. Default Constraint - 11 mins
+139. Primary and Foreign Key Concept - 9 mins
+140. Primary Key Constraint - 13 mins
+141. Foreign Key Constraint - 11 mins
+142. SQL Order of Execution - 9 mins
+
+Day 15: 19/11/2025
+Section 13: SQL Basics Questions
+143. Questions Set - 1 - 14 mins
+144. Questions Set - 2 - 19 mins
+145. Questions Set - 3 (Joins) - 23 mins
+146. Questions Set - 4 (Joins) - 30 mins
+
+Section 14: SQL Assignments
+Assignment 1: SQL Assignment 1
+Assignment 2: SQL Assignment 2
+Assignment 3: SQL Assignment 3
+Assignment 4: SQL Assignment 4
+Assignment 5: SQL Assignment 5
+
+Section 15: SQL Functions
+147. Rank, Dense Rank and Row Number Window Functions - 1 - 12 mins
+148. Rank, Dense Rank and Row Number Window Functions - 2 - 12 mins
+149. Window Functions - Lead Function - 15 mins
+150. Window Functions - Lag Function - 9 mins
+151. ISNULL and Coalesce Functions - 12 mins
+152. First_Value() Window Function - 12 mins
+153. Last_Value() Window Function - 14 mins
+
+Day 16: 20/11/2025
+Section 16: Advanced SQL
+154. Common Table Expressions - 1 - 22mins
+155. Common Table Expressions - 2 - 18 mins
+156. Recursive Common Table Expressions - 14 mins
+157. Stored Procedure in MS SQL Server - 11 mins
+158. Views in MS SQL Server - 13 mins
+159. Indexes in MS SQL Server - 9 mins
+160. Clustered Index - 8 mins
+161. Non Clustered Index - 4 mins
+
+Section 17: SQL Important Interview Questions
+162. Nth Highest Salary - 18 mins
+163. Reportee and Manager Question - 13 mins
+164. Deleting Duplicates Q1 - 11 mins
+165. Deleting Duplicates Q2 - 15 mins
+
+Day 17: 22/11/2025
+Section 18: Power BI Course Introduction
+166. Microsoft Power BI Course Introduction - 11 mins
+
+Section 19: Introduction to Power BI
+167. General Workflow Power BI - 4 mins
+168. Downloading and Installing Power BI Desktop - 5 mins
+169. Creating a free Power BI Account - 7 mins
+
+Section 20: Data Visualization
+170. Creating a Bar Chart - 8 mins
+171. Creating a Column Chart - 6 mins
+172. Creating a Pie and a Donut Chart - 8 mins
+173. Creating a Clustered Column and Bar Chart - 7 mins
+174. Creating a Line and Area Chart - 10 mins
+175. Creating a Ribbon Chart - 7 mins
+176. Creating a Line and Stacked Column Chart - 15 mins
+177. Creating a Line and Clustered Column Chart - 8 mins
+178. Creating a Scatter Plot - 8 mins
+179. Creating a Bubble Map Visual - 7 mins
+180. Creating a Table and Matrix Visual - 10 mins
+181. Formatting a Table and Matrix Visual - 10 mins
+182. Creating a Funnel Chart - 10 mins
+183. Gauge Chart and KPI Visual - 15 mins
+184. AI Visuals in Power BI - 14 mins
+
+Section 21: Power Query Editor
+185. Detecting Data Types in Power BI Desktop - 15 mins
+186. Data Profiling - 10 mins
+187. Column Distribution Example - 5 mins
+188. Appending Queries - 9 mins
+189. Merge Inner Join - 15 mins
+190. Left Outer Join - 13 mins
+191. Right Outer Join - 10 mins
+
+Day 18: 23/11/2025
+192. Left and Right Anti Join - 14 mins
+193. Full Outer Join - 12 mins
+194. Group By in Power Query Editor - 7 mins
+195. Pivot, Unpivot and Transpose - 10 mins
+196. Add/Transform Columns - 11 mins
+
+Section 22: DAX
+197. DAX Lecture 1 - 25 mins
+198. DAX Lecture 2 - 25 mins
+199. DAX Lecture 3 - 34 mins
+200. DAX Lecture 4 - 14 mins
+201. DAX Lecture 5 - 17 mins
+202. DAX Lecture 6 - 14 mins
+203. Learning DAX with AI Tools - 9 mins
+204. Rectifying Incorrect DAX Expressions with AI - 7 mins
+
+Day 19: 03/12/2025
+205. Business Requirements - 6 mins
+206. Loading Data to PBI Desktop - 8 mins
+207. Data Profiling and Data Transformations Part 1 - 16 mins
+208. Data Transformations Part 2 - 19 mins
+209. Primary and Foreign Key - 8 mins
+210. Cardinality - 13 mins
+211. Star Schema - 16 mins
+212. Data Model Overview - 10 mins
+213. Different Types of Filters in Filters Pane - 7 mins
+214. Top Bottom 5 Products by Sales, Quantity and Profit - 18 mins
+215. Sales Trends over Time - 10 mins
+216. Other Requirements - 25 mins
+
+Day 20: 04/12/2025
+217. Requirement 4 DAX - 29 mins
+218. Requirement 4 Edit Interactions - 12 mins
+219. Other Remaining Requirements - 10 mins
+220. Changing Filter Behaviour for Dimension Table - 4 mins
+
+Section 24: Power BI Project 2, Insurance Data Analysis
+221. Downloading and installing MSSQL Server - 11 mins
+
+Day 21: 05/12/2025
+222. Importing Data to MSSQL Server - 6 mins
+223. Loading Data to Power BI Desktop - 9 mins
+224. Table View and Data Profiling - 9 mins
+225. Adding Slicers and Text - 5 mins
+226. Adding New Card Visuals - 7 mins
+227. Adding a Multi Row Card and a Ribbon Chart - 7 mins
+228. Adding a Bar and a Line Chart - 14 mins
+229. Adding a Donut Chart and Matrix Visual - 11 mins
+230. Publishing the Report to Power BI Service - 8 mins
+231. Scheduling Refresh - 8 mins
+232. Drill Through Filter - 6 mins
+233. Testing Scheduled Refresh and Publishing the updated report - 5 mins
+234. Creating and Testing Roles in PBI Desktop - 4 mins
+235. Testing and Implementing RLS in Power BI Service - 5 mins
+236. Power BI Reports and Dashboards - 6 mins
+237. Sentiment Analysis Power Query - 8 mins
+238. Sentiment Analysis Adding Visuals to the Report - 14 mins
+
+Section 25: Power BI Project 3, UPI Transaction Data Analysis
+239. Loading Data into Power BI Desktop - 12 mins
+240. Data Profiling - 5 mins
+241. Size and Position of Slicers - 5 mins
+242. Formatting the Slicers - 15 mins
+243. Adding a Page and Age Group Column - 8 mins
+244. Adding a Line Chart - 9 mins
+245. Adding a Matrix Visual - 9 mins
+246. Syncing Slicers and Applying Conditional Formatting - 6 mins
+247. Adding Bookmarks for Transactions - 7 mins
+248. Adding Bookmarks for Remaining Balance - 11 mins
+249. Publishing the Report to Power BI Service - 4 mins
+
+Day 22: 06/12/2025
+Section 26: Miscellaneous Section Power BI
+250. SQL + Power BI Scenario Based Question - 1 - 12 mins
+251. Power BI Scenario Based Question - 2 - 11 mins
+
+Day 23: 25/12/2025
+Section 27: Getting Started with Microsoft Excel
+252. Home Tab Font Group - 14 mins
+253. Home Tab Alignment Group - 10 mins
+254. Home Tab Number Group Part 1 - 12 mins
+255. Home Tab Number Group Part 2 - 10 mins
+256. Home Tab Styles Group Conditional Formatting 1 - 9 mins
+257. Home Tab Styles Group Conditional Formatting 2 - 7 mins
+258. Draw Tab and Cell Styles - 7 mins
+259. Excel Functions Video 1 - 7 mins
+260. Excel Functions Video 2 - 8 mins
+261. Excel Functions Video 3 - 16 mins
+262. Excel Functions Video 4 - 12 mins
+263. Excel Functions Video 5 - 6 mins
+264. Excel Functions Video 6 - 7 mins
+265. Excel Functions Video 7 - 9 mins
+266. Excel Functions Video 8 - 6 mins
+267. Excel Functions Video 9 VLookUp Function - 13 mins
+268. Excel Functions Video 10 XLookUp Function - 10 mins
+
+Section 28: Excel Dashboard 1
+269. Pivot Tables Lecture 1 - 12 mins
+270. Pivot Tables Lecture 2 - 12 mins
+271. Creating and Formatting the Column Chart - 12 mins
+272. Creating and Formatting the Bar Chart - 10 mins
+273. Creating and Formatting the Line Chart - 10 mins
+274. Creating and Formatting the Area Chart - 11 mins
+275. Creating and Formatting a Pie Chart - 10 mins
+276. Creating the Dashboard - 7 mins
+
+Section 29: Excel Dashboard 2
+277. Data Understanding and Cleansing - 9 mins
+278. Data Transformation (Removing Data Quality issues using VLookUp Function) - 15 mins
+279. Adding Age Group and Production Cost Per Unit Column - 11 mins
+280. Adding a 3D Column Chart - 9 mins
+281. Adding a 3D Bar Chart - 10 mins
+282. Adding A 3D Line Chart - 10 mins
+283. Adding a 3D Pie Chart - 8 mins
+284. Creating the Dashboard - 10 mins
+
+Section 30: Power Query Editor (MS Excel)
+285. Data Profiling (Column Distribution) - 10 mins
+286. Data Profiling (Column Profile and Column Quality) - 7 mins
+287. Combining Queries - 4 mins
+288. Inner Join Concept - 9 mins
+289. Inner Join Example - 5 mins
+290. Left Join Concept - 6 mins
+291. Left Join Example - 4 mins
+292. Right Join Concept - 5 mins
+293. Right Join Example - 4 mins
+294. Full Outer Join Concept - 6 mins
+295. Full Outer Join Example - 4 mins
+296. Left and Right Anti Join Concept - 6 mins
+297. Right and Left Anti Join Example - 3 mins
+298. Nulls in SQL Server and Power Query Editor - 5 mins
+299. Appending Two Tables - 7 mins
+300. Appending Three Tables - 2 mins
+
+Day 24: 26/12/2025
+301. Power Query Editor Exercise 1 - 8 mins
+302. Power Query Editor Exercise 2 - 7 mins
+303. Power Query Editor Exercise 3 - 9 mins
+304. Power Query Editor Exercise 4 - 9 mins
+305. Power Query Editor Exercise 5 - 5 mins
+
+Section 31: Excel Activity (Importing Data From SQL Server)
+306. Importing Data to SQL Server - 5 mins
+307. Importing Data to Excel From SQL Server - 5 mins
+308. Data Understanding and Creating the Pivot Table - 5 mins
+309. Adding Category Slicer - 4 mins
+310. Adding Other Slicers and Formatting Slicers and Pivot - 10 mins
+311. Refreshing the Report - 6 mins
+
+Section 32: Tableau
+312. Work of a Data Analyst (Story Telling) - 17 mins
+313. Downloading and Installing Tableau Public - 4 mins
+314. Loading Data into Tableau Public - 7 mins
+315. Creating Column and Bar Chart - 9 mins
+316. Saving Your Work to Tableau Public - 6 mins
+317. Horizontal and Vertical Axis - 5 mins
+318. Stacked and 100% Stacked Column Chart - 8 mins
+319. Stacked and 100% Stacked Bar Chart - 7 mins
+320. Creating an Area Chart - 8 mins
+321. Creating a Line Chart - 8 mins
+322. Creating a Scatter Plot - 6 mins
+323. Creating Pie Chart and Tree Map - 8 mins
+324. Creating a Donut Chart - 9 mins
+325. Creating a Lollipop Chart - 9 mins
+326. Filters Shelf in Tableau 1 - 5 mins
+327. Filters Shelf in Tableau 2 - 9 mins
+
+Day 25: 27/12/2025
+328. Symbol and Filled Map - 10 mins
+329. Funnel and Packed Bubble Chart - 9 mins
+330. Sets in Tableau - 7 mins
+331. Parameters in Tableau - 6 mins
+332. Sets and Parameters - 4 mins
+
+Section 33: Tableau Dashboard 1
+333. Importing Data - 3 mins
+334. Creating and Formatting a Bar Chart - 10 mins
+335. Creating and Formatting a Pie Chart - 6 mins
+336. Creating and Formatting a Line Chart - 5 mins
+337. Creating and Formatting a Scatter Plot - 3 mins
+338. Creating the Dashboard - 9 mins
+
+Section 34: Tableau Dashboard 2
+339. Importing Data - 5 mins
+340. Transactions by City - 5 mins
+341. Number of Transactions by Age Group - 4 mins
+342. Transactions by Payment Method and Merchant - 6 mins
+343. Adding Filters - 3 mins
+344. Creating the Dashboard - 11 mins
+
+Section 35: Tableau Prep Builder
+345. Downloading and Installing Tableau Prep Builder - 7 mins
+346. Understanding the Dataset - 5 mins
+347. Connecting to Text File and Microsoft Excel - 6 mins
+348. Removing Additional Columns - 6 mins
+349. Cleaning Orders Central Table - 18 mins
+350. Cleaning Orders East Table - 4 mins
+351. Cleaning Orders West Table - 6 mins
+352. Assigning Data Roles to Geographical Fields - 7 mins
+353. Combining Different Tables - 4 mins
+354. Cleaning Returns Table - 9 mins
+355. Joining Tables - 7 mins
+356. Cleaning Combined Table - 7 mins
+
+Section 36: SQL + Tableau Project (Student Depression Data Analysis)
+357. Importing Data to SQL Server - 4 mins
+358. Modifying Gender Column - 6 mins
+359. Adding the Age Group Column - 7 mins
+360. Column Distribution remaining columns - 10 mins
+361. Adding Index Column and Updating depression - 7 mins
+362. Downloading and Installing Tableau Desktop - 5 mins
+363. Bringing Data from SQL Server to Tableau Desktop - 3 mins
+364. Academic Pressure and Student Count - 8 mins
+365. Financial Stress and Student Count - 5 mins
+366. Study Satisfaction and Student Count - 6 mins
+367. Sleep Duration and Student Count - 4 mins
+368. Study Hours and Student Count - 5 mins
+369. Creating the Student Count Analysis Dashboard - 9 mins
+370. Publishing the report to Tableau Cloud - 8 mins
