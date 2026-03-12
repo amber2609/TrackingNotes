@@ -624,3 +624,175 @@ map returns an array of <li> elements, which React renders.
 Using forEach here would not work, because it does not return the array of elements.
 
 React Forms and Events Interview Questions =>
+
+51. How are Forms handled in React compared to plain HTML?
+
+In plain HTML, the browser’s DOM manages form data. In React, form inputs are usually controlled components:
+The form values live in state.
+Each keystroke triggers an onChange handler to update state.
+This makes the data predictable and easy to validate before submission.
+function MyForm() {
+  const [name, setName] = React.useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("Submitted: " + name);
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input 
+        type="text" 
+        value={name} 
+        onChange={(e) => setName(e.target.value)} 
+      />
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
+In this example, the input is fully controlled by React through value and onChange.
+
+52. How do you prevent the default Form Submission behaviour in React?
+
+By using event.preventDefault() inside the form’s onSubmit handler.
+Example:
+const handleSubmit = (e) => {
+  e.preventDefault();
+  console.log("Form submitted!");
+};
+In this example, the page is stopped from reloading and lets React control what happens on submit.
+
+53. What is event bubbling and how can you stop it in React?
+
+Event Bubbling: When an event triggered on a child element propagates upward to its parent elements.
+In React, you can stop it using event.stopPropagation().
+const handleClick = (e) => {
+  e.stopPropagation();
+  console.log("Child clicked, but won’t bubble up.");
+};
+
+54. How do you handle multiple input fields in a single Form in React?
+
+By using a single state object and updating it dynamically with name and value.
+Example:
+This way, one handler can manage multiple inputs.
+
+55. How do you reset Form fields after submission in React?
+
+In React, form inputs are usually controlled components, meaning their values are stored in state. To reset a form, you simply reset the state that controls the inputs:
+Example:
+const [formData, setFormData] = useState({ name: "", email: "" });
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  console.log(formData);
+  // Reset form fields
+  setFormData({ name: "", email: "" });
+};
+In this example:
+setFormData({ name: "", email: "" }) resets all input fields to their initial values.
+This triggers a re-render, updating the UI with empty inputs.
+
+React Routing Interview Questions =>
+
+56. What is React Router and why is it used?
+
+React Router is a library that enables client-side routing in React applications. It allows you to create single-page applications (SPAs) where navigation between views happens without a full page reload, making apps faster and smoother.
+
+57. Difference between <a> tag and <Link> in React Router?
+
+<a> tag: Reloads the whole page when navigating.
+<Link> component: Updates the URL and changes the component without reloading (SPA behavior).
+
+58. What are the main components of React Router?
+
+<BrowserRouter> – Wraps the app and enables routing.
+<Routes> – Container for all route definitions.
+<Route> – Defines a path and the component to render.
+<Link> / <NavLink> – For navigation.
+useNavigate() – For programmatic navigation.
+
+59. What is the difference between useHistory and useNavigate?
+
+In React Router v5 : navigation was done using useHistory().
+In React Router v6 : replaced with useNavigate().
+const navigate = useNavigate();
+navigate("/dashboard");
+
+60. How do you implement nested routes in React Router?
+
+<Routes>
+  <Route path="/dashboard" element={<Dashboard />}>
+    <Route path="profile" element={<Profile />} />
+    <Route path="settings" element={<Settings />} />
+  </Route>
+</Routes>
+/dashboard/profile : shows Profile inside Dashboard.
+
+61. What are route parameters and how do you access them?
+
+Route params are dynamic parts of the URL.
+<Route path="/users/:id" element={<User />} />
+Inside User component:
+import { useParams } from "react-router-dom";
+const { id } = useParams();
+/users/101 : id = 101
+
+62. How do you redirect a user in React Router?
+
+Using <Navigate> component:
+<Route path="/old" element={<Navigate to="/new" />} />
+Using useNavigate() hook for programmatic redirects.
+
+63. What is the difference between client-side routing and server-side routing?
+
+Client-Side Routing:
+In client-side routing, only the first request loads the HTML + JS bundle.
+After that, navigation happens inside the browser using JavaScript (like React Router).
+The page doesn’t reload : only the required component/view updates.
+Example Flow:
+User visits /about.
+Server sends index.html + JS bundle (React app).
+React Router detects /about and loads <About /> component without reloading the page.
+Server-Side Routing:
+In server-side routing, whenever a user clicks a link or enters a URL:
+A request goes to the server.
+The server processes it and sends back a new HTML page.
+The browser reloads the page completely.
+Example Flow:
+User visits /about.
+Browser sends a request to server : /about.
+Server responds with an about.html page.
+Browser reloads and shows About page.
+
+64. Difference between <Switch> and <Routes> in React Router?
+
+Switch:
+Used in React Router v5 to render only the first matching route.
+Checks routes from top to bottom and renders the first match.
+If multiple routes match, only the first one is rendered.
+The order of routes is very important.
+Supported component, render, and children props.
+Needed the exact keyword to avoid unwanted matches.
+Nested routes were harder to manage.
+Example:
+<Switch>
+  <Route exact path="/" component={Home} />
+  <Route path="/about" component={About} />
+  <Route path="/contact" render={() => <Contact />} />
+</Switch>
+Routes:
+Introduced in React Router v6 as a replacement for <Switch>.
+Uses a ranking algorithm to automatically find the best match.
+The order of routes does not matter.
+Supports only the element prop for rendering.
+Cleaner and simpler syntax compared to <Switch>.
+No need for the exact keyword anymore.
+Makes nested routing much easier.
+<Switch> is deprecated, and <Routes> is now the recommended way.
+Example:
+<Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/about" element={<About />} />
+  <Route path="/contact" element={<Contact />} />
+</Routes>
