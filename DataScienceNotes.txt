@@ -999,3 +999,116 @@ Post Pruning basically means, we will construct the decision tree completely and
 
 Pre Pruning basically means, while we are constructing the decision tree, we dont have to construct the decision tree entirely like how we did it in Post Pruning, hence while we are constructing the decision tree, we can play with some of the parameters. We have some parameters like max_features, max_depth. All these parameters are basically some of the Hyperparameters.
 In short in Pre Pruning, we tune with the Hyperparameters while constructing decision tree.
+
+Decision Tree Regression ->
+
+Whenever the output feature is continuos feature at that point of time we use Decision Tree Regressor.
+Entropy and Gini Impurity is basically for the purity split. Information Gain is basically to find out which feature should we use for making the split.
+
+In Decision Tree Regressor, we cannot use Entropy, Gini Impurity and Information Gain.
+Entropy, Gini Impurity and Information Gain, can be used when the output feature is categorical.
+
+We create many Decision Trees, in every Decision Tree, we will have a Threshold, lets consider the Threshold will have the first value. The root node will have the first value.
+In Decision Tree Classifier, we used to use Information Gain for deciding this. In Decision Tree Regressor, we cannot use this.
+We are going to use something called as Variance Reduction to decide which split to use.
+We are basically going to compute mean squared error for each and every node and then we are going to combine them to actually find out the variance reduction. Then finally out of all the splits, whichever has the maximum variance reduction, we are going to take that split.
+When we are using Decision Tree Regressor, we use Mean Squared Error instead of using Entropy and Gini Impurity.
+
+Variance Formula is = 1/nSummation(y - ybar)^2.
+Variance Reduction Formula is = Var(Root) - Summation(W(i) * Var(Child)).
+For Calculation, refer the Course Material Decision+Tree+Regressor.pdf.
+
+Lets say, if we get new Test Data.
+If it is less than the root node value, then it will go to the left node, how are we gonna find the final output?
+Lets consider the left node to be the leaf node. The ouput will be the average of all the values present in that left node.
+If it is greater than the root node value, then it will go to the right node.
+The output will be the average of all the values present in the right node.
+
+Decision Tree Implementation ->
+
+In Decision Tree we dont require Standardization or any kind of Normalization.
+Whenever we get a Leaf Node, Gini becomes 0.0. Gini is going to range between 0 to 0.5 in every split. If we use Entropy, Entropy value will be ranging between 0 to 1.
+If we get Gini around 0.5, then basically it means an Impure Split. If we get Gini near to 0, then that becomes a very good Pure Split.
+This kind of split will basically han from Top to Bottom.
+
+Random Forest Machine Learning =>
+
+Bagging and Boosting Ensemble Techniques ->
+
+We have 2 types of Ensembled Techniques:
+1. Bagging
+2. Boosting
+Ensembled Techniques actually help us to combine multiple algorithms together. Train the speciific kind of model and then with respect to that we get some kind of output.
+When we are combining multiple Machine Learning models, there are chances that we definitely get goo amount of Accuracy.
+
+In most of the platforms Kaggle and even in different Hackathons, many people while they are solving the Machine Learning Problem Statement, they use this kind of Ensembled Techniques, especially Bagging and Bossting Techniques. With respec to any kind of Problem Statement, Ensembled Techniques like Bagging and Boosting gives very good accuracy.
+
+Some of the Algorithms that we will learn in Bagging is Random Forest.
+
+Idea Behind Bagging:
+In Bagging, suppose we have a specific Training Dataset. In Bagging Technique, we have multiple Base Learners. When we say Base Learners, this are basically different different Machine Learning Algorithms or it can be same Machine Learning Algorithms.
+In Bagging, we give some sample of Dataset to the Model 1, and another sample of Dataset to Model 2, another sample of Dataset to Model 3, and another sample of Dataset to Model n.
+Different Models will get trained from different Datasets. Once the Model is trained from different different sample of Datasets, then when we give out new Test Data for Predictions. When we pass this specific set of Data, the new test data will go to the Model 1, and then the Algorithm will do some kind of Predictions. When we want to find out the Final output in this specific way, then we use something called as Majority Voting Classifier in the case of Regression Problem Statement. This basically means, they will go and see that each and every Model which we specifically say as Base Learners, what output they are giving, like maximum number of Models are giving the output as 0. So our final output based on Majority Voting Classifier will be 0. This is the idea behind Bagging.
+
+If we have a Regression Problem Statement, the ouput will be a continous value. So the final output will be the average of all the outputs.
+
+Important thing about Bagging:
+All the Base Learners are getting trained parallely, not sequentially.
+
+Bagging and Boosting Algorithms are used for solving both Classification and Regression Problems.
+
+Idea Behind Boosting:
+In Boosting, we will learn about the different Algorithms:
+1. AdaBoost Algorithm
+2. Gradient Boost Algorithm
+3. Extreme Gradient Boost Algorithm, also called as XgBoost
+
+Fundamental idea behind Boosting:
+In Baggin we had Base Learners, in Boostingwe basically say that we have Weak Learners.
+We have the Dataset, and many Models which are connected Sequentially. We combine all the Weak Learner and finally when we combine all Sequentially, we actually get something called as Strong Learner.
+In Boosting, we give the entire Dataset to Model M1. Model M1 will train and it will give some kind of Accuracy, lets say for some of the records it has not predicted correctly. It will pass those records which are incorrectly predicted along with some more Dataset to Model M2. Similarly Model M2 will train from that specific records and will train, and will produce some wrong records. It will pass all the wrong records along with some Dataset to Model M3. This process will keep on continuing with n number of Models.
+When we try to give new Test Data, then each and every Model will have its own strength and based on that it will give the predictions. Overall when we combine all the predictions, again we can include Majority Voting Classifier or we can also get with respect to, if we try to find out the avearge we will able to get the Regression Problem Statement. In Short, in Boosting we are combining multiple Weak Leqarners together to form a Strong Learner.
+
+Random Forest Regression ->
+
+Lets consider a Dataset, and m features.
+Random Forest uses the approach of Bagging, the base learners that we actually have, all the Models of the Base Learner are Decision Tree.
+We are going to do some Row Sampling from the Dataset. From the Dataset, we are going to pick up some rows. Along with Row Sampling we are going to do something called as Feature Sampling.
+Row Sampling means we are going to pick some amount of rows from the Dataset. Feature Sampling means we are going to pick some Features and give it Decision Tree Model 1 and it will get trained over there.
+For the Model 2, we will be doing Row Sampling with replacement. We are doing replacement because, some of the rows may get repeated from Model 1 but we are also replacing some rows. So all the rows should be same as all the rows that we have given to Model 1. We may have to do Feature Sampling with replacement.
+Some of the rows and features may get repeated, but majority of the rows and features will get replaced.
+Same thing we are going to do for the other Models.
+
+In Random Forest, we use only Decision Trees. All the Decision Trees will get trained with respect to all the training Dataset.
+
+Whenever we try to give new Test Data, we are going to take the Majority Voting Classifier in the Classification.
+With respect to Regression, the output will be Continuous, hence we calculate the average of all the Model outputs.
+
+Why should we use Random Forest instead of Decision Tree?
+
+In Decision Tree, we face a scenario called as Overfitting, with Overfitting we get Low Bias and High Variance.
+With the help of Random Forest, since we have many Base Learners, the High Variance automatically will become Low Variance because our Test Accuracy will increase because we have many Base Learners that are trained on separate separate sample of Data bu using Row Sampling and Feature Sampling concepts.
+
+Feature Engineering Part 01 ->
+
+Discrete Features will have more categories than the Categorical Features.
+Continuous Features will have more categories than the Discrete Features.
+
+Feature Engineering Part 02 ->
+
+What is Column Transformer?
+Whenever we want to handle categorical features or we want to do Standard Scaling, we are specifically doing that in Columns.
+Column Transformer is a kind of Library or Class, what it does os that, any kind of Transformation we give inside it, we can combine multiple Transformation technique.
+For ex: We can combine OneHotEncoder and StandardScaler.
+StandardScaler we will apply in Numerical Features.
+OneHotEncoder we will apply in Categorical Features.
+When we use OneHotEncoder with important property drop='first', if we have Binary Categories it will do One Hot Encoding for Binary, we will get 2 Columns. The number of Columns created by One Hot Encoding, 1 Column is not at all required.
+Suppose there are n Columns, n-1 Columns will try to represent the entire data. So that is the reason, we will be dropping the First Column after we probably create One Hot Encoding.
+So for this specific case, we are going to use Column Transformer.
+Since we are combining multiple Transformer technique, we have to use Column Transformer.
+Whenever we want to apply Transformation in Training Dataset, we have to basically apply fit_transform.
+For the Test Dataset, whenever we need to apply the Transformation, we just use transform, because of data leakage.
+
+Model Training Step ->
+
+We cannot just be dependent on 1 Model, we really need to try so many different Algorithms.
