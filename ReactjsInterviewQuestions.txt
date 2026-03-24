@@ -796,3 +796,320 @@ Example:
   <Route path="/about" element={<About />} />
   <Route path="/contact" element={<Contact />} />
 </Routes>
+
+React Advanced Interviews Questions =>
+
+1. What are Custom Hooks in React?
+
+Custom hooks are normal JavaScript functions whose names start with “use”, and they may call other hooks. We use custom hooks to maintain the DRY concept, which is Don't Repeat Yourself. It helps us to write a logic once and use it anywhere in the code. Some of the commonly used custom hooks are:
+useFetch: Used for making API requests and handling loading and error states.
+useLocalStorage: Stores and retrieves values from localStorage to persist data between sessions.
+useDebounce: Used to delay a function execution until after a specified wait time (useful for search input).
+usePrevious: Stores the previous value of a state or prop before the component re-renders.
+useToggle: A simple hook to toggle a boolean state.
+
+2. How to optimize a React code?
+
+We can improve our React code by following these practices:
+Using binding functions in constructors
+Eliminating the use of inline attributes as they slow the process of loading
+Avoiding extra tags by using React fragments
+Lazy loading
+
+3. What is the difference between useRef and createRef in React?
+
+Feature:
+Type
+Component Type
+Re-render Behavior
+Ref Value
+Use Cases
+Example
+
+useRef:
+It is a type of hook.
+Used in functional components.
+It saves its value between re-renders in a functional component.
+Returns a mutable ref object ({ current: value }).
+Storing DOM references, instance variables, and previous state values without re-renders.
+const ref = useRef(null);
+
+createRef:
+It is a function.
+Used in class components.
+It creates a new ref for every re-render.
+Returns a new ref object every time.
+Storing DOM references in class components.
+this.ref = React.createRef();
+
+4. What is React Redux?
+
+React Redux is a state management tool which makes it easier to pass these states from one component to another irrespective of their position in the component tree and hence prevents the complexity of the application. As the number of components in our application increases it becomes difficult to pass state as props to multiple components. To overcome this situation we use react-redux.
+
+5. What are the benefits of using react-redux?
+
+There are several benefits of using react-redux such as
+It provides centralized state management i.e. a single store for the whole application.
+It optimizes performance as it prevents re-rendering of component.
+Makes the process of debugging easier.
+Since it offers persistent state management therefore storing data for a long times becomes easier.
+
+6. Explain the core components of react-redux?
+
+There are four fundamental concepts of redux in react which decide how the data will flow through components.
+Redux Store: It is an object that holds the application state.
+Action Creators: These are functions that return actions (objects).
+Actions: Actions are simple objects which conventionally have two properties- type and payload.
+Reducers: Reducers are pure functions that update the state of the application in response to actions.
+
+7. How can we combine multiple reducers in React?
+
+When working with Redux we sometimes require multiple reducers. In many cases, multiple actions are needed, resulting in the requirement of multiple reducers. However, this can become problematic when creating the Redux store. To manage the multiple reducers we have function called combineReducers in the redux. This basically helps to combine multiple reducers into a single unit and use them.
+Syntax
+import { combineReducers } from "redux";
+const rootReducer = combineReducers({
+    books: BooksReducer,
+    activeBook: ActiveBook
+});
+
+8. What is context API?
+
+Context API is used to pass global variables anywhere in the code. It helps when there is a need for sharing state between a lot of nested components. It is light in weight and easier to use, to create a context just need to call React.createContext(). It eliminates the need to install other dependencies or third-party libraries like redux for state management. It has two properties Provider and Consumer. 
+
+9. Explain Provider and Consumer in ContextAPI?
+
+A provider is used to provide context to the whole application whereas a consumer consume the context provided by nearest provider. In other words The Provider acts as a parent it passes the state to its children whereas the Consumer uses the state that has been passed. 
+
+10. Explain CORS in React.Axios?
+
+In ReactJS, Cross-Origin Resource Sharing (CORS) refers to the method that allows you to make requests to the server deployed at a different domain. As a reference, if the frontend and backend are at two different domains, we need CORS there.
+We can setup CORS evironment in frontend using two methods:
+Axios
+fetch
+
+11. What is axios and how to use it in React?
+
+Axios, which is a popular library is mainly used to send asynchronous HTTP requests to REST endpoints. This library is very useful to perform CRUD operations.
+This popular library is used to communicate with the backend. Axios supports the Promise API, native to JS ES6.
+Using Axios we make API requests in our application. Once the request is made we get the data in Return, and then we use this data in our project.
+To install aixos package in react use the following command.
+npm i axios
+
+12. Write a program to create a counter with increment and decrement?
+
+import React, { useState } from "react";
+
+const App = () => {
+    const [counter, setCounter] = useState(0)
+    const handleClick1 = () => {
+        setCounter(counter + 1)
+    }
+
+    const handleClick2 = () => {
+        setCounter(counter - 1)
+    }
+
+    return (
+        <div>
+            <div>
+                {counter}
+            </div>
+            <div className="buttons">
+                <button onClick={handleClick1}>
+                    Increment
+                </button>
+                <button onClick={handleClick2}>
+                    Decrement
+                </button>
+            </div>
+        </div>
+    )
+}
+
+export default App
+In this example
+The useState hook initializes a state variable counter with a value of 0. The setCounter function is used to update this state.
+When the Increment button is clicked, setCounter(counter + 1) increases the counter value by 1.
+When the Decrement button is clicked, setCounter(counter - 1) decreases the counter value by 1.
+The current value of counter is displayed inside a <div> and updates automatically when the state changes.
+Two buttons trigger handleClick1 and handleClick2 using onClick, allowing users to increase or decrease the counter.
+
+13. Explain why and how to update state of Components using Callback?
+
+It is advised to use a callback-based approach to update the state using setState because it solves lots of bugs upfront that may occur in the future.We can use the following syntax to update the state using a callback.
+this.setState(st => {
+    return(
+        st.stateName1 = state1UpdatedValue,
+        st.stateName2 = state2UpdatedValue
+    )
+})
+
+14. What is React-Material UI?
+
+React Material UI is a framework built upon React library which contains predefined components to create React applications. Material UI is basically a design language built by Google in 2014 and works with various JavaScript frameworks apart from React such as Angular.js and Vue.js. The quality of the inbuilt designs of Material UI and its easy implementation make it the first choice of most developers. The inbuilt components are also customizable so it helps easily recreate the designs.
+
+15. What is flux architecture in React?
+
+Flux is an architecture that Facebook uses internally when operating with React. It is merely a replacement quite an architecture that enhances React and also the idea of unidirectional data flow.
+
+16. Explain the useMemo hook in React?
+
+The useMemo is a hook used in the functional component of react that returns a memoized value. In Computer Science, memoization is a concept used in general when we don’t need to recompute the function with a given argument for the next time as it returns the cached result. A memoized function remembers the results of output for a given set of inputs.
+
+17. Does React useState hook update immediately?
+
+React do not update immediately, although it seems immediate at first glance. React keep track of the states by queuing them in the order they are called. React queue all the changes to be made and update once the component Re-render which is not immediate. This is how React knows which value corresponds to which state. It goes as per the queue every time the component tries to re-render.
+
+18. When to use useCallback, useMemo and useEffect?
+
+useEffect is a function that can be used as an alternative to lifecycle methods such as componentDidMount, componenetWillUnmount, and componentDidUpdate in functional components.
+useCallback can be used when we want to prevent unnecessary renders from the child components. It helps to resolve side effects.
+useMemo is used when we want to re-render based on cache values as makes the application faster.
+
+19. Explain the types of Router in React?
+
+There are three types of routers in React:
+Memory Router: The memory router keeps the URL changes in memory not in the user browsers.
+Browser Router: It uses HTML5 history API (i.e. pushState, replaceState, and popState API) to keep your UI in sync with the URL.
+Hash Router: Hash router uses client-side hash routing. It uses the hash portion of the URL (i.e. window.location.hash) to keep your UI in sync with the URL. 
+
+20. What is StrictMode in React?
+
+The React StrictMode can be viewed as a helper component that allows developers to code efficiently and brings to their attention any suspicious code which might have been accidentally added to the application. The StrictMode can be applied to any section of the application, not necessarily to the entire application.
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
+);
+
+21. What is conditional Rendering in React?
+
+Conditional rendering in React means dynamically displaying components or elements based on a condition. Instead of rendering everything at once, React decides what to render based on the current state, props, or logic. We can use conditional rendering when:
+We have to Show/hide UI elements based on user authentication.
+Display different layouts based on user roles.
+Render UI dynamically based on API responses.
+Show loading spinners while fetching data.
+
+22. What is React Router?
+
+React Router is a library for handling navigation in React applications. It allows developers to create single-page applications (SPAs) with multiple views while maintaining a smooth, seamless user experience without full-page reloads.
+// App.js
+import React from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+
+// Components for different pages
+const Home = () => <h2>Home Page</h2>;
+const About = () => <h2>About Page</h2>;
+
+const App = () => {
+    return (
+        <Router>
+            <nav>
+                <Link to="/">Home</Link> | <Link to="/about">About</Link>
+            </nav>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+            </Routes>
+        </Router>
+    );
+};
+
+export default App;
+//index.js
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+
+// Create a root element
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+// Render the App component
+root.render(<App />);
+In this example
+The code imports React to create components and ReactDOM to render the app to the browser.
+Instead of ReactDOM.render(), we use ReactDOM.createRoot() to create a "root" where our app will be attached in the DOM.
+document.getElementById("root") grabs the div element with the id="root" in your index.html. This is where the React app will be rendered.
+root.render(<App />) tells React to render the App component inside the root element created earlier.
+Note: React 18 introduces this new way of rendering the app. The createRoot() method is now used instead of the old render() method to improve performance and enable new features like concurrent rendering.
+
+23. What is the difference between the React Hooks and Classes?
+
+Feature
+State Management
+Reusability
+this Keyword
+Lifecycle Methods
+Performance
+
+React Hooks
+useState() hook for state handling.
+Custom hooks allow sharing logic across components.
+No use of this. State and methods are directly accessible.
+useEffect() for side effects and lifecycle management.
+React's new hooks API has better performance optimizations.
+
+Class Components
+this.state for state handling.
+Inheritance is used for sharing logic, but it’s more complex.
+Uses this to access state and methods (this.state, this.setState()).
+Methods like componentDidMount(), componentDidUpdate(), etc.
+Generally less efficient compared to functional components and hooks.
+
+24. How data is passed between the React Components?
+
+In React, data is passed between components using props. The way data flows between components depends on whether they are parent-child, sibling components, or if you're using state management techniques like context or Redux.
+
+25. What is Lazy Loading in React?
+
+Lazy Loading in React is a technique used to load components only when they are needed, instead of loading everything at once when the app starts. This helps improve the performance of the app by reducing the initial loading time. In React, React.lazy() is used to implement lazy loading for components, which allows you to split your code into smaller bundles and load them only when required.
+
+26. Explain Redux and its components?
+
+Redux is a state management library that helps manage the application state globally. React-Redux is used to connect Redux state to React components. There are the three main components of the redux:
+store: It holds the application state.
+actions: It describe what to do.
+reducers: It define how the state changes in response to actions.
+
+27. How React Routing is different from Conventional Routing?
+
+Features
+Page Loading
+SEO Considerations
+Navigation
+Technology
+URL Structure
+
+React Routing
+No full page reload; components are dynamically rendered.
+React Router needs additional configurations (like SSR or dynamic rendering) to optimize SEO.
+Navigation is handled by JavaScript on the client-side, often using Link and NavLink components.
+Managed via React Router; uses client-side routing.
+URLs can have dynamic parameters handled by React Router (e.g., /product/:id).
+
+Conventional Routing
+Entire page reload happens with every navigation.
+SEO is typically easier to manage since pages are fully rendered by the server.
+Navigation is handled by the server through HTML anchor tags (<a href="...">).
+Managed by server-side routing (e.g., Express, PHP).
+URLs are typically static and are managed by the server.
+
+28. How to avoid binding in ReactJS?
+
+In ReactJS, binding in the context of event handlers is often required to ensure that the correct this context is available inside class methods. However, it can lead to boilerplate code and performance issues, especially when binding functions in each render cycle. We can avoid binding in ReactJS by using the below methods:
+Arrow Functions
+Higher-Order Components (HOCs) or Custom Hooks
+
+29. What are props in React?
+
+In React, props (short for "properties") are a way of passing data from a parent component to a child component. Props are read-only and are used to customize or control the behavior of a component. They help make components reusable and dynamic by allowing different data to be passed into them.
+
+30. What is the use of CSS modules in React?
+
+CSS Modules help you keep your styles specific to each React component, so they don't affect other components. In simple terms, it lets you write CSS for one component without worrying about messing up the styles of other parts of your app. This is especially useful when your app grows larger and has many components, making it easier to manage styles without conflicts.

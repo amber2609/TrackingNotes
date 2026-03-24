@@ -1087,7 +1087,7 @@ With respect to Regression, the output will be Continuous, hence we calculate th
 Why should we use Random Forest instead of Decision Tree?
 
 In Decision Tree, we face a scenario called as Overfitting, with Overfitting we get Low Bias and High Variance.
-With the help of Random Forest, since we have many Base Learners, the High Variance automatically will become Low Variance because our Test Accuracy will increase because we have many Base Learners that are trained on separate separate sample of Data bu using Row Sampling and Feature Sampling concepts.
+With the help of Random Forest, since we have many Base Learners, the High Variance automatically will become Low Variance because our Test Accuracy will increase because we have many Base Learners that are trained on separate separate sample of Data by using Row Sampling and Feature Sampling concepts.
 
 Feature Engineering Part 01 ->
 
@@ -1112,3 +1112,1064 @@ For the Test Dataset, whenever we need to apply the Transformation, we just use 
 Model Training Step ->
 
 We cannot just be dependent on 1 Model, we really need to try so many different Algorithms.
+
+Adaboost Machine Learning Algorithm =>
+
+Introduction to Adaboost ML Algorithm ->
+
+With both Bagging and Boosting, we will be able to solve both Classification and Regression Problem Statement.
+All this Algorithms in Bagging and Boosting uses Decision Tree as the Base Learners or Weak Learners.
+In Bagging we use Base Learners.
+In Boosting we use Weak Learners.
+
+What does Weak Learner means in Boosting?
+Weak Learner basically means that, this models have not been trained properly with the training dataset. This means the Weak Learner have not learnt much from the Training Dataset.
+
+In Random Forest, in case of Classification Algorithm, we use something called as Majority Voting Classifier.
+in case of Regression Problem, we basically find out the Average of all the outputs.
+
+Adaboost will not work like Random Forest.
+In Adaboost, we assign some weights to the Weak Learner.
+Adaboost Function:
+f = Alpha1*(Model1) + Alpha2*(Model2) + Alpha3*(Model3) + .......... + Alphan*(Modeln).
+here, Model1 .... Modeln are Decision Tree Stumps.
+Alpha1 .... Alphan are weights assigned to Weak Learners.
+Based on the above Function, we try to solve both Classification and Regression problems.
+
+Decision Tree Stumps basically means, here we are going to create a Decision Tree Stumps 1 whose depth will be just 1 Level, we will have multiple Decision Tree Stumps with depth just 1 Level, and we are going to connect this Decesion Tree Stumps sequentially.
+Stumps basically means that the depth is just 1 Level, not more than that.
+If Decision Tree have just 1 depth, then this can basically be considered as a Weak Learner.
+Whenever we have Weak Learner, this basically leads to Underfitting.
+Whenever we have Underfitting, it means that Training Accuracy is less, and there may be a scenario where Test Accuracy will be less or more.
+The Test accuracy is more than the Training accuracy.
+Since Weak Learner is just for 1 depth, we can definitely say this is actually Underfitting the conditions.
+In Decision Tree Stumps, we have High Bias and Low Variance.
+When we combine multiple Decision Tree Stumps sequentially, then it will lead to Low Bias and High Variance.
+Why we say it as a Weak Learner?
+Because it has depth as 1 Level.
+If independently, just for 1 Weak Learner, we are trying to do the Prediction, then it will lead to Underfitting. Underfittin basically means High Bias and Low Variance.
+But if we try to combine all the Decision Tree Stumps, along with weights, we will get Low Bias and High Variance.
+
+Creating Decision Tree Stumps ->
+
+We are going to create Decision Tree Stump.
+From multiple Decision Tree Stumps, which one needs to be getting selected as the First Decision Tree Stump in Adaboost. For this, we will be using Entropy or Gini Index(Impurity).
+We can use either of this 2, and understand that which is having an impure split.
+We will be getting better Entropy or better Gini Index, we will be getting for the Decision Tree Stump with pure split.
+
+In first step, we created Decision Tree Stump and we select the best Decision Tree Stump using Entropy or Gini Index.
+
+Performance of Decision Tree Stump ->
+
+In the second step with respect to Adaboost Classifier MAchine Learning Algorithm, we are going to perform 2 different operations:
+1. Sum of the Total Errors
+2. Performance of Stump
+
+We will select the Decision Tree Stump of out multiple Decision Tree Stumps by using the best Entropy.
+Whichever will be having best Entropy, that one we will select. The best Entropy will basically say that we are getting a pure leaf node very quickly.
+
+The first step to calculate Sum of the Total Errors and Performance of Stump, we need to assign some weights.
+We are assigning weights because the first component Sum of the Total Errors, the sample weights will help us to calculate the Total Errors.
+To compute what exactly is Total Error, we are just going to use the total number of wrong records.
+Sum up all the Total Errors, we are going to add up all the sample weights of all the wrong records.
+
+To calculate Performace of stump, we use a Formula:
+Performance od Stump = 1/2ln((1-TE)/TE), where ln is log to the base e.
+
+Function for Adaboost:
+f = Alpha1*(Model1) + Alpha2*(Model2) + Alpha3*(Model3) + .......... + Alphan*(Modeln).
+where Alpha indicates weights, and the performance of the first stump is basically the performance of the Model.
+
+Refer the Course Material 11.1-+Adaboost+MAth+intuition.pdf.
+
+If we are able to find the performance of the stump with respect to the First Decision Tree Stump. Then how do we construct the second Model, and how do we set up Alpha2.
+
+Updating Weights ->
+
+We are in Step 3 of construcing Adaboost Classifier which uses Decision Stumps as its Weak Learner.
+In the upcoming step, we need to make sure that which ever are the wrong records that needs to be sent to the next Decision Tree Stump.
+For this we need to perform 2 important steps:
+Update the weights of Correctly and Incorrectly classified points.
+Whichever is the Classified points, we have to reduce the Weight.
+Whichever is the Incorrectly Classified points, we have to increase the Weight.
+Because of this, there will be a high probability of selecting the Wrong Records by the next Decision Tree Stump.
+
+Formula of the weight updation for Correct Classified Points:
+= older weight * e^-Performance of the Stump
+
+Formula of the weight reduction for Incorrect Classified Points:
+= older weight * e^Performance of the Stump
+
+Refer the Course Material 11.1-+Adaboost+MAth+intuition.pdf.
+
+Normalising Weights and Assigning Bins ->
+
+The updation of the weights happens because to make sure that the inclassified points from the Decision Tree Stump 1 should go towards the Decision Tree Stump 2. So that is why we have increased the weights for the Incorrect Classified Points and decreased the weights for the Correct Classified Points.
+In the next step, we are going to understand Normalized Weights Computation and Assigning Bins.
+
+If we do the summation of all the updated weights, it will not be 1. But initially when we assigned the Sample Weights, we could see that all the summation was equal to 1. We need to normalize, if we try to do the summation it should be 1.
+
+To normalize, we have to divide every updated weights with the sum of updated weights.
+
+Next we come to the Assigning Bins.
+
+Our main target is that, after Decision Tree Stump 1 is created, if they are doing some incorrect Classified Prediction, we need to send the wrong records to the next Decision Tree Stump.
+We need to find out the mechanism, how do we make sure that the Machine Learning Algorithm sends only those records or mostly those records that are incorrectly classified, for that particular case we will be assigning bins.
+In Bins Assignment we are going to create range of Bins.
+Whichever are the wrong records, wrongly predicted by the Decision tree Stump 1, there the bins range will be quite huge. We will try to find the mechanism where in, we will try to send this records with huge bins range more frequently to the next Decision Tree Stump 2. Based on that, the next Decision Tree Stump 2 will be able to train the wrongly predicted records. So that is the reason we have done the bins assignment.
+
+In the next step, we are going to find out a way that what are the records that are going to get captured to go to the next Decision Tree Stump.
+
+Selecting New Datapoints for Next Tree ->
+
+In the Step 4, we have created the bins and we have assigned some bins size.
+How do we select the data points to send to next Stump.
+
+We will continue an iterative process, in this iterative process we will be selecting random values between 0 and 1.
+In the first instance, we are going to create all the new records that are going to get selected from the previous step based on bins assignment.
+
+We will generate a random number in the iterative process, and then with the help of that random number we will pick up the value on where that random number is present in the bins assignment. Then the record with the highest bins assignment which is the incorrectly Classified point will be picked up again and again due to its huge bins size.
+
+The new records that are picked up by the random number generation will be sent for training to the next Decision Tree Stump and Sample Weights will be assigned.
+Then everything from Step 2 to Step 6 will keep on repeating unless and until we dont finish up all the Decision Tree Stump sequentially.
+Similarly, we keep on creating multiple Stumps and we do this particular step again and again.
+
+In the next step, we will try to see how the prediction will basically happen with respect to a new Test Data that we are getting by using the Decision Tree Stump.
+
+Final Prediction for Adaboost ->
+
+Lets understand how the final prediction will happen with respect to a new test data in Adaboost. This is specifically with respect to a Classification Problem.
+For this new Test Data, different Decision Tree Stumps will give different different values.
+In Random Forest, we dont focus on Majority Voting Classifier. Here 1 important parameter that we have discussed with respect to this we have a weight called Alpha1 .... AlphaN.
+
+Refer the Course Material 11.1-+Adaboost+MAth+intuition.pdf.
+
+The maximum number whatever is saying, 1.136 is greater than 0.950, definitely the entire output of the entire Weak Learners which is combined as a Strong Learner, here the maximum output is Yes since we get the performance of Say with respect to Yes is high i.e., 1.136. Performance of Say with respect to No is 0.950.
+
+We can also say that weight of Yes(1.136) is high when compared to No(0.950).
+
+So Yes value is obviously greater than the No value.
+Finally our Output is that, whenever we get a Test data with respect to <=50k and the credit score is Good, the credit card will definitely will get approved. The final output will be Yes with respect to this particular use case, considering this particular dataset. So this is how the Final prediction will happen.
+
+We will discuss how a Regression Problem Statement will happen, only 2 things will be changing with respect to Regression. Here we will not be using Entropy, instead we will be using Mean Squared Error to basically compute which Decision Tree Stump is the best, and at the last everything will be almost same but in the final step we will be having Continuous value of all the Stumps with respect to some weights assigned to it.
+
+Gradient Boosting =>
+
+Gradient Boosting Regression ->
+
+With the help of Gradient Boosting Algorithm we can solve bothe Regression and Classification use cases.
+Gradient Boosting is a part of Boosting Ensemble Technique, where in we create Decision Trees sequentially. When we combine all the Weak Learners together and finally we basically get a Strong Learner.
+When the dependent feature output is continuous value, so we are basically considering this as a Regression Dataset.
+Steps to start with if we really want to create a Gradient Boosting Algorithm:
+1. Create a Base Model. Whenever we create a Base Model, we have to make sure this Base Model is not Biased to any value, so it will be giving some default value. So in order to find out what Default value this Base Model will give, we have to just compute the average of the dependent feature output, because this is the Truth output yhat.
+2. Compute the Residuals or Errors. In order to compute the Residual and Error, we are going to get the predicted output from the Base Model, that is yhat.
+In oreder to find out, the Residuals and Error, we have to find out the difference between ouput feature value (true value) and predicted value, that is yhat.
+
+Refer the Course Material 12.1-Gradient+Boosting+Regressions.pdf.
+3. We are going to construct a Decision Tree considering inputs x(i) and output as Residual(i), and we will get one more output feature called as R2.
+R2 basically means after Training the Model with the independent features and R1. Whenever we pass any record, to the Decision Tree, we are getting R2 as the Output.
+After constructing the Decision Tree, we are again going to compute the Residual and Error.
+
+Suppose if we give any input, what should be my predicted output? The Residual values will not be the predicted output. So in order to compute the predicted output what should we do?
+The predicted output for the first record will be, the average value of the output feature will go the Base Model, then when it goes to the next Decision Tree 1, for the first record, we will get the ouput of Residual2. So we are going to subtract first record Residual2 output with the average value of the output feature. The value we get will be the predicted output for the first record
+Refer the Course Material 12.1-Gradient+Boosting+Regressions.pdf.
+
+The difference between the predicted output and the actual output is very very small. We may think that the Model is performing well because the difference is small, we are getting mistaken by this.
+Here the Model is basically performing Overfitting.
+Hence we will not calculate our Predicted value like this. Instead, we will be introducing one more new term. So after the new record passes to the Base Model, and the Base Model output is 75. We are going to multiply with one Learning Rate parameter (Alpha). The Alpha value ranges from 0 to 1. We are going to multipl Alpha with whatever output of the Decision Tree 1 we have got. Lets say we have got the output with Huge error.
+
+After this, if we really want to construct my next Decision Tree, again we have to compute our R3 that is Residual R3. Residual R3 we will be getting by the difference of the output feature value and latest yhat value.
+
+Again we will repeat this particular steps and we will after computing Residual Error again we will be constructing the next Decision Tree.
+Next Decision Tree will have Base Model as 75. Then we will construct the Decision Tree which is already there, and then the next Decision tree. In this Decision Tree, we are going to take input (x(i),Residual3). Then once the new Decision Tree model is trained, we will get Residual4 as the output value.
+Again this process will keep on continuing.
+
+The Final Function of this particular Gradient Boost will be:
+F(x) = Alpha0*(h0(x)) + Alpha1*(h1(x)) + Alpha2*(h2(x)) + Alpha3*(h3(x)) + .......... + Alphan*(hn(x)).
+Here all the Alpha value are our Learning Rates.
+
+Final Function of Gradient Boosting:
+F(x) = Summation(Alpha(i)*hi(x)).
+
+Gradient Boost Classifier Training ->
+
+When Recall value is less, we can probably use Hyperparameter Tuning for that specific Algorithm.
+We can increase the Accuracy by doing some kind of Hyperparameter Tuning.
+
+Gradient Boost Regression Model Training ->
+
+In the real world scenario, whenever we work in a specific project, we need to try each and every Machine Learning Algorithm.
+
+Xgboost Machine Learning Algorithms =>
+
+Xgboost Classification Indepth Intuit ->
+
+Xgboost is nothing but Extreme Gradient Boosting Machine Learning Algorithm.
+With the help of this Algorithm we would be able to solve both Classification and Regression Problem Statements.
+The steps are as follows:
+1. Construct a Base Model.
+With respect to different different Base Model, whenever we are creating a Base Model with respect to Classification, as the Classification is a Binary Classification, we are going to create a Probability of 0.5. Whatever output this particular Model will be giving, it will basically be giving the Probability of 0.5.
+Lets say the Base Model is not bias towards anything, so we are going to take Probability as a 0.5.
+2. Construct a Decision Tree with the Root.
+We are going to construct ouor first Decision Tree, which will probably begin after the Base Model.
+Residual 1 will be the difference between the output feature (y) and yhat which is the Base Model as 0.5.
+After Constructing the Base Model we calculate the Residuals.
+While constructing a Decision Tree, we consider Residual 1 as the output feature.
+
+In 3rd step Calculate Similarity Weight and 4th step Calculate Gain we will, this both steps will help us to find out which independent feature should we select for the splitting purpose in the Decision Tree 1 which is getting constructed sequentially.
+
+Lets conside the Salary feature to do the 1st split.
+Lets Calculate the Similarity Weight for each and every Node.
+Calculate the Gain then.
+
+Refer the Course Material 13.1-Xgboost+Classifier.pdf.
+
+Whichever split will be having the highest Gain, we will take that particular feature and start splitting.
+
+Further, we can do more splits. Lets say, we are going to probably consider the further split from the nodes, and the next feature we can consider it as Credit.
+Again we calculate the Similarity Weight and Gain for the further splits.
+
+With respect to New Test Data, how will the prediction basically going to happen we are going to see.
+
+Lets say we pass a new test, the first thing is that it passes through this particular Base Model. When it passes through this particular Base Model, it gives the value with respect to Probability. If we are getting the value with respect to Probability, one thing we really need to do is that we really need to calculate the Log of Odds. We cannot directly use the Probability.
+In Logistic Regression also, we saw that whenever we used to get a probability, we used to pass it through a Log of Odds function, which was the Cost Function.
+Whenever for a new Test data it should pass through log(odds). log(odds) is basically given by a formula log(P/1-P).
+In the first instance, lets say if the first record is getting passed through here through the Base Model. If we calculate, what will be the probability, if we place it over the Formula to find out the log(odds). If we try to calculate log(odds) it will be log(0.5/0.5), hence it will be log(1), which is nothing but 0.
+Whenever it passes through the Base Model, as an output we will be getting the output as 0.
+Lets say if the first record passes through the Xgboost, then obviously the first value we are going to get from our Base Model is 0.
+
+Refer the Final Output or Predicted Output in the Course Material 13.1-Xgboost+Classifier.pdf.
+
+Always remember, with the help of Sigmoid Activation Function we are going to get a good probability because Sigmoid Activation Function always gives us the output between 0 to 1.
+
+Whatever value we get, will be the new predicted output yhat.
+After that we aill be caluclating Residual 2, which will be nothing but the difference between output feature and yhat.
+Then again, we are going to construct next Decision Treeconsidering independent features and R2 as the output feature. Then again we will calculate the Similarity weight and the Gain.
+This process will keep on going until we get all the knids of Trees which will start with the Base Learner and then it will multiply with Alpha, multiplied by another Decision Tree. Alpha is nothing but the Learning Rate to avoid Overfitting. Then again there will be an Alpha multiplied by another Decision Tree output, and this will continue till the end. This in turn is nothing but Xgboost Classifier.
+Sigmoid Function is also called as Logistic Function.
+
+Final output with respect to predicted points will be:
+Sigmoid(Base Learner + Alpha1*(DT1) + Alpha2*(DT2) + Alpha3*(DT3) + ....).
+Whenever we compute Similarity Weight, there will be also 1 more parameter which is called as Lambda. Lambda is basically a Hyperparameter. We basically do a lot of Cross Validation in order to select the Lambda.
+
+Till when we should keep on splitting it, should we keep some restiction with respect to similarity weight?
+We setup a cover value, the cover value is given by the equation:
+SummationPr(1-Pr)
+So whenever any weight is less than the output we get from the above equation, then we slice down the entire tree
+
+Xgboost Regressor ->
+
+With the help of Xgboost Regressor, we can also solve a Regression Problem Statement.
+When we are solving Regression Problem, Similarity Weight Formula is going to change slightly a bit, the denominator will be changing since this is a Regression Problem Statement altogether.
+
+The steps to follow in order to create an Xgboost Regressor. That basically means sequential Decision Trees:
+1. We create a Base Model, since this is a Regressor Problem Statement the Base Model will be giving us the output of what is the average we are going to get in the dependent feature.
+Whenever any data that passes through the Base Model, the output that we are actually going to get is the average of the dependent feature output value.
+The Base Model is not at all Bias towards any values.
+We then calculate yhat, when we are calculating yhat, one thing you have to make sure that, whenever we pass any data to the Base Model it is going to give the average of the dependent feature output value as the output.
+2. We are going to compute our Residuals. We are going to find out the difference between the output feature value and the average of the output feature value.
+We computed the Residual by using the predicted output of the base model.
+3. We are going to construct Decision Tree 1 using xi as the input and R1 as the output.
+Lets say that, we are going to pickup Experience as the feature and start creating the Decision Tree.
+We are taking the first value as the Threshold and splitting it.
+
+Refer the Course Material 13.2-XgboostRegressor.pdf.
+4. After Constructing the Decision Tree, we have to calculate the Similarity Weight.
+
+For formula, refer the Course Material 13.2-XgboostRegressor.pdf.
+
+Similarity Weight = Summation(Residual)^2/Number of Residuals + Lambda.
+Lambda value is a specific Hyperparameter.
+When the Lambda value increases then the Similarity Weight decreases.
+5. After calculating the Similarity Weight, we are goign to calculate Gain.
+Gain = Similarity Weight of the Left Child + Similarity Weight of the Right Child - Similarity Weight of the Root Node.
+
+We did this because, If we do 1 more Split and lets say we are going to change the Threshold now, Initiall the Threshold was first value of the independent feature.
+Now if we make the Threshold the second value of the independent feature, we can make another split.
+Our main aim is that, within the Decision Tree we have to select which split has to be used for the Decision Tree 1.
+Out of all the splits, we are going to use the split with the highest Gain.
+
+The Base Learner will is giving the output the average of the output feature value.
+Then the next Decision Tree will be having the split with the highest Gain. We can do further splitting of the Decision Tree. We can split with the another feature.
+
+In Xgboost Classifier, we take the log(odds of the Base Learner) + Alpha1*(DT1) + Alpha2*(DT2) + ..... + Alphan*(DTn).
+Similarly, with respect to Xgboost Regressor, we are passing a record, that is Experience is 3 and Gap is No.
+
+Refer the Course Material 13.2-XgboostRegressor.pdf.
+
+We will have the output as [1,9], in order to find out the output of this, we have to find out the avearge of the numbers.
+
+The new Test record passes through the Xgboost Regressor Base Learner.
+We can take any Alpha value, in this case we have take 0.1. Alpha is a Hyperparameter.
+It will be the ouput of the 3rd record that we have given.
+
+We are then going to calculate the predicted value yhat.
+Now after we calculate the predicted output yhat, we have created 1 Base Learner and q Decision Tree.
+Now we have to create another Decision Tree.
+To create this another Tree, we have to give the independent feature and new Residual R2, Residual R2 will get computed by the difference between Salary and yhat.
+In the next Decision Tree, that we will be constructing, we will be taking the independent feature and the output feature R2, and we will be constructing the Decision Tree, and this will keep on going until we have multiple Decision Tree.
+This is what is the entire process of implementing the Xgboost Regressor.
+
+Unsupervised Machine Learning =>
+
+Introduction to Unsupervised Machine Learning ->
+
+Till now we have learnt Supervised Machine Learning Algorithms.
+Supervised Machine Learning Algorithm basically means, the dataset that is basically given, we used to some independent features or input features (f1, f2, f3, f4) and we would always have a dependent or output feature. We were solving 2 kinds of problems, classification and regression problem statements.
+
+In Unsupervised Machine Learning, we will be solving a problem statement which is called as Clustering, that basically means you will be grouping data into similar clusters.
+Lets say, we have been given a Dataset. In this Dataset, we may have features (Age, Experience, Salary). We dont have any output feature in this particular Dataset.
+If we try to apply any Unsupervised Machine Learning Algorithm, then we will be able to group or cluster this data together.
+When we are grouping, the information that we will be able to get from the dataset is that, people who are having similar age, similar years of experience and similar salary. When we apply Unsupervised Machine Learning Algorithm, we will be able to create Clusters, that may have similar types of values in the Clusters.
+At the end of the day, we are Clustering this data points into a specific group.
+
+Tha Algorithms that we would be learning in Unsupervised Machine Learning Algorithm:
+1. K Means Clustering Algorithm
+2. Hierarchical Clustering Algorithm
+3. DBScan Clustering Algorithm
+4. Silhoutte Scoring
+
+Silhoutte Scoring Mechanism will be used to see the model that we have got, in short we will be using Silhoutte Scoring Mechanism to validate the first 3 Models.
+
+PCA (Principal Component Analysis) =>
+
+Curse of Dimensionality ->
+
+Why should we use PCA or Dimensionality reduction?
+For this, we have to understand an important topic known as Curse of Dimensionality.
+Lets say, we have many Machine Learning Models.
+Lets say that, we have a Dataset. In this specific Dataset, we have somewhere around 500 features.
+When we talk about Dimensionality, that means we are talking about Dimensions, whenever we say Dimensions, this is nothing but features.
+
+Lets say, we provide 3 features to train in Model M1.
+In Model M2, we provide 6 features for training the Model.
+For Model M3, we have provided around 15 features for training the Model M3.
+For Model M4, we have provided around 50 features.
+For Model M5, we have provided around 100 features.
+For Model M6, we have provided 500 complete features.
+
+We will be getting some Accuracy 1 with respect to Model M1. The accuracy is based on 3 specific features.
+We would do the same with Model M2 and Model M3 and will get Accuracy 2 and Accuracy 3.
+When we went to Model M4, herwe we are providing 50 features. In this features there may be a scenario that some of them may not be at all so much important. Some may have lot of importance, some may have very less importance, some may have no importance at all. Here the Accuracy 4 will keep decreasing. In this scenario we will be seeing that the Accuracy 3 is greater than Accuracy 4.
+In Model 5, Accuracy 5 will still decrease.
+In Model 6, Accuracy 6 will still keep decreasing.
+
+In Model 3, we were training with 15 features, the Accuracy 1 was increasing. The features were important for Model 3 to perform well.
+But when we went to Model 4, here we have increased the number of features, this specific model need not require that many number of features to do the prediction. Over here, we can say that the Model is overfeeded.
+Modles should be given that many number of features, through which the Accuracy keeps on increasing.
+The same thing will happen with the Model 5 and Model 6.
+
+Model is altogether, inside when you say that any Machin Learning Algorithm, those are nothing but Mathematical equations. With respect to Mathematical equations, as you keep on feeding new and new features, it will try to learn those features also eventhough it is not that important. Because of that the Model will get overfeeded and it will definitely lead to a lot of confusion, and the Model will stop performing well. From that point of time the Model performance will also degrade.
+As the number of features are increasing, the dimensions are increasing. The Model performance will degrade because now the mathematical calculation will happen for that many number of Dimensions. Because of that the Model performance will also degrade.
+When we train our model with many features, that is where we get Curse of Dimensionality.
+
+How do we prevent it?
+There are 2 different ways how to remove this Curse of Dimensionality:
+1. Feature Selection, we will try to take the most important features and then we will train our Model.
+2. Dimensionality Reduction (PCA), in this there are many algorithms and we will start with PCA. This process is basically called as Feature Extraction. It basically says that we will try to derive a feature from a set of features where we will be capturing much essence of the previous feature.
+
+Feature Selection and Extraction ->
+
+We will understand the difference between Feature Selection and Extraction.
+Why should we perform Dimensionality Reduction?
+To prevent Curse of Dimensionality.
+To improve the performance of the Model, suppose we have 100 features than that means we have 100 dimensions. to train the model, in every Model when the training happens, some Mathematical equation is already present. So the Mathematical equation gets applied to all the 100 dimensions. Because of this it may take more time in training of the Model.
+To visualize or understand the data. Once we are able to Visualize, we will be able to understand the data.
+
+We can visaulize only in maximum 3-dimension way. We cannot visualize anything higher than the 3-dimension.
+To understand the data, we can reduce the number of dimensions to 3d or 2d, and we can see it clearly so that we will be able to understand the data.
+
+Feature selection is a process, where in it will help help us to select the most important Feature which will actually help us to predict the output.
+
+Whichever have the highly possible relationship which we basically calculate through Covariance, we can definitely say that those features are important features which will be helpful in predicting the output feature.
+When the Covariance is 0, we can say that there is no relationship between X and Y, so we can then remove that feature.
+
+Refer the Course Material PCA.pdf.
+
+In case of Pearson Correlation, the more the value towards +1, the more positive Correlated X and Y is.
+The more the value towards -1, more negatively Correlated it is.
+If the Correlation between X and Y is equal to 0, that basically means No Relationship.
+
+If we have the Linear Relationship, definitely it indicates that the independent feature is an important parameter in determining the output feature because it has the Linear Relationship.
+When there is no relationship between the independent feature and the dependent feature. Even though the independent feature value is increasing, the dependent feature value may remain stagnant. Then we can come to a conclusion that the relationship between the independent feature and the dependent feature will be very very less or it will be approximatelyequal to 0 or it may be ranging between 0-0.25, not that positively or negatively Correlated.
+In this particular case, we can consider that the independent feature is not that important feature and we can drop that feature.
+These is Feature Selection process. We use Correlation and Covariance to do it.
+
+Now we will discuss about Feature Extraction.
+What does exactly happens in Feature Extraction?
+In Feature Extraction, lets say we have some independent features and the dependent feature.
+Lets say, if we want to reduce the number of independent features.
+We cannot reduce the number of independent features when all the independent features are important for the output feature or when there is a relationship between the independent and the dependent feature. In this case, we perform something called as Feature Extraction. In Feature Extraction the core idea is that we take the independent features and we apply some Transformation to extract new feature. Lets say this new feature is something called as House Size, and the output feature is somethig called as Price.
+
+In the real world scenario, we will be having 10-15 ffeatures and we will try to reduce it to 2-3 features. Once we reduce it, we will able to visualize it in a proper way.
+
+PCA Geometric Intuition ->
+
+PCA is used for Dimensionality reduction. That basically means, we are going to extract features with respect to the older features that are present in the Dataset.
+A simple way of converting a 2-dimension to 1-dimension is that, we will make sure that we plot or project all this point in the X-axis. When we project all the points, we will be able to get all the data points in 1-dimension.The are between the 1st point and the last point is the Spread. If the Spread is huge, the Variance will also increase, both are directly proportional to each other.
+
+The disadvantage of this approach, where we are directly projecting to X-axis. The Size information is getting captured, but the number of Rooms information is getting lost. So this information that you had related to Number of Rooms, this information is getting lost because, if we try to project from y-axis to the first point also, here also we have some amount of Spread.
+As the spread is increasing, the variance is also increasing. Because of the Variance, here also some information regarding Number of Rooms are there and we are directly skipping this information, we are neglecting this information, when we have used this specific approach, when in you are directly project to X-axis.
+With this approach, there is loss of information. In this case,  we are losing information with respect to Number of Rooms.
+Once we lose the information, your Model may not perform well with respect to this predictions. Here in short, you are doing feature extraction, but we are doing feature extraction with lot of information that are lost. In this Feature Extraction process, you are losing lot amount of information.
+When we are doing Feature Extraction, that information need not be losst that much. So how do we prevent it?
+In PCA, we do some kind of Transformation on the X axis and the Y axis. You apply some Mathematical equation (Eigen Decomposition) on some Matrix. With the help of this specific Transformation, we will be getting a new axis.
+
+Refer the Course Material PCA.pdf.
+
+Once we get the specific axis, then we will try to project the information on this new axis (Size'). One more axis will get created and it will be perpendicular to the new axis (Number of Rooms').
+
+What are the differences between previous and this new Projections. If we consider the new axis (Size') as the X-axis, here we will be able to see that, the spread is properly captured with respect to the points.
+If we try to plot all this point on the one more new axis, here you will be able to see the spread that is going to get lost, will be very very less. Here we are applying some Transformation, and we are creating a new axis (Size') and (Number of Rooms'). Once we create this new axis, all you do is that you now just project all this point to the particular axis (Size'), and after projecting this point we can see that maximum variance is getting captured for all the point over here.
+Why this graph is better than the previous graph? Because in the Y axis, you are not losing much information, we are just losing small amount of information. This amount of Variance we are actually losing, when we project it on the X-axis.
+
+Refer the Course Material PCA.pdf.
+
+Now with this Transformation, we will be able to convert 2-dimension into 1-dimension and we are making sure that much information is not lost, we come to this by seeing that the Y axis (the new axis) the Variance is less. Even though we project the point in new X-axis, most of the Variance is basically getting captured by the new X-axis. Hence much information is not lost.
+
+In the previous example, once you project it in the X-axis, huge amount of information is getting lost because here the Variance is quite high or spread is quite high. In this example it is not that high.
+Our main aim in PCA is that to find out new-axis kind of lines. After Transformation, which is the new axis that is being created.
+Since we had just 2 Dimensions, so after we do the Transformation, we basically call the new X-axis as PCA1, and we call the new Y-axis as PCA2.
+Suppose we have 3 Dimensions, that basically means, we will be having 3 Principal Components. PCA1 will be capturing the maximum amount of Variance. The PCA2 will be capturing the next maximum amount of Variance. Similarly, if we have 3 Dimensioins, then the PCA3 will be capturing the maximum amount of Variationafter PCA1 and PCA2.
+
+In Geometric Intuition behind PCA, our main aim is basically to find out Principal Components. At the end of the day, we really need to find out one line that should be able to capture maximum amount of Variance. Once we take the PCA1, then we can convert this from 2 Dimenision to 1 Dimension point.
+
+Our main aim is to find out PCA which has after projecting all the points it should have captured the maximum variance or spread.
+Why Variance is important? Because Variance basically talks about how the data is basically spread, and with the help of Variance, we will be able to capture more and more information.
+The final goal of the PCA will be that, to find out the Principal Components, in such a way that maximum variance will be captured.
+Suppose if we have 2 Dimension point, then we will basically be having PCA1, PCA2. Variance with respect to PCA1, after we project all the points will be greater than Variance with respect to PCA2 once we project it.
+Suppose if we have 3 Dimensions, then here we will be able to see that, we will be getting 3 PCA. That basically means we will be having 3 different axis PCA1, PCA2, PCA3. The variance with respect to PCA1 will be greater than variance with respect to PCA2 after we project the points and the will be greater than variance with respect to PCA3. The Variance will be following this approach.
+PC Algorithm will be finding out the best Principal Component line. It will try to select 2 best PCA lines.
+How we say that this is the best PCA line? Once we project the specific points on the new X-axis line, we will be able to call this line as the best line only when the Variance that is getting captured is maximum. We will say this as PCA1. Suppose of the new Y-axis line has captured the second maximum variance, then we will basically say it as PCA2.
+
+At the end  of the day, when we are converting it into from 2 Dimension to 1 Dimension, then we will be basically taking up all the specific points that we have actually plotted over the new X-axis.
+The final goal will basically be to get the best PCA which captures maximum variance.
+
+If we have to conver 3 Dimension point to 1 Dimension. In case of 3 Dimension points we will be getting 3 Components PCA1, PCA2, PCA3. VAriance of PCA1 will be greater than Variance of PCA2 which will be greater than Variance of PCA3. Since we want to convert it intoo 1 Dimension, we will project all the points in PCA1 and we will be taking all these points as the 1 Dimension points.
+Lets say if we want to convert 3 Dimension to 2 Dimension, then we will probably take PCA1, and we will also project all the points in PCA2, and we will tkae PCA1 and PCA2 information, and combine it together to basically get 2 Dimension.
+
+PCA Maths Intuition 01 ->
+
+Lets consider we have 2 axis, X and Y, my aim is to convert from 2 Dimension to 1 Dimension. As we know the final aim of the PC Algorithm is to find out the best Principal Component line after the Transformation from the axis in such a way that maximum Variance will fet captured.
+What PCA will do to come to the conclusion like whether the line is best or not. There are 2 important things:
+1. Projections
+2. Cost Function, that is related to the Variance.
+
+Lets take up 1 point from all the given points, consider P1 which is denoted by X1 and Y1. We can also consider this P1 as a Vector. Lets consider we also have a unit vector which is specifically given as miu symbol. If we really wan to Project the P1, into the new X-axis line, then we will get something called as P1'. We really need to find out what is this new Projection.
+If we are projecting P1 to the unit vector miu to P1', then this Projectionis given by an equation:
+Projection(P1) on miu = (P1 * miu) / ||miu||
+This is the that is basically used with respect to the Projection of a specific vector on a unit vector.
+Whenever we have a unit vector, the magnitude of that vector will be 1.
+We can write:
+Projection(P1) on miu = P1 .(dot product) miu, whatever value that we will get from this will be the Scalar value.
+
+As soon as we do dot product of P1, which is given by the co-ordinates X1 and Y1. Lets say the unit vector is given by the co-ordinates X2 and Y2. When we do the dot product with respect to P1 and miu, we are actually going to get P1'.
+We will project all the points, lets P0', P1', P2', P3' ..... Pn'.
+Once we have all this points after projecting it, it will all be a Scalar value itself. These values are just basically talking about the distance.
+What is P1' talking about. It is talking about the distance from origin to P1'. Similarly with all the points.
+Once we have the Scalar values, then it becomes easy to compute the Variance.
+We can calcualate the Variance by using the equation:
+Variance = Summation(xi - xbar)^2 / n
+The goal is to find the best unit vector, the best will capture the maximum variance.
+At the end of the day, we are trying to capture or we are trying to find out the vector which captures the maximum variance.
+Hence the above equation becomes our Cost Function.
+
+We cannot keep on go ahead and select different different unit vectors and probably trying to find out the best vector in that way.
+There is a technique which is called as Eigen Decomposition which we specifically say as Eigen Vectors and Eigen Values.
+Our main aim is to find out the unit vector to select to capture the maximum variance. For that, we will be using Eigen Vectors and Eigen Values.
+There are some steps:
+1. Find out the Covariance Matrix between feature.
+2. Eigen Vectors and Eigen Values will be found out from the Covariance Matrix.
+3. Whichever Eigen Vector will be the largest one, when we say Eigen Vector will be largest one, thhat basically means for the Eigen Vector where the Eigen Value is high.
+The Eigen value basically talks about the magnitude of the Eigen Vector. This will capture the maximum variance.
+
+We compute Eigen values and Eigen vectors because, at the end of the day we really need to find out the best unit vector such that maximum variance is captured, and we cannot keep on doing hit and trial.
+So, in order to find out we really need to go ahead and find out Eigen Vectors and Eigen Values.
+The Eigen Vectors and the Eigen Values can be found out by the simple equation:
+A vector v = Lambda vector v
+This is nothing but Linear Transformation of Matrix.
+We will then get some Eigen values, whichever Eigen vector has the highest Eigen value which is nothing but the Magnitude of the Eigen vector, that specific vector will get selected.
+Mathematically it is proven that whenever we project on that specific line, maximum variance will get captured.
+
+Eigen Decomposition on Covariance Matrix ->
+
+At the end of the day, we have to find the best Principle Component Line, which will be able to capture maximum variance. In order to find this, we will be using Eigen vectors and Eigen values.
+The most important thing about these vectors is that, suppose lets say, we have a specific matrix. On this matrix, if we have a vector v. The vector will have different co-ordinates. On this particular Vector v, if we apply some Linear Transformation with a specific Matrix. Then we will be getting one Lambda value. The Lambda is nothing but the Eigen value multipled by the same vector.
+[] * [v] = Lambda * v
+
+Refer the Course Material PCA.pdf.
+
+What is Linear Transformation basically means?
+Lets say, we have our co-ordinates system, and it is in the Grid Manner. Lets say all the data is in this Grid manner. When we say Linear Transformation, then the entire data can be moved in different directions.
+In order to compute Eigen values and Eigen vectors, what we do is that, lets say if A is the Matrix and v is the v vector.
+On the top of this specific Vector, if we apply Linear Transformation on this specific vector. Then we will get Lambda which is Eigen value and vector.
+A * v = Lambda * v
+This specific equation we will be using in order to find out Eigen values and Eigen vectors.
+From this equation, whichever Eigen vector has the maximum magnitude, that will be used as a plane or principal component, which will be able to capture maximum variance.
+With the above equation, we will be able to get the Eigen Vector, and this Eigen vector will have the maximum magnitude. Maximum magnitude means Maximum Eigen Values that will be selected as the Best Principal Component Line. In this particular case it is PCA1 because it captures maximum variance.
+
+Steps to calculate Eigen values and Eigen vectors:
+1. Calculate the Covariance of the features.
+
+Equation of Covariance:
+Cov(X,Y) = Summation((xi - xbar)*(yi - ybar)) / N-1
+
+In order to find out the Covariance(X,Y), we usually get 2*2 matrix.
+Covariance(X,X) = Variance(X)
+Covariance(X,Y) = Covariance(Y,X)
+If we have 3 independent variables X, Y and Z, then we would probably create 3*3 matrix.
+In order to find out the Eigen values, we will take up the Covariance matrix A and we will try to take up the Vector v, we will try to apply the Transformation of the vector, and finally we will be getting Lambda and vector.
+A . v = Lambda . v
+Suppose if we have 2 feature (f1, f2), then we will be getting 2 Lambda values Lambda1 and Lambda2. Lambda1 will basically be giving the Principal Component Line 1 magnitude and whereas Lambda2 will be giving the Principal Component 2 magnitude.
+When we have 3 features (f1, f2, f3) we will get Lambda1, Lambda2, Lambda3 which will specifically talk about the Eigen values.
+Just by using the above equation, we will be getting an Eigen Vector and that Eigen Vector will be giving 2 or 3 based on the number of features that we have, that many Lambda values, lets say if it is giving Lambda1 and Lambda2, that basically means we have 2 Eigen values.
+When the Lamda1 will be the highest and Lambda2 will be the highest, so this way we will be able to get this Lambda1 and Lambda2 which are specifically the Eigen values, and then this can be considered as PCA1 and PCA2.
+
+Once we Standardize the data, all the data points that we will be seeing it will be 0 centered.
+
+At the end of the day, we are trying to find out with respect to any data points, we are trying to find out the best Principal Component line that can fit on the data points such that it captures maximum variance.
+
+K Means Clustering Unsupervised ML =>
+
+Kmeans Clustering Geometric Intuition ->
+
+First Unsupervised Machine Learning Algorithm.
+Suppose we have data points, distributed in different groups.
+Whenever we have this kind of data points. This entire data points after applying K Means clustering will be distributed in groups or clusters. Along with Clusters, we would also be getting something calles as Centroid. Since here we have 2 Clusters, we would be getting 2 Centroids.
+We are able to Cluster similar kind of points together. That is the main aim behind K Means Clustering.
+
+Steps in Creating Groups:
+1. Initialize some Centroids or K Value. Whenever we say about Centroids, we are talking about K Value.
+2. We will try to find out from the Centroid to all the points. We will also find from which Centroid the point is near. In a simpler way, if we really want to find out, we will just try to create a straight line from 1 Centroid to the other. We will create another perpendicular line which will be passing through the straight line.
+In order to find out the distance, we would be using something called as Eucledian distance or Manhattan distance. We will be using either one of this. We will also try to understand when should be using 1 over the other.
+We will find out the points that are nearest to the Centroids and we will mark them in that particular group.
+3. After the marking is done, we are going to move the Centroids. We are going to find out the average of this points from each group.
+Whatever average will come, the Centroid will get updated and move to a different point. The average point will be the new Centroid location.
+
+Again we will be repeating all these steps from the 2nd step. Here we can see that some of the points have again got mismatched and the points will change the groups.
+At one point, we will be able to see that we are clearly getting 2 groups.
+This is how we have clearly created 2 Clusters, and we have to stop repeating the points.
+
+How to find K Values ->
+
+How do we select the K Value?
+In real life scenario we would finding a lot of overlapped points.
+WCSS = Within Cluster Sum of Squares.
+In order to find out the K Value, we will start with the process.
+Lets initialize K Value from 1 to 20.
+When K Value is 1, means we will have 1 Centroid and it can be initalized anywhere.
+As soon as we initialize K=1, what will happen is that we will just compute the distance from every point to this particular Centroid.
+Once we compute it, we will know that the distance is quite high for some points.
+WCSS = Summation(distance between points to nearest Centroid)^2
+WCSS value will be quite high.
+
+Coming to the second scenario, when the K value is equal to 2. In this scenario 2 Centroids will be initialized. Whichever points are near to the Centroid, we will calculate the distance.
+WCSS value will reduce in this case when K is 2 because there are 2 Centroids.
+
+When we continue to do this with K=3 and K=4, we will be seeing that WCSS value will keep on decreasing. After some point it will be almost stable. This method is basically called as Elbow method.
+Elbow method basically says that, we have to find out a point where in there is abrupt decrease in WCSS, and after that it is going to stablize. So we have to go and select that K value. This is the concept of the Elbow method and how do we select the K value.
+
+How do we compute the distance between 2 points in Eucledian distance?
+In Eucledian distance, suppose there are 2 points P1 and P2, in order to find out the distance between these 2 points, the formula is:
+Eucledian Distance = root((x2-x1)^2+(y2-y1)^2)
+
+Suppose if it is a 3-dimensional point, then we will also use z.
+
+In case of Manhattan distance, our points will have base and perpendicular.
+If we want to find out the base and perpendicular distance.
+Base is nothing but x2 - x1, and perpendicular is nothing but y2 - y1.
+So the overall forrmula with respect to Manhattan Distance can be written as:
+Manhattan Distance = |x2 - x1| + |y2 - y1|
+If we use this formula, we will be able to compute the Manhattan Distance.
+
+Random Initialisation Trap(Kmeans++) ->
+
+What if random initialisation of the Centroids goes wrong?
+We may get a different output which may be completely wrong.
+This is called Random Initialisation Trap.
+There are some problems whenever we randomly initalize all the centroids, you may be getting a different cluster of groups that may not work well with respect to the dataset.
+For this particular case, we use Kmeans++ initialisation technique 
+In this technique, we initialize all the Centroids in such a way that atleast it should be at maximum distance at it can.
+If a Centroid is getting initalized somewhere, then the next Centroid that is getting initialized should be quite far from the previous Centroid.
+Try to use Kmeans++ initialisation technique whenever we are using K means Clustering.
+
+Hierarichal Clustering =>
+
+Hierarichal Clustering ->
+
+Even though we will have the K Value, but there will not be Centroids.
+Hierarichal Clustering we have 2 types:
+1. Agglomerative Clustering
+2. Divisive Clustering
+One is a revers of the other, hence if we understand one, we can easily understand the other.
+Agglomerative basically means combining. Divisive basically means Dividing.
+Steps:
+1. For each data point initially we will consider it as a separate cluster.
+Each data point will be considered a separate Cluster.
+2. We find the nearest point and create a new cluster, with both the data points inside the Cluster.
+We will continue the process untill all the data points get added in 1 big Cluster.
+3. Keep on doing the same process until we get a single Cluster.
+This approach is called as Agglomerative approach, from smallest point we are trying to cover up all the points and create as a single Cluster.
+
+How many number of Clusters do we need to take?
+For that we will be using Dendrogram. Dendrogram basically gets constructed based on all the points.
+
+We find out the nearest points. Each and every point is a separate Cluster. We find out the nearest point, that is P4 and P5, we combine them as a new Cluster. Lets say that the distance between them is 1. We have grouped them in a single Cluster.
+After that we find out the next nearest point. It is P1 and P2. We are going to combine P1 and P2, it will be greater than the Eucledian distance when compared to P4 and P5.
+We can use Eucledian or Manhattan distance to find out the nearest points.
+Lets conside that P6 is near to P4 and P5. We are going to combine this as a separate cluster.
+Finally P3 will also get combined to the cluster P1 and P2.
+Based on Eucledian distance, the height of the graph will be created. This diagram is called as Dendrogram.
+Finally when we combine both the Clusters.
+
+How do we decide what should be the number of Clusters?
+In this case, lets say the K value is 2. With the help of K=2, we would get 2 groups, P1, P2, P3 and P4, P5, P6.
+The approach that we have used in Dendrogram is bottom to top. This approach is called as Agglomerative approach.
+In Divisive, we go from top to bottom.
+From the Divisive approach also what will happen is that, we will combine all the points on the top and then we go ahead and divide the points from the top to bottom.
+
+How do we select the K Value?
+K Value is basically selected based on the Eucledian distance threshold. We define some kind of Threshold, lets say we consider the threshold to be 4, then we will create a horizontal line from there, the points present in the cluster should not be having more than Eucledian distance threshold as 4. That is what the line basically specifies.
+All the points that are within the cluster and that are in different different cluster, the threshold should be made sure that it should always be less than 4. We are trying to set up a Threshold value.
+Threshold value basically help us to identify how manyy number of clusters will be there.
+When we draw the horizontal line considering some Threshold value, it passes through 2 points. When it passes through 2 points, that basically means the Cluster should be 2.
+What happens if we reduce our threshold, lets say our threshold is 2.5 and we start creating a horizontal line there. It is passing 4 vertical lines. If it is passing through 4 points, then that means we have to use the K value as 4.
+If we are decreasing the distance between the points, that basically means the number of clusters will increase.
+If we are setting up our threshold to 0.5, it will pass through 6 vertical lines. That basically means, we have come to our similar points we had, P1, P2, P3, P4, P5, P6.
+It is our duty to select the best threshold, and we have to always make sure that when the threshold is selected, we should get a good number of Clusters.
+Selecting the threshold can be a tough challenge, so with thelp of Dendrogram there is a simple hack. We just need to find out the longest vertical line such that none of the horizontal line passes through it.
+We have only 1 vertical line such that none of the horizontal line passes through it, we create a horizontal line through it and we will see how many points it is passing through. If it is passing through 2 points, that basically means we have to select K value as 2. This is the technique that we should apply in Dendrograms which will actually help us to select the K suitable values.
+
+Kmeans vs Hierarichal Mean Clustering ->
+
+For smaller datasets, we have to use Hierarichal Clustering because in Hierarichal Clustering we create Dendrograms. If we have a huge datasets, the Dendrogram will not be able to clearly see. So it will be very difficult to make the decision of how many number of Clusters we need to have.
+Hierarichal Clustering can be used not only for the numerical data, but it can be also wherever probably we can just try to find out whereever we can use this cosine similarity also for all those things where cosine similarity can be applied, for that also Hierarichal Clustering can be applied.
+We can apply Hierarichal Clustering for variety of data.
+
+When we are using Centroids in K means, the technique that we use is called as Elbow method, this Elbow method sometimes it becomes difficult to find the number of Centroids, because we have to see that where is thhere a sudden decrease in the WCSS value, and then when it is stabilizing.
+In the case Hierarichal Mean Clustering, it becomes little easy to find  the number of Clusters.
+
+DBSCAN Clustering =>
+
+How DBSCAN Works ->
+
+In the diagram, we would be finding 3 main points.
+1. Red point, this we will be considering as a Core point.
+2. Yellow point, this point is nothing but a Border point.
+3. Blue point, this particular point is specifically called as an Outlier or Noise.
+Along with this, we will also consider 2 more parameters.
+1. Minimum points, that we have to probably consider. In this example we have considered 4 Minimum points.
+2. Epsilon, which is nothing but the radius that we are going to use to draw a circle around any specific point.
+This are the 2 Hyper that we will be using for DBSCAN Clustering.
+
+With the help of Silhoutte scoring we will be able to select both the values, Minimum points and Epsilon.
+
+When does a point be called as a core point?
+Lets say we have a data point, and we take some Epsilon value and we draw a circle around it. We have marked it as a Core Point. There are some conditions:
+1. There should be atleast some minimum number of points that should exist within this circle. Lets say if the minimum point is 4, that basically m eans if we have 4 points within the circle. We can also have greater than 4. But if we have atleast that many minimum number of points atleast, then we will consider this as a Core point.
+Number of points within the radius should be greater than or equal to 4, which is minimum points. If the particular point satisfies this condition, points are nothing but other data points that are existing.
+
+What does a Border point actually specifies?
+Lets say if we have a Border point, and we create a circle considering 1 Epsilon value. Lets say if there are number of data points within this epsilon value but the number of data points will be less than the number of data points within this radius will be less than minimum points.
+
+When does a point be called as a Outlier (Noise)?
+In this particular case, whenever we take any point and create a circle within the Epsilon, no other point will be existing, then we can definitely say it as Outlier.
+
+In DBSCAN Clustering, what happens is that, based on density in various regions, we can actually group based on this Core points, Border points and Outlier also.
+
+Based on this similar clustering will actually happen, Border point will be clustered in a separate way, the Core points will be clustered in a separate way. Noise and Outliers are going to skip from that specific data.
+One importand thing with respect to DBSCAN clustering is that, eventhough your data will have Noise, your DBSCAN clustering will be able to handle it in amazing way.
+DBSCAN clustering will also be able to handle Non Linear clustering.
+
+Examples after applying DBSCAN ->
+
+After we apply DBSCAN clustering on a specific data, what kind of groups we will be able to get.
+With the help of DBSCAN clustering, we will not be taking up any Noise data. It will be able to separate completely the Noise data.
+
+In the 2nd image, in the left side when we have this specific data, if we try with K means clustering or if we try with Hierarichal clustering, with respect to this specific data. Here we will be able to see that it is not able to group together, it is considering all this things in a cluster, and even it is taking all the Outliers. But after we apply DBSCAN clustering, in the right side here you will be able to see that we are getting specific different kind of groups. For non linear data it is going to work well, and there would be some points that have been left out over here which is basically an outliers.
+So at the end of the day, when we are applying techniques which are related to Core points, Border points and Outliers, we will be able to get this amazing clustered groups.
+At the end of the day, we have 2 important parameters, Minimum points and the radius.
+
+Pros and Cons of DBSCAN ->
+
+Advantages:
+1. DBSCAN does not require one to specify the number of clusters in the data a priori, as opposed to k-means.
+2. DBSCAN can find arbitrarily-shaped clusters. It can even find a cluster completely surrounded by (but not connected to) a different cluster. Due to the MinPts parameter, the so-called single-link effect (different clusters being connected by a thin line of points) is reduced.
+3. DBSCAN has a notion of noise, and is robust to outliers.
+4. DBSCAN requires just two parameters and is mostly insensitive to the ordering of the points in the database. (However, points sitting on the edge of two different clusters might swap cluster membership if the ordering of the points is changed, and the cluster assignment is unique only up to isomorphism.)
+5. DBSCAN is designed for use with databases that can accelerate region queries, e.g. using an R* tree.
+6. The parameters minPts and ε can be set by a domain expert, if the data is well understood.
+
+Disadvantages:
+1. DBSCAN is not entirely deterministic: border points that are reachable from more than one cluster can be part of either cluster, depending on the order the data are processed. For most data sets and domains, this situation does not arise often and has little impact on the clustering result:[4] both on core points and noise points, DBSCAN is deterministic. DBSCAN*[6][7] is a variation that treats border points as noise, and this way achieves a fully deterministic result as well as a more consistent statistical interpretation of density-connected components.
+2. The quality of DBSCAN depends on the distance measure used in the function regionQuery(P,ε). The most common distance metric used is Euclidean distance. Especially for high-dimensional data, this metric can be rendered almost useless due to the so-called "Curse of dimensionality", making it difficult to find an appropriate value for ε. This effect, however, is also present in any other algorithm based on Euclidean distance.
+3. DBSCAN cannot cluster data sets well with large differences in densities, since the minPts-ε combination cannot then be chosen appropriately for all clusters.[11]
+4. If the data and scale are not well understood, choosing a meaningful distance threshold ε can be difficult.
+
+DBSCAN Clustering Implementation ->
+
+make_moons is a technique of creating the data.
+make_moons basically means it will try to show the dataset in the crescent format, like moon shaped format.
+
+Silhoutte Clustering =>
+
+Silhoutte Clustering Intuition ->
+
+Why do we use Performance metrics in Supervised Machine Learning Algorithms?
+To basically validate the Classification Model. To see whether the Model is performing well or not.
+
+Similarly, Silhoutte scoring is one amazing technique which will actually help to validate the Unsupervised Machine Learning Algorithm like K Means or Hierarichal Means Clustering.
+
+Steps to understand and apply Silhoutte Scoring:
+1. For every data point i (belongs to) Ci.
+Lets say we have a C1 cluster, within this particular cluster, we are going to consider a random point. We are going to compute the average distance from that particular point to all the other points that are present in the cluster.
+
+Refer the Course Material silhoutteclustering.pdf.
+2. Lets say we have a C1 cluster and the points in the cluster, in the first step, from a specific particular point we computed all the average distance, and we computed a(i). Now we will compute b(i). What b(i) will do is that, it will take the nearest cluster from the particular C2 cluster. There may be other Clusters as well. Lets say we have data points in that particular cluster as well, we will now try to calculate the average distance between the C1 Cluster data point to the data points in the C2 Cluster. By this, we will be able to get b(i).
+
+a(i) << b(i), if the clustering is done well. If a(i) is greater, then clustering will not be done well. If the clustering is not done well, at that point of time we will getting a(i) >> b(i).
+
+Refer the Course Material silhoutteclustering.pdf.
+3. Then we calculate the Silhoutte score.
+
+For formula, refer the Course Model silhoutteclustering.pdf.
+
+If we apply the formula, our value of Silhoutte score will be ranging between -1 to +1. If the more near to +1, then better clustering model we have created.
+If a(i) < b(i), then we know that our value will be approximately equal to +1 or nearer to +1.
+If a(i) > b(i), then we know that our value will be approximately equal to -1 or nearer to -1.
+
+Anomaly Detection Machine Learning Algorithms =>
+
+Anomaly Detection using Isolation Forest Indepth Intuition ->
+
+Whenever we talk about Anomaly Detection, it basically means to detect outliers.
+Real Life Example: If anyone is trying to access your Bank Account or Gmail Account outside of where you live.
+
+Outliers can play a very important role for a specific problem statement and it can also not play a very important role for a specific problem statement.
+Real life example for very important role is if a person is having Diabetes or not. The data point can be an outlier if the person is having.
+
+Different types of Anomaly Detection:
+1. Isolation Forest, internally we are going to use Decision Trees. Eventhough it is an Unsupervised Machine Learning but we are going to use Decision Trees for some specific purpose.
+What does Isolation Forest says with respect to Anomaly Detection and how we are able to determine the data points as an outlier?
+Internally Isolation Forest, it will try to create Decision Trees by considering various features and it will try to split it. The split will happen in such a way that, for every data point it will try to go ahead and create a leaf node.
+A particular leaf node could be for an outlier data point. For every data point we will try to create a leaf node with respect to any number of splits that may happen.
+
+We are considering a data point as an outlier because that data point is an Isolation Forest. Isolation Forest basically means, we are going to make that particular data point completely Isolated. Isolated basically means separated. Why we are saying the leaf node as an outlier, because we are able to Isolate that data point very much quickly. In one split we are able to Isolate when compared to all other points. For all the other points, again we will go ahead and different splits.
+Here we are creating Isolated Trees for the Outlier point. We are calling it as an Isolated Tree, because we are Isolating that data point. 
+
+For diagram, refer the Course Material 1.0-Anomaly+Detection+Isolation+Forest.pdf.
+
+For every data point, we will compute the Isolation score or Anomaly score. If it crosses a specific threshold, we consider that as an outlier.
+
+Mathematical Formula to compute Anomaly score of a new point:
+S(x,m) = 2^-E(h(x))/c(m)
+
+For formula, refer the Course Material 1.0-Anomaly+Detection+Isolation+Forest.pdf.
+
+We will compute the path to a specific data point. How quickly we are able to get to the Isolated leaf node. If we are able to get it in 1 depth or path, then we will say that the depth is equal to 1. If we get the Isolated leaf node in depths, then we will say that the depth is equal to 2.
+
+If we are using Isolation Forest, we will be having many Trees. For, every Tree the path may be different for the Isolation Forest, because based on the features we can split it however we want. If we have 4 features, we can start with f3 feature or f4 feature.
+
+If E(h(x)) << c(m), hence S(x,m) it will be approximately equal to 1 or very much near to 1. Then we can basically say, the Anomaly score is very good. If it is coming very much near to 1, then we can conside that as an Outlier.
+We need to define a threshold, may be 0.5. Anything that comes above 0.5, it will be considered as an Outlier.
+
+If E(h(x)) >> c(m), then S(x,m) will be approximately equal to 0.5 or it can be less than 0.5 as well. Lets consider this as normal Data point.
+
+This is how we go ahead and calculate the Isolation Forest.
+
+Internally we are creating many Isolation Trees.
+The only difference between an Isolation Trees and Decision Trees is that, in Isolation Trees we are isolating each and every data point separately. We are just seeing that how much time, how much depth it is taking to come to the particular Isolated point. By using the above Mathematical Formula we can basically find out whether a data point is an outlier or not for a specific Problem Statement.
+
+Anomaly Detection is completely based on Unsupervised Machine Learning.
+
+DBSCAN Clustering Anomaly Detection ->
+
+When we are discussing about DBSCAN clustering, wherein we can create Clusters from Non Linear Data, there we will also be able to determine the Outliers. This Outliers, if it is important for a specific problem statement, that is basically a kind of Anomaly Detection Application that we can probably create.
+
+DBSCAN Clustering performs well when we Non Linear Clustering Data.
+2 Hyperparameters we are using, minPoints and Epsilon.
+
+make_moons will create a Non Linear Data.
+
+Local Outlier Factor Anomaly Detection ->
+
+1. Local Outlier
+2. Global Outlier
+
+When the data point is near to a specific Cluster, we can call it as a Local Outlier.
+When the data point is completely different or far away from all the Clusters, we can call it as a Global Outlier.
+
+In order to find out Global Outlier anomalies, it is very much easy with the help of DBSCAN or Isolation Forest because we isolate this kind of data points.
+But if we want to determine Local Outlier in a proper way, then we can use something called as Local Outlier Factor(LOF).
+Internally it uses K Nearest Neighbour. With the help of K Nearest Neighbour, we can determine the Local Density.
+How does Local Outlier Factor works?
+Lets say, we have taken K=5 as the neighbours we will give a 1 point and we will try to find out whether this is an outlier or not.
+If this needs to find out, if it is an outlier or not, it will find out the nearest 5 neighbouring points. Then we will conside this 5 nearest data points, and then we will observe what is the density with respect to the neighbouring points. So for every point, it will try to calculate the distance between the nearest 5 neighbour points from that particular point. When we are calculating the average distance, if the average distance is less that basically means the density is more. If the distance is more, that basically means the density is less. We are just going to compare the density from the particular neighbouring points to the Local Outlier point.
+With respect to K=5, we will find out if the Density is more over the normal data points or near the Local Outlier. If the density is less over Local Outlier, then it can be considered as an Local Outlier.
+
+End to End Machine Learning Project with AWS, Azure Deployment =>
+
+End to End ML Project with Deployment-Github and code Set up ->
+
+setup.py will be responsible in creating the Machine Learning Application as a Package. We can also install this package in our projects. We can even deploy the Package in Python PyPi. From there anyone can do the installation and anyone can also use it. So that is the reason why we use setup.py.
+
+How the setup.py will find out how many packages are there?
+We will create a folder called 'src'. If we want this 'src' to be found at as a package, we need to create a file name __init__.py inside src folder.
+
+Whenever in setup.py, find_packages() is running, it will just go and see in how many folder __init__.py. It will directly consider the 'src'as a package itself, then it will try to build it. Once it builds, we can probably import this wherever we want. Like how we import other libraries.
+Entire project development will be basically happening inside 'src'. Whenever we create any new folders also, there also we will be using __init__.py file, so that the internal folder also behaves like a package once we build it.
+
+We can directly install setup.py or whenever we are trying to install all the requirements.txt, at that point of time setup.py file should also run to build the packages.
+-e. in requirements.txt will automatically trigger setup.py file to run.
+
+Implementing Project Structure, Logging and Exception Handling ->
+
+As soon as we create any fodler inside src, the first thing that we need to do is that, create __init__.py file. We do this because components will be created as a package and it can also be exported or imported to some other file location. That is the reason we are writing __init__.py. Components are all the modules that we are going to create like initially we are going to create a procaess called as Data Ingestion.
+Data Ingestion basically means, we would be reading a dataset from a database or it can be from some file location or it can be from different kinds of Databases.
+Data Ingestioin is basically a part of the module, when we are probably developing the entire project. This can be our component.
+
+We will train the model in model_trainer.py file.
+
+pipeline folder will have what kind of pipeline we will create, with respect to pipeline, 2 types of pipeline will be there:
+1. training pipeline
+2. prediction pipeline
+
+train_pipeline.py will basically have the code for the training pipeline itself. From this training pipeline, we will try to trigger or call all the components.
+
+In utils.py, we can read the dataset from a database, we can probably create our mongo client, if we have to save our model into the cloud we can write the code here. utils code, we can call it inside the components folder.
+
+Discussing Project Problem Statement, EDA and Model Training ->
+
+When we are developing an end to end project, the major thing or the first priority thing we really need to think about is that what kind of dataset we should basicallly start with.
+We have considered a dataset, this entire project is about Student_Performance_Indicator.
+Till now most of the time we have learnt everything in Jupyter Notebook. But that same Jupyter Notebook code then we will try to convert that into a modular code. This is how we are going to learn it.
+
+Data Ingestion Implementation ->
+
+After data_ingestion, data_transformation will happen.
+In data_ingestion, whenever we are performing the data_ingestion component, there should be some inputs that may be probably required by the data_ingestion component.
+The input can be like where I have to save the train data. Where I have to save the test data. Where I have to probably save the raw data.
+This kinds of input, will be basically be creating in another class, and we can mention this class as DataIngestionConfig class.
+
+The reason why we are making DataIngestionConfig is because, in the data_ingestion component, any input that is required, anything that we specifically require we will probably through this DataIngestionConfig.
+
+If we do data_transformation also, we will probably go ahead and write DataTransformationConfig because there also we will be requiring some kinds of inputs.
+
+Output with respect to any data_ingestion, the output can be anything. It can be a numpy array, it can be any files saved in some folder. It can be multiple things.
+
+We will use a decorator. Inside a class to define a class variable, we basically use init, but if we try to use the @dataclass Decorator, we will be able to directly define the class variable.
+
+If we are only defining variables, then we can probably use DataClass class. But if we have some other functions inside the class, we can go ahead with the __init__ constructor.
+
+Data Transformation using Pipelines Implementation ->
+
+Model Trainer Implementation ->
+
+Building Prediction Pipeline ->
+
+When we use the render_template("index.html") method, it will just go and search for the 'templates' folder. We go ahead and create the 'templates' folder if we dont have it.
+
+In home.html, inside <form action="{{ url_for('predict_datapoint')}}" method="post">, we will be calling the predict_datapoint method which is present in app.py file.
+
+In predict_pipeline.py, we create CustomClass, it will be responsible in mapping all the inputs we are giving in the html to the backend with the particular values.
+
+The load_object function in predict_pipeline.py will import the pickle and probably it will just load the pickle file in short.
+
+ML Project Deployment Using AWS Beanstalk ->
+
+We have need to setup 2 important configurations, whenever we are working with Elastic Beanstalk, which is kind of instance that would be provided, where we can probably deploy our entire application.
+The extension is .ebextensions folder, inside that we have created python.config file, python.config file is mainly to tell the Elastic Beanstalk instance, saying that what is the entry point of the application? This is the most important thing.
+
+In the file python.config, we will have WSGIPath: application:application, the application should be app.py name, the entrypoint of the file, inside we have application pointing to Flask.
+It is compulsory that inside python.config we give in that format only, application: application, but the problem over here is that we dont have application.py file. So we will create a duplicate of app.py file and rename it as application.py, just for the deployment purpose. We will be removing debug=True, because while we are deploying, we will have to make sure that we remove that.
+
+Make sure to delete the app.py file, because in the configuration we have written application.py, but if the app.py is encounterd, probably there might be some release problem.
+
+Deployment EC2 Instance With ECR ->
+
+We need to create a Docker file, which will play a very important role. It is required because, with the help of Docker we will be able to create containers irrespective of the OS specifically being used in the server.
+
+We also need to create a main.yaml file inside .github/workflows. This has both CI/CD pipeline integrated.
+
+ECR is basically used to store private Docker images.
+
+From the ECR, we can probably do the deployment in various instances like you can do the deployment in EC2 instance and others.
+
+The main.yaml file will already be present in the market place of github actions which will give you an option how to deploy from the github to ECR2 AWS.
+
+Go to Github, then go to github actions, go to workflow, click on new workflow, we get an option Deploy to Amazon ECS, click on configure it, we get the entire for main.yaml.
+
+With EC2, we create virtual servers in the cloud.
+
+We can go to Github, and then settings, in the settings we will have Actions, once we click on Actions, then we can go to Runners.
+
+Importance of the Runners is, it is not a simple thing, whenever we do any kind of code commit in Github, then automatically this Runner should be able to get triggered and do the deployment process. We are going to create a new Runner.
+
+What is the main aim of the app-runner? Any changes that come in the Github, it will automatically push the deployment.
+
+The ./run.sh command, when we run this command, it will then be connected to Github and it is listening for jobs. Listening for jobs basically means any push that is basically happening.
+
+With respect to ECR why? Dockers privately if we really want to put it, Docker Images if you wnat to put in AWS, you have to use ECR repository, and from there if we want to pull and deploy it in the EC2 instance, you have to probably use AWS EC2 instance.
+
+If we really want to scale up, further we can also add Load Balancer, and through this way we can definitely do a lot of things.
+
+Deployment Azure with Container and Images ->
+
+First step will be to convert the Web Application into a Docker Image. Once it is getting converted to a Docker Image,  the Docker Image will be deployed in the server that we are going to use.
+In AWS it was EC2.
+In AWS, the Docker Image, which is currently a Private Image, this Private Image will then get deployed into Container Registry. This Container Registry is the Azure ones.
+Like in AWS we have ECR.
+
+Once we upload the Docker Image over Container Registry, then we have to create an Azure web app, and the web app will be like the server.
+Then the Container Registry will be pulled and installed over Azure Web App.
+
+End to End MLOPS Projects with ETL Pipelines- Building Network Security System =>
+
+Project Structure Set up with Environment ->
+
+Github Repository Set up with VS Code ->
+
+We create __init__.py in all the folders because, we can probably import any code that we write as a package in any folder as we want.
+
+Packaging the Project with Setup.py ->
+
+The setup.py file is an essential part of packaging and distributing Python projects. It is used by setuptools (or distutils in older Python versions) to define the configuration of your project, such as its metadata, dependencies, and more.
+
+find_packages function will scan through all the folders and whenever there is an __init__.py, it is going to consider that particular folder as a package.
+
+-e . in requirements.txt, is not going to get considered in setup.py file.
+-e . is referring to the setup.py file.
+
+-e . can be actually be added at the last, when the complete project is ready and we want to create a final package, at that time we can probably put this. This is usually used when we are trying to deploy the package into some cloud or into some as PyPi package if we want to deploy it.
+
+If we uncomment -e . i file requirements.txt, automatically the setup.py file will get triggered, and the entire package for the particular project will be created.
+
+Logging and Exception Handling Implementation ->
+
+Introduction to ETL Pipelines ->
+
+The full form of ETL Pipeline is nothing but Extract, Transform, Load. This 3 components make up the entire ETL Pipeline.
+Before the data enters into the mongodb database, as a data engineer we really need to create ETL Pipeline also.
+
+Why ETL Pipeline is so important?
+In the real world project, whenever we work in any companies, this data will be coming from various sources, it will not be just 1 source.
+The data will be coming from API's, S3 buckets, paid API's, and some other source itself. We need to combine all the data, when we combine all the data, we do some transformation technique, lets say our main aim is to convert it into json, and store it in some database itself.
+
+The above process is entirely done by the data engineering team. But as a Data Scientist, we really need to know some of the information about it, so that is the reason we are learning this entire concept.
+
+Setting up MongoDb Atlas ->
+
+Before our data gets into the MongoDB database, we need to create small ETL Pipeline and this ETL Pipeline should do, in the local dataset, phishindData.csv.
+
+We will try to create ETL pipeline, where in we will read the particular dataset phishingData.csv, we will do some kind of Transformation, and then we will convert into json, and finally after converting into json, we will insert entire data in MongoDb database.
+
+ETL Pipeline setup with Python ->
+
+The certifi is a python package that provides a set of root certificates. It is commonly used by python libraries that needs to make a secure http connection.
+The line certifi.where() retrieves the path to the bundle of ca certificates provided by certifi and store it in the variable ca. The ca is certificate authority, and this are nothing but the trusted certificate authorities, and this is usually done for SSL, TLS connections to verify that the server you are connecting to has the trusted certificate. We will be using this certificates for the further requests and all that we will see as we go ahead.
+
+The NetworkDataExtract() class in push_data.py file will be the ETL pipeline.
+
+Data Ingestion Architecture ->
+
+Implementing Data Ingestion Configuration ->
+
+0.0.0.0/0 is nothing but, we are going to make sure that from any http request that specifically comes that happens.
+
+Implementing Data Ingestions Component ->
+
+Initiating Data Ingestion basically means first of all the first step will be to read the data from the MongoDB. The second step will be to probably create the feature store, and the third step will be to probably split the data as train and test and finally save it in the Ingested folder.
+
+Implementing Data Validation - Part 1 ->
+
+What exactly we are going to do in Data Validation?
+Here we will be able to see that whenever we read some data from the MongoDB, the most important thing is that the data schema should not be changed, Schema basically means lets say if we have 10 features in the dataset, this 10 features should always be there because if the 10 features are not there or if 1 of the feature is of any other data type, then we will not be able to train our model properly.
+We also need to check, lets say in one of the particular feature the data is following the normal distribution, after some point of time, this data may change its feature to right skewed distribution. This change of the data is specifically called as Data Drift.
+If there is a Data Drift, we cannot use that same data probably to train the model because there is a huge difference between the normal distribution data and the right skewed data. Normal Distribution data we have specifically used for the Model training. What if the data distribution changes with time, then we should probably go ahead and create something called as Data Drift report.
+Data Drift report will give an idea to talk about or to tell the developers, whatever data that is basically coming, the distribution is completely getting changed.
+
+We will also go ahead and check whether each and every feature that we are specifically getting during the training the model are of same data type with respect to new data that we are getting. So this kinds of check is basically Data Validation.
+
+1. Our dataset should have the same schema, when we are saying same schema that basically means same number of columns, same number of features, and the distribution should also be same.
+2. We will also be checking something called as Data Drift. Data Drift is just to check whether the distribution of the data is same or not when we compare it with training the data and the new data that we are getting.
+3. Validate number of Columns, whether Numerical Columns exists or not.
+
+For Data Drift we are going to use a library from scipy.
+
+How to validate the number of columns? We need to check if the numerical columns exist or not?
+For this we need to define some kind of Schema. We will define a Schema path, based on this particular Schema path we will just try to compare how many fields are there or not.
+
+Why the schema.yaml is basically created?
+If we go ahead and see the dataset phishindData.csv, we need to basically see that how many number of columns are there, how many number of Numerical columns are there, through this we will be able to validate the the entire data itself, so that is the reason we have created schema.yaml. It will be in the form of key value pairs.
+
+In every problem statement that we work in Data Science with respect to our Dataset, that is specifically coming after the ETL pipeline, and we need to have a fixed schema.
+
+Implementing Data Validation - Part 2 ->
+
+The reason for creating a method read_data as a static method is that because we just, if you know the basic informatio of static.
+Since it is going to be uses one time during Data Validation.
+Statc Information is going to be used.
+Since the method is defined as a static method, we can directly call the class and wnd we can call that particular function.
+
+The ks_2samp() is basically used to compare the distribution of the 2 samples and this is available in scipi.
+
+Data Transformation Architecture ->
+
+What is SMOTETomek?
+Lets say that, if in the dataset if we have imbalanced dataset, so we can probably balance it with the help of SMOTETomek.
+
+Data Transformation Implementation ->
+
+Model Trainer Implementation - Part 1 ->
+
+Data Transformation basically means, if we really want to do any kind of Feature Engineering, we probably want to replace NAN values with something else.
+We used KNN Imputer and we created the pickle file for this, so that this pickle file can be used at anywhere based on our Model Training.
+Inside the Model Trainer Artifacts, we specifically focus on 2 important things, that is we will try to create model.pkl file, and the model.pkl file is nothing but once our model is trained, after our model is trained we basically get this model.pkl file.
+From the Data Transformation Artifacts, whichever pickel file we have used for our Pipeline. This pickel file should also be coming in Model Trainer Artifacts.
+
+The load_object method is nothing but, any file that we specifically give, it should probably read, how we are saving object using save_object method to save the pickel file, similarly we will, if we want to read that particular pickel file, we will create the function load_object.
+
+Model Trainer and Evaluation with Hyperparameter Tuning ->
+
+Model Experiment Tracking with MLFLOW ->
+
+The mlflow is nothing but it is an open source tool which will be very useful to manage the entire lifecycle of a data science project. Here we will be able to make sure that we put all the performance metrics, we can any number of experiments that we are probably doing, finding the best model along with that, any classification metrics that is there. We can actually store all this kinds of experiments with the help of mlflow. We can also visualize them and compare them with respect to various experiments.
+
+MLFLOW Experiment Tracking with Remote Repository Dagshub ->
+
+Model Pusher Implementation ->
+
+Model Training Pipeline Implementation ->
+
+Batch Prediction Pipeline Implementation ->
+
+Final Model and Artifacts Pusher to AWS S3 Buckets ->
+
+Building Docker Image and Github Actions ->
+
+Github Action Docker Image Push to AWS ECR Repo Implementation ->
+
+Final Deployment to EC2 instance ->
+
+MLFLOW Dagshub and BentoML Complete ML Project Lifecycle =>
+
+Getting started with MLOPS with MLFlow and Dagshub with Project ->
+
+MLFlow is an open source platform for managing the entire Machine Learning Project itself with respect to the Life Cycle.
+MLFlow is an open source platform to manage the ML Lifecycle, including experimentation, reproducibility, deployment, and a central model registry. MLFlow currently offers four components:
+1. MLFlow Tracking
+2. MLFlow Projects
+3. MLFlow Models
+4. Model Registry
+
+Data Versioning Control Implementation ->
+
+Data Version Control (DVC) is a tool for data science that takes advantage of existing software engineering toolset. It helps machine learning teams manage large datasets, make projects reproducible and collaborate better.
+
+Why require DVC when we already have Git?
+Whenever we have huge dataset, it is better that we can probably use DVC along with Git to manage that specific data with respect to Versioning.
+
+Building Data Science Projects with BentoML ->
+
+BentoML is an unified AI application framework. It will actually help to probably build amazing AI application in such a way that we will also be able to deploy it in the production.
+BentoML is a platform for software engineers to build AI products.
