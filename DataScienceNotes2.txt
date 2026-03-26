@@ -1,3 +1,504 @@
 NLP for Machine Learning =>
 
 Roadmap to learn NLP for Machine Learning ->
+
+NLP is Natural Language Processing.
+
+In Machine Learning, we solved 2 different kinds of problems:
+1. Supervised
+2. Unsupervised
+
+In most of the Supervised Machine Learning, we solved 2 different kinds of problems:
+1. Classification
+2. Regression
+
+In Supervised Machine Learning Algorithm, our aim is that, with respect to Independent features we will be having lot of data points. In the output, it can be a Classification problem or the Regression problem.
+Our main aim is, we usually create a model and we train the model with Independent features data, then our model will be able to make or it will be capable to make some predictions whenever we give input data.
+
+In Machine Learning, f1 feature can be a continuous feature, f2 feature can be a categorical feature, and it can also be different types of features.
+Lets say that, some of our features are completely made up of Text.
+For example: Spam Classification.
+
+Our main aim is to basically detect whether Email that comes is a spam or not spam.
+In this scenario, some of the features that we may have are Email Subject, Email Body, and the output feature is basically Spam/Ham.
+
+Lets say we get an email with Email Subject "Billionaire", Email Body "You Won a Lottery of Billion $$".
+We can consider this as a Spam.
+
+Lets say, our entire input data is a text or sentence. In this scenario, it would not be that easy for the model to understand.
+So in this scenario, we have techniques where we can convert the texts into some meaningful vectors.
+
+Vectors are numbers only, vectors represent some meaningful information with respect to text.
+Whenever the input data is in the form of text or sentences, we basically use Natural Language Processing, so that we will be able to process this particular data and we will be able to make the Model understand to solve use cases like Spam Classification.
+
+Hence this is the entire context behind NLP.
+
+Machines like Alexa, Google Home, Automate Devices etc are able to understand Human Languages becuase of NLP.
+
+Roadmap of NLP:
+Initially to begin with, we must know 1 more programming language like Python.
+With the help of Python, we would be able to solve lot of use cases of NLP.
+
+Step 1 is called as Text Preprocessing, it will start with basic things.
+What are the Text Preprocessing things that we need to do? How we can basically clean the particular text data. All this things will come in Text Preprocessing.
+The techniques we are going to apply in Text Preprocessing is:
+1. Tokenization, it is a concept where in, we convert a paragraph into a sentence, sentence into words.
+2. Lemmatization
+3. Stemming
+4. Stopwords
+
+In Step 2:
+In the Text Preprocessing 2, we focus on converting the text data into vectors. Here we are going to learn topics like:
+1. Bag of Words
+2. TFIDF
+3. Unigrams
+4. Bigrams
+
+In step 1, we are basically focusing on cleaning the Inputs or Text.
+In step 2, we are basically focusing on converting the input text to Vectors.
+Vectors should make sure that, the context of the statement should be able to get captured.
+At the end of the day, in NLP with whatever techniques right now it is there, if we are able to convert the input text to meaningful vectors, we will be able to solve the use cases in a better manner.
+
+In Step 3:
+In the Text Preprocessing 3, we focus on, we use more advanced techniques like:
+1. Word2Vec
+2. Average Word2Vec
+Step 3 is also a technique to convert input text into Vectors.
+
+As we go from Step 2 to Step 3, the conversion of the input text to Vectors, the Step 3 approach is better than the Step 2 approach.
+Word2Vec and Average Word2Vec are kind of Deep Learning Techniques.
+
+In Step 4:
+In Step 4, we will learn:
+1. RNN
+2. LSTM RNN
+3. GRU RNN
+This are deep learning techniques, which is basically used for handling or solving text related use cases like spam classification, text summarization and many more things.
+
+In Step 5:
+In Step 5, we would learn Word Embedding. This is an also amzaing way to convert input text into vectors.
+Word Embedding internally uses some amount of Word2Vec. We can train our own Word Embedding techniques.
+
+In Step 6:
+In Step 6, we would learn Transformers.
+
+In Step 7:
+In Step 7, we would learn BERT.
+
+As we go from Step 1 to Step 7, the accuracy of the Model keeps on increasing and the size of the Model also increases.
+
+At first we will be focusing on the First 3 steps.
+When we start Deep Learning, we will focus on the next 4 Steps.
+
+The first 3 steps will be the part of Machine Learning.
+In Machine Learning, we will be using Libraries like NLTK, Spacy, which will actually help us to perform all the tasks which is available in the  First 3 Steps.
+If we know NLTK, then learning Spacy will also be easy.
+
+In Deep Learning, we will go with Libraries like Tensor Flow or Pytorch.
+Tensor Flow is created by Google, Pytorch is created by Facebook.
+
+Practical Use cases of NLP ->
+
+When we write wrong spelling in the mail, it gets automatically corrected. This is all because of NLP.
+The Google Translation from one Language to the other Language is also happening because of NLP.
+Text to Image, Text to Video when we do any Google Search is also an amazing example of NLP.
+
+There is a company called as Hugging Face, Hugging Face has created an amazing Models and Solutions for many use cases.
+Many companies are using Hugging Face. Hugging Face is an amazinf application of NLP because all this applications are in short taking the text data only and performing different kinds of tasks.
+
+Tokenisation and Basic Terminologies ->
+
+Basic Terminologies:
+1. Corpus
+2. Documents
+3. Vocabulary
+4. Words
+
+A Paragraph is usually called a Corpus.
+With respect to Documents, Sentences are called as Documents.
+Vocabulary is nothing but all the unique words that are present in the Paragraph.
+All the Words that are present in the Corpus that we define separately as specific words.
+
+Tokenization is a very important step whenever we try to solve any kind of use cases with respect to NLP.
+
+What exactly is Tokenization?
+Lets say we have a Paragraph:
+"My name is Amber and I have interest in teaching ML, NLP and DL. I am also a Youtuber".
+The above text will be entirely Corpus, which is nothing but a paragraph of words.
+Tokenization is a process where in we take either a paragraph or a sentences and we convert this into Tokens.
+
+From the above paragraph, the Tokens that are usually generated, it will be basically called as Sentences or Documents.
+We will try to convert the entire Paragraph into Sentence.
+
+When we do Tokenization from a Paragraph to a Sentence, it will be looking for characters like . or !.
+
+The first sentence in the above Paragraph would be:
+My name is Amber and I have interest in teaching ML, NLP and DL.
+
+The second sentence we would be having is:
+I am also a Youtuber.
+
+We can perform Tokenization again on top of Sentences, it will then convert the Sentences into Words.
+Each and every Word will be a separate Word.
+
+Sentences can also be a Token, words can also be a Token.
+Each and every word in NLP needs to be converted into Vectors, so we need to take up each word and try to do this kind of pre processing.
+
+Lets say we have 2 sentences:
+"I like to drink Apple Juice. My Friend likes Mango Juice".
+The above is a Paragraph. There are 2 sentences in the above Paragraph.
+
+We perform the Tokenization and convert the above Paragraph into Sentences:
+The first sentence will be:
+I like to drink Apple Juice.
+The next sentence will be:
+My Friend likes Mango Juice.
+
+Total we have 11 Words.
+
+But if we try to count the Unique words, there will be 10 Unique words.
+
+So whenever we get the Unique words, that basically means in our Dictionary, in our complete Paragraph, it is our Vocabulary.
+
+Tokenisation is a process to convert either a Paragraph or a Sentences into Tokens. If we convert a Paragraph into Tokens, that means we are converting Paragraph into Sentences. We can also convert a Paragraph into Words. If we are converting into Words, single Words will become Tokens, and if we are trying to convert a Paragraph into Sentences, every Sentence will be a Token.
+
+Tokenisation Practicals ->
+
+We are goingn to use library like NLTK.
+NLTK is a leading platform for building Python programs to work with human language data.
+There is also one more library called as Spacy.
+
+Install nltk using the command:
+pip install nltk
+
+We are going to use:
+from nltk.tokenize import sent_tokenize
+from nltk.tokenize import word_tokenize
+from nltk.tokenize import wordpunct_tokenize
+from nltk.tokenize import TreebankWordTokenizer
+
+Text Processing Stemming using NLTK ->
+
+Stemming is a text preprocessing technique in NLP that reduces words to their root or base form by crudely chopping off suffixes (e.g., "running" to "run", "easily" to "easili"). It is a rule-based, fast, and efficient approach used to normalize text, reduce vocabulary dimensionality, and improve information retrieval.
+Example:
+eat is a Stem word of eating, eat, eaten.
+go is a stem word of going, gone, goes.
+
+Instead of having these similar kinds of words, we can just have one word.
+
+Different types of Stemming Techniques:
+1. Porter Stemmer
+from nltk.stem import PorterStemmer
+
+When Stemming is basically applied, for some of the words we may not get a correct exact meaning. The form of the specific word may change. This is the major disadvantage with respect to Stemming.
+This will get fixed with the help of Lemmatization.
+
+2. Regexp Stemmer
+This is a class with the help of which we can easily implement Regular Expression Stemmer algorithms. It basically takes a single regular expression and removes any prefix or suffix that matches the expression.
+from nltk.stem import RegexpStemmer
+
+3. Snowball Stemmer
+Snowball Stemming is a stemming technique which performs better than Porter Stemmer, gives better accuracy, means better form of a word.
+from nltk.stem import SnowballStemmer
+
+These are some techniques which will actually help you to find out the word stem, it is getting used in Text Preprocessing to clean the data, we need to make sure that the data is ready so that we will be able to convert it into Vectors in an efficient way.
+
+The major disadvantage of Stemming is that, eventhough SnowballStemmer is performing well, but some of the words it does not perform well and gives us a bad word.
+
+For use cases like chatbots, this techniques cannot be used. For this, we have to go ahead with Lemmatization because Lemmatization solves all the above particular problems because it has the dictionary of all the words, all the root words that is basically there, and it will be giving good grammatical form of the word.
+
+Text Preprocessing Lemmatization NLTK ->
+
+Lemmatization technique is like stemming. The output we will get after lemmatization is called 'lemma', which is a root word rather than root stem, the output of stemming. After lemmatization, we will be getting a valid word that means the same thing.
+from nltk.stem import WordNetLemmatizer
+
+NLTK provides WordNetLemmatizer class which is a thin wrapper around the wordnet corpus. This class uses morphy() function to the WordNet CorpusReader class to find a lemma.
+
+WordNetLemmatizer will take more time when compared with Stemming
+WordNetLemmatizer examples where it can be used are Q&A, chatbots, text summarization
+
+Text Preprocessing Stopwords ->
+
+Text Processing is a very important step in Natural Language Processing because we really need to clean the data, we need to make the data in the right format, later on we willl try to convert all these text data into vectors and then only we will be able to train the model because model, whenever we say any machine learning model internally we really need to train with some mathematical equations. So whenever we train something with mathematical equations, there we need to give the input data in the form of numerical or floating values.
+
+Along with Stopwords, we can apply Stemming.
+from nltk.corpus import stopwords
+
+Parts of Speech Tagging using NLTK ->
+
+In Lemmatization, the parts of speech tagging plays a very important role, because if we are giving it as a verb or a noun, based on that we are able to get the root form of the specific word.
+import nltk
+
+The pos_tag basically whatever parameter we give, we should be giving in the form of list of words. Each and every word will be assigned to some tag.
+
+Named Entity Recognition ->
+
+Examples of Named Entity Tags:
+1. Person
+2. Place or Location
+3. Date
+4. Time
+5. Money
+6. Organization
+7. Percent
+
+import nltk
+
+We need to download nltk.download("maxent_ne_chunker"), we should download this as we are especially using chunker techniques to basically get the named entity.
+We need to download nltk.download("words")
+
+nltk.ne_chunk(tag_elements).draw()
+
+What's Next? ->
+
+We are doing Stemming and Lemmatization for cleaning the text. Once the raw text becomes very much clean, we are definitely, the next step will basically be to take this particular text and try to convert this into Vectors. Vectors is a numerical representation of a specific text. It can be a sentence, it can be words. We try to represent each and every word with some kind of vectors, which will give some meaningful representation of that specific word so that we will be able to apply any kind of Machine Learning Algorithm like Classification to solve any kind of use cases like sentiment analysis.
+
+Now, we will try to convert the text into vectors.
+Vectors is nothing but a numerical representation of this specific text.
+
+Transformers and Bert also use the technique of converting text into vectors. One way is Word Embedding. They convert the text into vectors which will provide meaningful semantic information to the text.
+
+1. One Hot Encoded is not a very efficient technique with respect to this kind of data. Right now nobody is using One Hot Encoded techniques specifically for the text data.
+2. Bag of Words is an important technique.
+3. TF-IDF is also a good technique to convert words into vectors.
+4. Word2Vec is also an amazing technique.
+5. Average Word2Vec is also an important technique
+
+Refer the Course Material finalNLP.pdf.
+
+There is a concept in Deep Learning called as Word Embedding, Word2Vec is basically used, we can also train our own Word2Vec, we can also train custom Word2Vec, we can also use the same weights to train the newer data.
+
+Internally Word2Vec and Average Word2Vec uses Deep Learning techniques.
+
+As we go ahead and learn different different techniques, there will be some disadvantage in that specific technique so we are using the next technique.
+
+One Hot Encoding Intuition ->
+
+Unique Vocabulary will play a very important role while creating the vectors.
+
+Wherever the specific word is, it will be represented by a Vector which will be of dimension v, v is nothing but the words that are present on the right.
+There are 7 words, the unique vocabulary we have is 7. So it is going to be represented by the 7 vectors where for those specific word it will be represented as 1 and remaining all will be represented as 0.
+
+Refer the Course Material finalNLP.pdf.
+
+Advantages and Disadvantages of OHE ->
+
+Sparse Matrix usually leads to Overfitting.
+
+Whenever we perform NLP or any Machine Learning use case, the number of features should be fixed with respect to the length.
+
+OHE wont be able to tell the exact difference between the words.
+
+OHE will not work when a new word is actually coming wherein it is not present in the Vocabulary with respect to the Test data.
+
+Refer the Course Material finalNLP.pdf.
+
+Bag of Words Intuition ->
+
+The Frequency should be in the Descending order.
+
+It is not necessary that we use all the words in the Bag of Words.
+Lets say that, in Vocabulary there are 100 unique words, and lets say some of the words are just present once. If some of the words are present once, we need not take that.
+
+In Binary Bag of Words, even though the word count is greater than 1, it is going to force it to become 1.
+In Normal Bag of Words, we can increase the count to greater than 1, how much ever the count of the word is there.
+
+Refer the Course Material finalNLP.pdf.
+
+Advantages and Disadvantages BOW ->
+
+With respect to Bag of Words, based on the Vocabulary size, we are able to get all the sentences converted into that many number of dimensions of words. The vectors and the inputs are getting fixed because the Vocabulary is getting fixed. It will help us for Machine Learning Algorithms training.
+
+Lets say in our new test data, we have included a new word.
+But in the Training dataset, we do not have this new word.
+Then it is going to ignore this specific word, and it will be going to see for the other words. Hence Out of Vocabulary still exists.
+The most important word, or the most important context is not getting captured. If that is not getting captured, semantic will not get captured.
+
+If we try to find out the difference or how similar the vectors are just by plotting the points, based on that only 1 value is getting changed 'not'. We will get the vectors very much near to each other, and this we can basically do it through cosine similarity.
+If it is near to each other, the angle between them is very near to each other, or if the angle between them is very less, we may say that the sentences are same or almost same or similar, but actually they are not similar, they may be the complete opposite of each other.
+This kind of situations are not getting handled well with the Bag of Words.
+Word2Vec will solving this problems.
+
+BOW implementation using NLTK ->
+
+N Grams ->
+
+We will not remove 'not' since it is distinguishing the entire sentence.
+We are going to perform Bigram. Bigram basically means that, we will have the combination of 2 words.
+
+Now in the example we can see that, if we compare the 2 vectors, now they are not exactly the same, there is a huge difference, because we have 4 differences between the vectors. Now the model will be able to distinguish the 2 sentences because we have implemented N Grams.
+
+Refer the Course Material finalNLP.pdf.
+
+N Gram BOW Implementation using NLTK ->
+
+TF-IDF Intuition ->
+
+TF-IDF is Term Frequency - Inverse Document Frequency.
+Whenever we say TF-IDF, in short we are multiplying Term Frequency * Inverse Document Frequency.
+
+Refer the Course Material finalNLP.pdf.
+
+Advantages and Disadvantages of TF-IDF ->
+
+If a word is present in all the sentences in the paragraph, it should be given less importance because all the sentences having that specific word, so it is not playing that important role.
+Word importance needs to be captured from every sentence, that is what we specifically want.
+If a word is not getting repeated in all the sentences, we need to value such word in the sentences.
+
+By this, our Machine Learning model will be able to understand something specific we are basically talking about and that way the Mathematical models will be able to find out what kind of predictions it actually wants, and through this the accuracy increases.
+
+TF-IDF Practical Implementation Python ->
+
+Word Embeddings ->
+
+Deep Learning Trained Model will give very good accuracy.
+The disadvantages in Count or Frequency are getting solved by Deep Learning Trained Model.
+
+Word2Vec is a Word Embedding technique which will efficiently convert a word into vectors which will be making sure that both the property, it is expected to have similar in meaning whenever it is converting into a vector space along with that it will also give you a very good representation of the words.
+
+Word2Vec are of 2 types:
+1. CBow, CBow is nothing but continuous bag of words.
+2. Skipgram
+
+Refer the Course Material finalNLP.pdf.
+
+Word2Vec Intuition ->
+
+Word2Vec is a Deep Learning Trained Model, it is a kind of Word Embeddings technique wherein the focus is to convert Words into Vectors making sure that the meaning of different different words are actually maintained. If there are similar words, we would be getting vectors that are very near to each other, if the words are completely opposite based on the vectors and the vectors would be far away from each other.
+
+Lets say we have a Vocabulary, each and every word present in the Vocabulary will be converted into a Feature Representation. This basically means that we are going to convert the words into a Vectors based on some features.
+Lets say we have features like Gender, Royal, Age, Food, etc. which has 300 dimensions. 300 dimensions means 300 features. Now with respect to all the Vocabulary, we are going to represent the word in the form of Vector considering the feature representation. Based on the particular features, we are going to assign a numerical value. The numerical value will be assigned based on the relationship of the 2 words, that is the Vocabulary and the Feature Representation that we have.
+When we are training a very large Word2Vec Model, we will not be able to see the features entirely.
+
+If the Vocabulary is related to the Feature, then we will have a value closer to 1, else if not related then we will have a value closer to 0.
+Because of the Vectors, similar words will be very close to each other.
+
+How do we calculate the distance between the vectors?
+We try to calculate the distance in the graph, we try to find out the angle. To find out the distance between 2 vectors, we use a distance formula. distance = 1 - cosine similarity.
+
+Cosine similarity is nothing but the angle between the 2 vectors. Lets say the angle between the 2 vectors is 45 degree, the cosine similarity = cos45.
+
+If the distance is nearer to 0, we will say that they are almost similar vectors. If the distance is nearer to 1, we will say that they are different vectors.
+
+Refer the Course Material finalNLP.pdf.
+
+Word2Vec CBow Intuition ->
+
+With respect to Word2Vec, we also have Pretrained Models or we can also train a Model from scratch.
+Word2Vec Model is trained on hugh dataset.
+Word2Vec is a supervised Machine Learning.
+Window size is really importantt to create the input data and the output data.
+Window size=5, means we have to initially select 5 words. We will take the center word.
+If we are taking any word as center word, it will be basically our output word.
+The output word should know about its forward word and its backward word.
+We then take the next 5 words and repeat the same process.
+We can take any Window size value. Dont take an even number. Tak an odd number so that we would be getting the center element which we would be taking as an output.
+
+Refer the Course Material finalNLP.pdf.
+
+We are going to train our Model with the input and the output data.
+How the training basically will happen?
+We need to convert the words to vectors initially before sending it for the training.
+
+What does CBow basically means?
+This is nothing but, it is a fully connected Neural Network. In this fully connected Neural Network, we would be able to see 1 very important thing.
+First of all just understand how many number of inputs should we be giving, like how many words, we will be giving as input.
+Since the window size=5, all the inputs are fixed, now we would be able to see we are giving 4 words in every sentence, so our input is basically fixed.
+
+Now lets go to the middle layer, that is called as a hidden layer. In this hidden layer, we will be having 5 vectors since window size=5.
+Now with respect to the output, In output we have only 1 value, and each word is represented by a vector of 7, because if we are considering the value of the output then using One Hot Encoding we are going to get the vectors of 7 dimension.
+In output we would basically be having another output layer, which will again be having 7 different outputs.
+This is how our fully connected Neural Network will look like.
+
+Each and every node in the input will be connected to the node in the middle layer. This is how an ANN will work. All the nodes will have some initialized weights and we need to train these weights, and this is what happens in ANN.
+
+With the help of Loss Function, we will also do Forward and Backward Propagation.
+
+Once we pass all the inputs, what happens in the output?
+With respect to 7 outputs in the Output Layer, we already know what is our real output, that is 'is'. We will be getting some value in the Output Layer, but the real output is what?
+If we consider 'is', 'is' is our 3rd word, so 'is' is our real output, it will be represented in the vector format.
+But while we are training the model with different different weights, we may also get yhat values.
+We then calculate the Loss Function, and based on the Loss we need to reduce it, we do the Backward Propagation, and we do it unless and until the difference between y and yhat are minimal, and this process is continuous.
+
+Since we are getting a specific output, when the Window Size of middle layer is 5, that basically means we are going to get the output as 5 for every word.
+That basically means when a word is getting converted into a vector, we are going to get a size of 5 vectors, and this will be basically our final output.
+
+The more the window size, the better the model can basically perform.
+
+Refer the Course Material finalNLP.pdf.
+
+This training of forward and the backward propagation, when the loss is minimal then only we will be able to get the vectors, and that vector is basically taken and it will be represented in the format of the feature representation for each and every word.
+
+Skipgram Indepth Intuition ->
+
+What is the difference between CBow and Skipgram?
+With the help of Skipgram, over here with respect to the window size=5, the middle word is the input and the 2 words before and after that will be the output.
+In the input, we are gonna basically have input layer with 7 vectors, 7 because the Vocabulary size is 7.
+In the middle, we will basically be having our window size=5 vector.
+In the output, we are having 4 words. Every word will have 7 dimensions.
+Randomly all the layers would be connected with weights, so 7*5 weight matrix will be created and with respect to this our forward propagation will happen.
+
+If we probably know ANN, what all things happen between the hidden layer, the input weights is getting multipled with the weights itself, and then a bias is added, and activation function is applied on top of it. In the output layer we basically apply softmax function, so that we compute it with y and yhat. yhat is the predicted one and y is the real data.
+We then calculated our Loss Function, and we make sure that we keep on doing the forward and the backward propagation unless and until all the loss function decreases.
+
+Finally we will be seeing that, whatever is connected, the words will be shown in the form of 5 vectors once the loss is completely minimized.
+We should definitely know how the ANN actually works, how the Optimizer actually works.
+
+The more the training data, the more the accuracy.
+
+Refer the Course Material finalNLP.pdf.
+
+Advantages of Word2Vec ->
+
+With Word2Vec, we will be able to get Dense Matrix. This basically means we will not have many 0s and 1s.
+When we have Dense Matrix, the Machine Learning Models will be able to train in a better way.
+
+Semantic information is getting captured, now we will be able to find out the similar words with the vectors itself.
+
+Before with the help of Bag of Words and TF-IDF, we were completely dependent on the Vocabulary Size. But now, we are not dependent on the Vocabulary Size. So over here we will be having fixed set of Dimensions.
+
+Out of Vocabulary is also solved, because now we are capturing the informatio like Semantic Info.
+
+Refer the Course Material finalNLP.pdf.
+
+AvgWord2vec Indepth Intuition ->
+
+Just by Word2Vec we will not be able to solve the Classification Problem, we need to perform Average Word2Vec.
+
+When we have this kind of sentences, and if we are basically writing the number of dimensions, basically the number of vectors is there. In the real world scenario, we would be converting the entire sentence into Vectors. But we are getting Vectors for every word, noe this is a problem.
+
+Our main aim should be that, we should be getting only 1 dimension with respect to the Vectors, so that we can take this as an input and 1,0,1 will basically be our output, and we can basically train our Model.
+
+In Word2Vec, we get vectors for every word, and hence here we find the average of the vectors of all the words and take the average of it, and that is why we say Average Word2Vec.
+
+This will work because, at the end of the day, we will be seeing that we just require the vectors for the entire sentence and right now we have for every word separate 300 dimension Vectors. So if we are trying to take out the average of these vectors, and if we try to write down as 1 Vector. The length would obviously be 300 dimensions itself. But now, with respect to this particular Vector, we will be having our output which we can pass it to our Model and get trained with respect to this.
+We are doing this because, we really want only 1 specific set of Vectors for the entire sentence.
+
+We are going to use a library called as Gensim, and also a library called as Glove. But if we understand Gensim, we would be able to do everything.
+
+Refer the Course Material finalNLP.pdf.
+
+Word2Vec Practical Implementation Gensim ->
+
+pip install gensim
+from gensim.models import Word2Vec, KeyedVectors
+
+Spam ham Project using BOW ->
+
+Spam and Ham Project using TF-IDF ->
+
+Best Practices for solving ML Problems ->
+
+The best practices that needs to be followed for solving ML Problems are:
+1. Preprocessing and Cleaning, also known as Feature Engineering.
+2. Train Test Split
+3. BOW and TF-IDF, converting Sentences to Vectors, by doing this step after the Train Test Split step we are preventing Data Leakage.
+4. Trained our Models
+
+Part-1 Text Classification with Word2Vec and AvgWord2vec ->
+
+Part-2 Text Classification with Word2Vec and AvgWord2vec ->
+
+Part-1 Kindle Review Sentiment Analysis ->
+
+Part-2 Kindle Review Sentiment Analysis ->

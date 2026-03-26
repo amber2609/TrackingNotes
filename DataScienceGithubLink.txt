@@ -7,3 +7,5 @@ https://github.com/krishnaik06/Complete-Python-Bootcamp
 
 Dagshub and Bento-ML Complete ML Project:
 https://github.com/krishnaik06/Complete-Data-Science-With-Machine-Learning-And-NLP-2024/tree/main/25-MLFlow%20Dagshub%20and%20BentoML-Complete%20ML%20Project%20Lifecycle
+
+https://github.com/krishnaik06/Complete-Data-Science-With-Machine-Learning-And-NLP-2024/tree/main/26-CompleteNLP%20For%20Machine%20Learning
